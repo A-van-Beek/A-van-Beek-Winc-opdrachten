@@ -1,28 +1,14 @@
 /*
-A: maak voor elke film in _database.js een tile aan in de HTML
-B: maak deze loop afhankelijk van de keuze via de radio=buttons
-c: maak een reset knop
+        functie die een nieuw li-element maakt.
 */
-// const addMoviesToDom = movies.map((movie) => {
-//   const allMovies = movie.Title;
-//   console.log(allMovies);
-// });
+function createMenuItem(name) {
+  const li = document.createElement("li");
+  li.textContent = name;
+  return li;
+}
 
-const addMoviesToDom = movies.forEach(movie => {
-    const newLi = document.createElement("li");
-    const newMovie = document.getElementsByClassName("films");
-    newMovie.insertBefore(newLi, newMovie.getElementsByTagName("li")[movie]);
-    newLi.innerHTML = allMovies   
+const addMoviesToDom = movies.map((movie) => {
+  const newMovie = document.getElementById("movies"); //get <ul> element
+  const allMovies = movie.Title; //get titel van nw movie
+  newMovie.appendChild(createMenuItem(allMovies)).classList.add("tile");
 });
-.map((movie) => {
-    const allMovies = movie.Title;
-    console.log(allMovies);
-  });
-
-
-// function clickLion() {
-//     const newLi = document.createElement("li");
-//     const menuSpotted = document.getElementById("spotted-animals-list");
-//     menuSpotted.insertBefore(newLi, menuSpotted.getElementsByTagName("li")[0]);
-//     newLi.innerHTML = "Lion";
-//   }

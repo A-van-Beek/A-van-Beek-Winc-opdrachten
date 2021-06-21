@@ -1,0 +1,95 @@
+// TODO: plaatje passend maken in tile
+
+* {
+  ///* kleinste scherm: geel */
+  font: arial;
+  font-size: 18px;
+  background-color: #ffffb3;
+  display: grit;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+  grid-template-rows: 20px 20px auto 20px;
+  grid-template-areas:
+    ". header header header header ."
+    ". menu menu menu menu ."
+    ". main main main main ."
+    ". footer footer footer footer .";
+  justify-items: flex-start;
+}
+
+body {
+  margin: 10;
+  border: 5px solid blue;
+  // background-color: #8de97f;
+}
+
+h1 {
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+header {
+  // background-color: lightblue;
+  border: 5px solid black;
+  grid-area: header;
+}
+
+menu {
+  // background-color: lightpink;
+  border: 5px solid purple;
+  grid-area: menu;
+  justify-self: flex-start;
+}
+
+.films {
+  //container voor de films
+  // background-color: lime;
+  border: 5px solid orange;
+  grid-area: main;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex;
+}
+
+.tile {
+  //de films
+  list-style: none;
+  width: 25%;
+  text-align: center;
+  border: 3px solid red;
+  // background-color: white;
+  border-radius: 10px; // afronding van de border
+  margin: 15px;
+  height: 460px;
+  box-shadow: 10px 10px 20px black;
+}
+
+footer {
+  font-size: 75%;
+  // background-color: magenta;
+  border: 5px solid green;
+  grid-area: footer;
+}
+
+// TODO: nog aanpassen !!
+// media styling
+@media (min-width: 768px) {
+  * {
+    background-color: lightseagreen;
+  }
+  .tile {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  * {
+    background-color: lightcoral;
+  }
+  .tile {
+    width: 30%;
+  }
+}

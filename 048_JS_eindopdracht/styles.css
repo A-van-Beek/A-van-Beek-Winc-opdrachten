@@ -15,9 +15,8 @@ body {
 }
 
 h1 {
-  font-size: 1.7em;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.5em;
 }
 
 header {
@@ -45,12 +44,17 @@ menu {
 .tile {
   list-style: none;
   width: 25%;
-  text-align: center;
+  height: 150px;
   border: 3px solid red;
   border-radius: 10px;
-  margin: 15px;
-  height: 460px;
   box-shadow: 10px 10px 20px black;
+  margin: 15px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 footer {

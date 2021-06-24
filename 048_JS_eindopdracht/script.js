@@ -27,10 +27,13 @@
 // });
 
 /*
-    selectie Avenger in titel
+    selectie searchTerm in titel
  */
+
+const searchTerm = "X-Men";
+
 const addMoviesToDom = movies.map((movie) => {
-  if (movie.Title.includes("Avenger")) {
+  if (movie.Title.includes(searchTerm)) {
     const newMovie = document.getElementById("movies"); //get <ul> element
     const newLi = document.createElement("li"); // create nw <li>
     newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>

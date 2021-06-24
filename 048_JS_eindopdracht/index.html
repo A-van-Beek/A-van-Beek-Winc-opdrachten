@@ -18,6 +18,10 @@
     <header><h1>Welkom bij mijn filmzoeker</h1></header>
     <menu>
       <ul>
+        <input type="radio" id="reset" name="reset" value="reset" /><label
+          for="reset"
+          >Reset selectie, toon alles</label
+        >
         <input type="radio" id="recent" name="recent" value="recent" /><label
           for="recent"
           >Laatste films, 2014 of nieuwer</label
@@ -43,6 +47,7 @@
       </ul>
     </menu>
     <main>
+      <div id="select"></div>
       <ul id="movies">
         <!-- <li class="tile">
           <img

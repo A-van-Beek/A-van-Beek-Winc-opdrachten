@@ -1,39 +1,8 @@
-// /**
-//  laden van alle films:
-//  */
-// const addMoviesToDom = movies.map((movie) => {
-//   const newMovie = document.getElementById("movies"); //get <ul> element
-//   const newLi = document.createElement("li"); // create nw <li>
-//   newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
-//   const newImg = document.createElement("IMG"); // create nw <img>
-//   newImg.setAttribute("src", movie.Poster); //add link to <img>
-//   newImg.setAttribute("alt", movie.Title); //add alt-text to <img>
-//   newLi.appendChild(newImg); //combine nw <img> in nw <li>
-// });
-
-// /*
-//     selectie nieuwste films
-//  */
-// const addMoviesToDom = movies.map((movie) => {
-//   if (movie.Year >= 2014) {
-//     const newMovie = document.getElementById("movies"); //get <ul> element
-//     const newLi = document.createElement("li"); // create nw <li>
-//     newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
-//     const newImg = document.createElement("IMG"); // create nw <img>
-//     newImg.setAttribute("src", movie.Poster); //add link to <img>
-//     newImg.setAttribute("alt", movie.Title); //add alt-text to <img>
-//     newLi.appendChild(newImg); //combine nw <img> in nw <li>
-//   }
-// });
-
-/*
-    selectie searchTerm in titel
+/**
+ laden van alle films:
  */
-
-const searchTerm = "X-Men";
-
-const addMoviesToDom = movies.map((movie) => {
-  if (movie.Title.includes(searchTerm)) {
+function addMoviesToDom() {
+  const addMoviesToDom = movies.map((movie) => {
     const newMovie = document.getElementById("movies"); //get <ul> element
     const newLi = document.createElement("li"); // create nw <li>
     newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
@@ -41,5 +10,127 @@ const addMoviesToDom = movies.map((movie) => {
     newImg.setAttribute("src", movie.Poster); //add link to <img>
     newImg.setAttribute("alt", movie.Title); //add alt-text to <img>
     newLi.appendChild(newImg); //combine nw <img> in nw <li>
-  }
-});
+    deselectRadio();
+  });
+}
+
+addMoviesToDom();
+
+const searchTerm = "";
+function deselectRadio() {
+  //uncheck alle radiobuttons
+  document.getElementById("reset").checked = false;
+  document.getElementById("recent").checked = false;
+  document.getElementById("x-men").checked = false;
+  document.getElementById("princess").checked = false;
+  document.getElementById("batman").checked = false;
+  document.getElementById("avenger").checked = false;
+}
+function deleteSelection() {
+  //verwijder huidige lijst films
+  const ulList = document.getElementById("movies");
+  ulList.innerHTML = "";
+}
+
+function addMoviesToDomTitle(searchTerm) {
+  //selectie op basis van titelwoord
+  movies.map((movie) => {
+    if (movie.Title.includes(searchTerm)) {
+      const newMovie = document.getElementById("movies"); //get <ul> element
+      const newLi = document.createElement("li"); // create nw <li>
+      newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
+      const newImg = document.createElement("IMG"); // create nw <img>
+      newImg.setAttribute("src", movie.Poster); //add link to <img>
+      newImg.setAttribute("alt", movie.Title); //add alt-text to <img>
+      newLi.appendChild(newImg); //combine nw <img> in nw <li>
+    }
+    document.getElementById("select").innerHTML =
+      "Er is gefilterd op: " + searchTerm;
+  });
+}
+
+//reset, toon alle films + verwijder selectie-melding:
+const reset = document.getElementById("reset");
+reset.addEventListener("click", selectReset);
+
+function selectReset() {
+  deselectRadio();
+  deleteSelection();
+  document.getElementById("select").innerHTML = "";
+  addMoviesToDom();
+}
+
+//select avenger films:
+const avenger = document.getElementById("avenger");
+avenger.addEventListener("click", selectAvenger);
+
+function selectAvenger() {
+  deselectRadio();
+  deleteSelection();
+  //voeg nieuwe lijst films toe
+  const searchTerm = "Avenger";
+  addMoviesToDomTitle(searchTerm);
+}
+
+//select x-men films:
+const xmen = document.getElementById("x-men");
+xmen.addEventListener("click", selectXMen);
+
+function selectXMen() {
+  deselectRadio();
+  deleteSelection();
+  //voeg nieuwe lijst films toe
+  const searchTerm = "X-Men";
+  addMoviesToDomTitle(searchTerm);
+}
+
+//select princess films:
+const princess = document.getElementById("princess");
+princess.addEventListener("click", selectPrincess);
+
+function selectPrincess() {
+  deselectRadio();
+  deleteSelection();
+  //voeg nieuwe lijst films toe
+  const searchTerm = "Princess";
+  addMoviesToDomTitle(searchTerm);
+}
+
+//select batman films:
+const batman = document.getElementById("batman");
+batman.addEventListener("click", selectBatman);
+
+function selectBatman() {
+  deselectRadio();
+  deleteSelection();
+  //voeg nieuwe lijst films toe
+  const searchTerm = "Batman";
+  addMoviesToDomTitle(searchTerm);
+}
+
+//select recente films:
+const recent = document.getElementById("recent");
+recent.addEventListener("click", selectRecent);
+
+function selectRecent() {
+  deselectRadio();
+  deleteSelection();
+  //voeg nieuwe lijst films toe
+  addMoviesToDomRecent();
+}
+//voeg nieuwe films toe
+function addMoviesToDomRecent() {
+  movies.map((movie) => {
+    if (movie.Year >= 2014) {
+      const newMovie = document.getElementById("movies"); //get <ul> element
+      const newLi = document.createElement("li"); // create nw <li>
+      newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
+      const newImg = document.createElement("IMG"); // create nw <img>
+      newImg.setAttribute("src", movie.Poster); //add link to <img>
+      newImg.setAttribute("alt", movie.Title); //add alt-text to <img>
+      newLi.appendChild(newImg); //combine nw <img> in nw <li>
+    }
+    document.getElementById("select").innerHTML =
+      "Er is gefilterd op: recente films";
+  });
+}

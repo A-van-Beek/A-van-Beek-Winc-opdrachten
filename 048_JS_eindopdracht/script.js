@@ -2,7 +2,7 @@
  laden van alle films:
  */
 function addMoviesToDom() {
-  const addMoviesToDom = movies.map((movie) => {
+  movies.map((movie) => {
     const newMovie = document.getElementById("movies"); //get <ul> element
     const newLi = document.createElement("li"); // create nw <li>
     newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
@@ -51,7 +51,7 @@ function addMoviesToDomTitle(searchTerm) {
 
 //reset, toon alle films + verwijder selectie-melding:
 const reset = document.getElementById("reset");
-reset.addEventListener("click", selectReset);
+reset.addEventListener("change", selectReset);
 
 function selectReset() {
   deselectRadio();
@@ -62,7 +62,7 @@ function selectReset() {
 
 //select avenger films:
 const avenger = document.getElementById("avenger");
-avenger.addEventListener("click", selectAvenger);
+avenger.addEventListener("change", selectAvenger);
 
 function selectAvenger() {
   deselectRadio();
@@ -74,7 +74,7 @@ function selectAvenger() {
 
 //select x-men films:
 const xmen = document.getElementById("x-men");
-xmen.addEventListener("click", selectXMen);
+xmen.addEventListener("change", selectXMen);
 
 function selectXMen() {
   deselectRadio();
@@ -86,7 +86,7 @@ function selectXMen() {
 
 //select princess films:
 const princess = document.getElementById("princess");
-princess.addEventListener("click", selectPrincess);
+princess.addEventListener("change", selectPrincess);
 
 function selectPrincess() {
   deselectRadio();
@@ -98,7 +98,7 @@ function selectPrincess() {
 
 //select batman films:
 const batman = document.getElementById("batman");
-batman.addEventListener("click", selectBatman);
+batman.addEventListener("change", selectBatman);
 
 function selectBatman() {
   deselectRadio();
@@ -110,7 +110,7 @@ function selectBatman() {
 
 //select recente films:
 const recent = document.getElementById("recent");
-recent.addEventListener("click", selectRecent);
+recent.addEventListener("change", selectRecent);
 
 function selectRecent() {
   deselectRadio();

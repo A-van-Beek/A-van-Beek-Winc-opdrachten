@@ -1,3 +1,21 @@
 {
-    "liveServer.settings.port": 5501
+  "editor.formatOnSave": true,
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "liveServer.settings.port": 5501,
+  "spellright.language": ["en", "nl"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext", "javascript"],
+  // added by me
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  // end added
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

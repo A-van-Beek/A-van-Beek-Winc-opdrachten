@@ -28,8 +28,18 @@ doorlinken
     Deze ids vind je ook weer terug in onze filmdatabase.
     Zie bijvoorbeeld: https://www.imdb.com/title/tt0944947/
     Pas de URL van IMDB aan en plak het juiste ID erachter.
-- check eventlisteners, moeten deze change worden ipc click ?
+
+https://www.imdb.com/title/
+
+V- check eventlisteners, moeten deze change worden ipc click ?
 - check nog een keer het doel van het switch statement
+
+- upper/lower case corrigeren
+- media formaat aanpassingen
+- x van y gevonden
+- check: alle radio in één regel uitzetten?
+V- css constante kleuren toevoegen
+
 
 Bonus
 - selectie op titel via inputveld

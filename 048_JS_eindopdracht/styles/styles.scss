@@ -1,10 +1,12 @@
+@import "./constants.scss";
+
 // TODO: plaatje passend maken in tile
 
 * {
   ///* kleinste scherm: geel */
   font: arial;
   font-size: 18px;
-  background-color: #ffffb3;
+  background-color: $white-off;
   display: grit;
   grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
   grid-template-rows: 20px 20px auto 20px;
@@ -75,7 +77,7 @@ footer {
 // media styling
 @media (min-width: 768px) {
   * {
-    background-color: lightseagreen;
+    background-color: $blue-ice;
   }
   .tile {
     width: 30%;
@@ -84,7 +86,7 @@ footer {
 
 @media (min-width: 1024px) {
   * {
-    background-color: lightcoral;
+    background-color: $purple-light;
   }
   .tile {
     width: 30%;

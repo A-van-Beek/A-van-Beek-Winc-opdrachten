@@ -8,28 +8,13 @@ javascript
 V- lijst met movies + script pagina maken (de ene gebruikt de andere, dus volgorde matters)
 V- log de films naar console.log
 V- maak addMoviesToDom, met 1 argument
-    * pak de <ul> door middel van de ID die je gemaakt hebt
-    * Gebruik .map om door de lijst te itereren om een compleet
-        <li>-element te maken. Resultaat: array met <li> elementen.
-        Gebruik de titel van de movie
-    * maak van de array via .forEach aan de <ul> de <li>'s
-    * check of de titels op het scherm verschijnen
-    * zet nu in plaats van de titel het img van de film.
-        NB denk aan hoofd/kleine letters......
-    * roep de addMoviesToDom-functie aan, nadat de HTML pagina geladen is
 
 filteren
 V- maak eventlisteners aan de radiobuttons, gebruik de array methods
 V- maak functie addEventListeners()
 
 doorlinken
-- maak van poster een link naar de juiste IMDB pagina
-    IMDB werkt met een id per film/serie in de URL.
-    Deze ids vind je ook weer terug in onze filmdatabase.
-    Zie bijvoorbeeld: https://www.imdb.com/title/tt0944947/
-    Pas de URL van IMDB aan en plak het juiste ID erachter.
-
-https://www.imdb.com/title/
+V- maak van poster een link naar de juiste IMDB pagina
 
 V- check eventlisteners, moeten deze change worden ipc click ?
 - check nog een keer het doel van het switch statement

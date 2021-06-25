@@ -1,8 +1,5 @@
-/**
- laden van alle films:
- */
-
 function addMoviesToDom() {
+  //laden van alle films:
   movies.map((movie) => {
     const newMovie = document.getElementById("movies"); //get <ul> element
     const newLi = document.createElement("li"); // create nw <li>
@@ -44,10 +41,15 @@ function addMoviesToDomTitle(searchTerm) {
       const newMovie = document.getElementById("movies"); //get <ul> element
       const newLi = document.createElement("li"); // create nw <li>
       newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
+      const newA = document.createElement("a");
+      newA.href = "https://www.imdb.com/title/" + movie.imdbID;
       const newImg = document.createElement("IMG"); // create nw <img>
-      newImg.setAttribute("src", movie.Poster); //add link to <img>
+      newImg.setAttribute("src", movie.Poster); //add poster to <img>
       newImg.setAttribute("alt", movie.Title); //add alt-text to <img>
-      newLi.appendChild(newImg); //combine nw <img> in nw <li>
+      newA.appendChild(newImg);
+      newA.target = "_blank";
+      newLi.appendChild(newA);
+      deselectRadio();
     }
     document.getElementById("select").innerHTML =
       "Er is gefilterd op: " + searchTerm;
@@ -130,10 +132,15 @@ function addMoviesToDomRecent() {
       const newMovie = document.getElementById("movies"); //get <ul> element
       const newLi = document.createElement("li"); // create nw <li>
       newMovie.appendChild(newLi).classList.add("tile"); //combine <li> in <ul>
+      const newA = document.createElement("a");
+      newA.href = "https://www.imdb.com/title/" + movie.imdbID;
       const newImg = document.createElement("IMG"); // create nw <img>
-      newImg.setAttribute("src", movie.Poster); //add link to <img>
+      newImg.setAttribute("src", movie.Poster); //add poster to <img>
       newImg.setAttribute("alt", movie.Title); //add alt-text to <img>
-      newLi.appendChild(newImg); //combine nw <img> in nw <li>
+      newA.appendChild(newImg);
+      newA.target = "_blank";
+      newLi.appendChild(newA);
+      deselectRadio();
     }
     document.getElementById("select").innerHTML =
       "Er is gefilterd op: recente films";

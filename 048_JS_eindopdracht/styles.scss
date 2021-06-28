@@ -46,21 +46,20 @@ menu {
   margin: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex;
+  flex-wrap: wrap;
 }
 
 .tile {
   //de films
   list-style: none;
-  width: 25%;
-  height: 150px; //460px;
   border: 3px solid red;
   border-radius: 10px; // afronding van de border
   box-shadow: 10px 10px 20px black;
   margin: 15px;
   text-align: center;
 }
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -70,24 +69,4 @@ footer {
   font-size: 75%;
   // border: 5px solid green;
   grid-area: footer;
-}
-
-// TODO: nog aanpassen !!
-// media styling
-@media (min-width: 768px) {
-  * {
-    background-color: $white-off;
-  }
-  .tile {
-    width: 30%;
-  }
-}
-
-@media (min-width: 1024px) {
-  * {
-    background-color: $purple-light;
-  }
-  .tile {
-    width: 30%;
-  }
 }

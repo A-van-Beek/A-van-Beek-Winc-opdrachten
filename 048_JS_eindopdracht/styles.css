@@ -34,14 +34,12 @@ menu {
   margin: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex;
+  flex-wrap: wrap;
 }
 
 .tile {
   list-style: none;
-  width: 25%;
-  height: 150px;
   border: 3px solid red;
   border-radius: 10px;
   box-shadow: 10px 10px 20px black;
@@ -57,23 +55,4 @@ img {
 footer {
   font-size: 75%;
   grid-area: footer;
-}
-
-@media (min-width: 768px) {
-  * {
-    background-color: #faebd7;
-  }
-
-  .tile {
-    width: 30%;
-  }
-}
-@media (min-width: 1024px) {
-  * {
-    background-color: #ccccff;
-  }
-
-  .tile {
-    width: 30%;
-  }
 }/*# sourceMappingURL=styles.css.map */

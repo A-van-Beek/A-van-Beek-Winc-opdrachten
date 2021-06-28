@@ -15,14 +15,11 @@ V- maak functie addEventListeners()
 
 doorlinken
 V- maak van poster een link naar de juiste IMDB pagina
+V- ook bij de selecties doorvoeren
 
 V- check eventlisteners, moeten deze change worden ipc click ?
-- check nog een keer het doel van het switch statement
 
-- upper/lower case corrigeren
 - media formaat aanpassingen
-- x van y gevonden
-- check: alle radio in één regel uitzetten?
 V- css constante kleuren toevoegen
 
 

@@ -1,1 +1,18 @@
 Hier een eigen ToDo-list
+stap 1:
+✅- maak functie huiswerkMaken met twee argumenten, vak en callback
+✅- deze functie geeft console.log: "ok, ik ga nu mijn huiswerk voor [vak] maken"
+✅- roep deze functie aan zonder argumenten
+
+stap 2:
+✅- maak functie: klaarMetHuiswerk, zonder argumenten
+✅- console.log: "klaar met het huiswerk"
+
+stap 3:
+✅- roep huiswerkMaken aan met "wiskunde" en klaarMetHuiswerk
+
+
+
+🟩
+✳️
+✅

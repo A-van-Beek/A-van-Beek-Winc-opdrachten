@@ -6,28 +6,44 @@
 
 // // verwacht resultaat: 1, 3, 2
 
-const posts = [
-  { title: "Post one", body: "This is post one" },
-  { title: "Post two", body: "This is post two" },
-];
+// //meeschrijven met de video:
+// const posts = [
+//   { title: "Post one", body: "This is post one" },
+//   { title: "Post two", body: "This is post two" },
+// ];
 
-function getPosts() {
+// function getPosts() {
+//   setTimeout(() => {
+//     var output = "";
+//     posts.forEach((post) => {
+//       //maak een li-element met de titel van het array.
+//       // let op: gebruik schuine, enkele aanhalingstekens
+//       output += `<li>${post.title}</li>`;
+//     });
+//     document.getElementById("inputPosts").innerHTML = output;
+//   }, 1000);
+// }
+
+// function createPost(post, callback) {
+//   setTimeout(() => {
+//     posts.push(post);
+//     callback();
+//   }, 2000);
+// }
+
+// createPost({ title: "Post three", body: "This is post three" }, getPosts);
+
+function klaarMetHuiswerk() {
   setTimeout(() => {
-    var output = "";
-    posts.forEach((post) => {
-      //maak een li-element met de titel van het array.
-      // let op: gebruik schuine, enkele aanhalingstekens
-      output += `<li>${post.title}</li>`;
-    });
-    document.getElementById("inputPosts").innerHTML = output;
+    console.log("Yes !! Ik ben klaar !");
   }, 1000);
 }
 
-function createPost(post, callback) {
+function huiswerkMaken(thema, callback) {
   setTimeout(() => {
-    posts.push(post);
+    console.log(`ok, ik ga nu mijn huiswerk maken voor ${thema} !`);
     callback();
   }, 2000);
 }
 
-createPost({ title: "Post three", body: "This is post three" }, getPosts);
+huiswerkMaken("wiskunde", klaarMetHuiswerk);

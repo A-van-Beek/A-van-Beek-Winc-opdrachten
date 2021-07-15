@@ -2,7 +2,7 @@ Hier een eigen ToDo-list
 ✅ functie 1: functie met meerdere argumenten,
     die via de rest-parameter alles bij elkaar optelt
 
-- functie 2: functie met die meerdere cijfers bij elkaar optelt
+✅ functie 2: functie met die meerdere cijfers bij elkaar optelt
     functie accepteert 1 argument, nl array van cijfers
     gebruik de spread-operator
 

@@ -9,7 +9,7 @@ than the value 10. Log the result to the console.
 const testNum = () => {};
  
   
-/*
+✅
 Exercise 2:
 Write two functions that use Promises that you can chain! 
 The first function, makeAllCaps(), will take in an array of words and
@@ -25,10 +25,7 @@ const sortWords = () => {};
 const arrayOfWords = ['cucumber', 'tomatos', 'avocado'];
 const complicatedArray = ['cucumber', 44, true];
 
-// call both functions, chain them together and log the result to
+✅
+call both functions, chain them together and log the result to
 the console
 
-
-🟩
-✳️
-✅

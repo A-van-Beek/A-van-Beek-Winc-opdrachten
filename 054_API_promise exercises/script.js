@@ -26,7 +26,7 @@
 
 // vraagGroterDan10();
 
-// // Exercise 2
+// // ✅ Exercise 2
 
 const arrayOfWords = ["cucumber", "tomatos", "avocado"];
 const outputArray = [];

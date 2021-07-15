@@ -28,11 +28,13 @@
 
 // // Exercise 2
 
-const arrayOfWords = ["cucumber", 5, "tomatos", "avocado"];
+const arrayOfWords = ["cucumber", "tomatos", "avocado"];
 const outputArray = [];
 
 function step1() {
   arrayOfWords.forEach(makeAllCaps);
+  console.log(outputArray);
+  outputArray.sort();
   console.log(outputArray);
 }
 
@@ -50,5 +52,3 @@ function makeAllCaps(item) {
 }
 
 step1();
-
-// const sortWords = () => {}

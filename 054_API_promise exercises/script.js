@@ -52,3 +52,47 @@ function makeAllCaps(item) {
 }
 
 step1();
+
+// mijn oplossing is niet helemaal goed, ik heb geen promises gebruikt.
+// dit had het ongeveer moeten zijn:
+const makeAllCaps = (words) => {
+  return new Promise((resolve, reject) => {
+    if (
+      words.every((word) => {
+        return typeof word === "string";
+      })
+    ) {
+      resolve(
+        words.map((word) => {
+          return word.toUpperCase();
+        })
+      );
+    } else {
+      reject("Expected array of strings");
+    }
+  });
+};
+
+const sortWords = (words) => {
+  return new Promise((resolve, reject) => {
+    if (words) {
+      resolve(words.sort());
+    } else {
+      reject("Expected array of strings");
+    }
+  });
+};
+
+const arrayOfWords = ["cucumber", "tomato", "zucchini", "avocado", "orange"];
+const complicatedArray = ["cucumber", 44, true];
+
+// call both functions, chain them together and log the result to the console
+makeAllCaps(arrayOfWords)
+  .then((capitalizedWords) => sortWords(capitalizedWords))
+  .then((sortedWords) => console.log(sortedWords))
+  .catch((error) => console.log(error));
+
+makeAllCaps(complicatedArray)
+  .then((capitalizedWords) => sortWords(capitalizedWords))
+  .then((sortedWords) => console.log(sortedWords))
+  .catch((error) => console.log(error));

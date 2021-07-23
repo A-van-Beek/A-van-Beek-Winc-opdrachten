@@ -1,5 +1,6 @@
 const API_KEY = "cde09870aeadbfab23c4cd701f2bf88b";
 const taal = "nl";
+
 // getData
 async function getData(url) {
   const response = await fetch(url)

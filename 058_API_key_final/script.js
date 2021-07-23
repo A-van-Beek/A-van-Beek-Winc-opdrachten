@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// //
-// zoeken op zoektermen
-// niet hoofdletter gevoelig
+//
+// zoeken op zoektermen, is niet hoofdletter gevoelig
+//
 const keywordUrl =
   movieDB + "/search/movie?" + API_KEY_2 + taal_2 + "&query=Kangaroo+kid";
 
@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// // //
-// // zoeken op movie_id
-// //
+//
+// zoeken op movie_id
+//
 const movieIdUrl = movieDB + "/movie/578?" + API_KEY_2 + taal_2;
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// // //
-// // presenteer favoriet
-// //
+//
+// presenteer favoriet
+//
 const favorietUrl = movieDB + "/movie/577?" + API_KEY_2 + taal_2;
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// // //
-// // presenteer film via find vanuit andere database (in dit geval IMDb)
-// //
+//
+// presenteer film via find vanuit andere database (in dit geval IMDb)
+//
 const findUrl =
   movieDB +
   "/find/tt1230545?" +
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// //
+//
 // presenteer films op populariteit descending
 //
 
@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const popularList = document.getElementById("popular");
     const popular = await getData(popularUrl);
-    console.log(popular.results[0].original_title);
     popular.results.forEach((result) => {
       let newLi = document.createElement("li");
       newLi.innerHTML = `${result.original_title}`;
@@ -119,6 +118,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   } catch (err) {
     console.log("Error! (popularList)");
+    console.log(err);
+  }
+});
+
+//
+// presenteer films uit 1975
+//
+
+const yearUrl =
+  movieDB +
+  "/discover/movie?" +
+  API_KEY_2 +
+  taal_2 +
+  "&sort_by=popularity.desc" +
+  "&primary_release_year=1975" +
+  "&include_adult=false" +
+  "&include_video=false" +
+  "&page=1";
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const yearList = document.getElementById("year");
+    const year = await getData(yearUrl);
+    year.results.forEach((result) => {
+      let newLi = document.createElement("li");
+      newLi.innerHTML = `${result.original_title}, ${result.release_date}`;
+      yearList.append(newLi);
+    });
+  } catch (err) {
+    console.log("Error! (yearList)");
     console.log(err);
   }
 });

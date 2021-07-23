@@ -9,9 +9,7 @@ Hier een eigen ToDo-list
     - Je hebt nu geleerd hoe je 1 specifieke film kunt ophalen.
 ✅    Tenslotte, voeg een 1 <h1> toe aan je html en laat daar de titel
     van jouw favoriete film aller tijden zien.
-- Maak een nieuwe lijst met 10 Top Rated movies
-    - De context mag je zelf kiezen: aller tijden (standaard),
-    van de maand (extra params?), van 2019 (extra params?).
+✅- Maak een nieuwe lijst met 10 Top Rated movies
 - Maak een nieuwe lijst met de beste films (top rated) binnen het 
     genre action. Gebruik de Discover query.
 - Maak een nieuwe lijst met films uit het jaar 1975

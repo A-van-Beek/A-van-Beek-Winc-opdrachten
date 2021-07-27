@@ -4,8 +4,14 @@ Hier een eigen ToDo-list
 - totaal 4 punten behalen:
 
 
-- landenlijst - 1 punt
+✅- landenlijst - 1 punt
     sorteer op naam
+    - maak array met namen landen
+    - ontdubbel
+     - sorteer: landen.sort() of landen.reverse()
+            getallen sorteren:
+                const points = [40, 100, 1, 5, 25, 10];
+                points.sort(function(a, b){return a - b});
 - steenbokvrouwen - 3 punten:
     voor- & achternaam
     sorteer op voornaam
@@ -54,3 +60,41 @@ bepaal sterrenbeeld: https://wikikids.nl/Sterrenbeeld
 🟩
 ✳️
 ✅
+
+lijst landen: alfabetisch en ontdubbelt
+    Australia
+    Austria
+    Azerbaijan
+    Belgium
+    Bosnia and Herzegovina
+    Bulgaria
+    Canada
+    China
+    Colombia
+    England
+    France
+    Germany
+    Greece
+    Hungary
+    India
+    Iran
+    Israel
+    Italy
+    Japan
+    Korea
+    Kyrgyz Republic
+    Mexico
+    Nepal
+    Netherlands
+    New Zealand
+    Nigeria
+    Poland
+    Romania
+    Russia
+    Slovakia
+    Spain
+    Tunisia
+    Turkey
+    Ukraine
+    United States
+    Vietnam

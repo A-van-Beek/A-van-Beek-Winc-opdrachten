@@ -5,7 +5,7 @@ Hier een eigen ToDo-list
 
 
 ✅- landenlijst - 1 punt
-    sorteer op naam
+✅    sorteer op naam
     - maak array met namen landen
     - ontdubbel
      - sorteer: landen.sort() of landen.reverse()
@@ -13,9 +13,9 @@ Hier een eigen ToDo-list
                 const points = [40, 100, 1, 5, 25, 10];
                 points.sort(function(a, b){return a - b});
 - steenbokvrouwen - 3 punten:
-    voor- & achternaam
-    sorteer op voornaam
-    elke persoon
+✅    voor- & achternaam
+✅    sorteer op voornaam
+✅    elke persoon
         is vrouw
         is ouder dan 30 (1990 of ouder)
         is steenbok (jarig 22-12 t/m 19-01)
@@ -34,7 +34,7 @@ Hier een eigen ToDo-list
 - gemiddelde leeftijd - 5 punten:
     knoppen met land-namen
     bij indrukken verschijnt tekst: "De gemiddelde persoon in {land} is {jaar} oud".
-    Rond de gemiddelde leeftijd af naar hele cijfers ( 18.4999 → 18 en 18.5 → 19).
+    Rond de gemiddelde leeftijd af naar hele cijfers (18.4999 → 18 en 18.5 → 19).
 - matchmaking - 6 punten:
     lijst op voornaam gesorteerd
     alleen volwassenen

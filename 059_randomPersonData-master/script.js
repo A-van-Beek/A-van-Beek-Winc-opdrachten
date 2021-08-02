@@ -6,6 +6,8 @@ var uniqueRegion = [];
 landenlijst.addEventListener("click", createRegionList);
 
 function createRegionList() {
+  // reset lijsten
+  resetLists();
   // create list regions
   randomPersonData.forEach((person) => {
     regionList.push(person.region);
@@ -25,12 +27,14 @@ function createRegionList() {
   });
 }
 
-// // lijst steenbok-vrouwen
+// lijst steenbok-vrouwen
 var steenbokArray = [];
 
 steenbokvrouwen.addEventListener("click", createSteenbokVrouwen);
 
 function createSteenbokVrouwen() {
+  // reset lijsten
+  resetLists();
   randomPersonData.forEach((person) => {
     const myMonth = person.birthday.dmy.substring(3, 5); //beginpositie, eindpositie
     const myDay = person.birthday.dmy.substring(0, 2);
@@ -69,4 +73,9 @@ function getxingzuo(myMonth, myDay) {
   for (var i = arr.length - 1; i >= 0; i--) {
     if (d >= arr[i][1]) return arr[i][0];
   }
+}
+// reset info
+function resetLists() {
+  document.getElementById("landen").innerHTML = "";
+  document.getElementById("steenbokvrouw").innerHTML = "";
 }

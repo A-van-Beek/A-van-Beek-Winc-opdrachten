@@ -32,3 +32,11 @@ test("Get word lengths", function () {
   const output = functions.getWordLengths(words);
   expect(output).toEqual(expected);
 });
+
+test("Find the needle", function () {
+  const words = ["house", "train", "slide", "needle", "book"];
+  const expected = 3;
+
+  const output = functions.findNeedle(words, "needle");
+  expect(output).toEqual(expected);
+});

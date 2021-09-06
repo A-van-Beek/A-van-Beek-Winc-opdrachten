@@ -1,17 +1,39 @@
 // Utility functions
-const isNotNull = (str) => str;
+const isNotNull = (str) => {
+  return str != null;
+};
 
-const hasRightLength = (str) => str;
+const hasRightLength = (str) => {
+  if (str.length <= 9) {
+    // console.log("korter dan 9");
+    return true;
+  } else {
+    // console.log("langer dan 9");
+    return false;
+  }
+};
 
-const hasUpperCaseCharacter = (str) => str;
+const hasUpperCaseCharacter = (str) => {
+  console.log(str.toLowerCase());
+  console.log(str !== str.toLowerCase());
+  return str !== str.toLowerCase();
+};
 
-const hasLowerCaseCharacter = (str) => str;
+const hasLowerCaseCharacter = (str) => {
+  // console.log(str.toUpperCase());
+  // console.log(str !== str.toUpperCase());
+  return str !== str.toUpperCase();
+};
 
-const hasDigit = (str) => str;
+const hasDigit = (str) => {
+  return /\d/.test(str);
+};
 
 const minimumConditionsReached = (conditions) => {
   // conditions is an array of booleans
   trueConditions = conditions.filter((bool) => bool);
+  // console.log(trueConditions);
+  // console.log(trueConditions.length >= 3);
   return trueConditions.length >= 3;
 };
 
@@ -26,11 +48,18 @@ const verifyPassword = (password) => {
   ];
   const result =
     minimumConditionsReached(conditions) && hasLowerCaseCharacter(password);
-
+  // console.log(conditions);
+  // console.log(result);
   return result;
 };
 
-module.exports = {
+// test functie (AvB)
+const testFunction = () => {
+  // console.log("testing");
+  return "testing";
+};
+
+functions = {
   verifyPassword,
   hasRightLength,
   isNotNull,
@@ -38,4 +67,7 @@ module.exports = {
   hasLowerCaseCharacter,
   hasDigit,
   minimumConditionsReached,
+  testFunction,
 };
+
+module.exports = functions;

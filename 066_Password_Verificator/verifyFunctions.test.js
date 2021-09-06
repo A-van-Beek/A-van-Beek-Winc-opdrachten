@@ -8,7 +8,7 @@ test("Admin should be in usernames", () => {
 
 // vanaf hier de opdracht:
 //koppeling met script-file
-const functions = require("./script");
+const functions = require("./verifyFunctions");
 
 // kleine test voor de koppeling
 test("Console.log is testing", () => {

@@ -14,8 +14,8 @@ const hasRightLength = (str) => {
 };
 
 const hasUpperCaseCharacter = (str) => {
-  console.log(str.toLowerCase());
-  console.log(str !== str.toLowerCase());
+  // console.log(str.toLowerCase());
+  // console.log(str !== str.toLowerCase());
   return str !== str.toLowerCase();
 };
 
@@ -49,7 +49,7 @@ const verifyPassword = (password) => {
   const result =
     minimumConditionsReached(conditions) && hasLowerCaseCharacter(password);
   // console.log(conditions);
-  // console.log(result);
+  console.log(`conclusie eindcontrole: ${result}`);
   return result;
 };
 

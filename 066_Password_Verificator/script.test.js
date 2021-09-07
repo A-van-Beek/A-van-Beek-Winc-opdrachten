@@ -1,12 +1,7 @@
-// een werkend test-script om de jest te testen.
-test("Joep should be in usernames", () => {
-  usernames = ["john", "joep", "admin"];
-  expect(usernames).toContain("joep");
-});
-
+//koppeling met script-file
 const functionsScript = require("./script");
 
 // kleine test voor de koppeling
-test("Script-file is testing", () => {
-  expect(functionsScript.testScriptFunction()).toBe("testing script-file");
+test("Console.log vanuit script.js is testing", () => {
+  expect(functionsScript.testFunctionScript()).toBe("testing");
 });

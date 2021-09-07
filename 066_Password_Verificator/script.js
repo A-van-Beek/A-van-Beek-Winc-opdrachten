@@ -15,13 +15,14 @@ function checkPassword() {
 }
 
 // test functie (AvB)
-const testScriptFunction = () => {
-  return "testing script-file";
+const testFunctionScript = () => {
+  // console.log("testing");
+  return "testing";
 };
 
 functionsScript = {
   checkPassword,
-  testScriptFunction,
+  testFunctionScript,
 };
 
 module.exports = functionsScript;

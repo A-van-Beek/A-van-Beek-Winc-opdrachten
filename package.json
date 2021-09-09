@@ -1,0 +1,23 @@
+{
+  "name": "a-van-beek-winc-opdrachten",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-van-Beek/A-van-Beek-Winc-opdrachten.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-van-Beek/A-van-Beek-Winc-opdrachten/issues"
+  },
+  "homepage": "https://github.com/A-van-Beek/A-van-Beek-Winc-opdrachten#readme",
+  "devDependencies": {
+    "jest": "^27.1.1"
+  }
+}

@@ -1,7 +1,7 @@
 //koppeling met script-file
-const functionsScript = require("./script");
+const functionsScript = require("./functionsGeneral");
 
 // kleine test voor de koppeling
-test("Console.log vanuit script.js is testing", () => {
+test("Console.log vanuit functionsGeneral.js is testing", () => {
   expect(functionsScript.testFunctionScript()).toBe("testing");
 });

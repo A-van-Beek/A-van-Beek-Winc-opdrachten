@@ -1,28 +1,12 @@
-console.log("welkom bij console log");
+// console.log("welkom bij het script");
 
-document.getElementById("submit").addEventListener("click", checkPassword);
+document.getElementById("submit").addEventListener("click", inputPassword);
 
-function checkPassword() {
-  console.log("deleting input");
-  console.log("checking password");
-  const requestedPassword = (document.getElementById("password").value = "");
-  const checkedPassword = verifyPassword(requestedPassword);
-  if (checkedPassword === true) {
-    alert(`Password: ${requestedPassword} is oké`);
-  } else {
-    alert(`Password: ${requestedPassword} is not correct`);
-  }
+function inputPassword() {
+  const requestedPassword = document.getElementById("password").value;
+  //   console.log(requestedPassword);
+  checkPassword(requestedPassword);
+  //   console.log("deleting input");
+  document.getElementById("password").value = "";
+  //   console.log(`Na delete: ${document.getElementById("password").value}`);
 }
-
-// test functie (AvB)
-const testFunctionScript = () => {
-  // console.log("testing");
-  return "testing";
-};
-
-functionsScript = {
-  checkPassword,
-  testFunctionScript,
-};
-
-module.exports = functionsScript;

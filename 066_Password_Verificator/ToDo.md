@@ -22,10 +22,11 @@ voor het totaal
 ✅ schrijf de algemene functie, let op combinaties en zorg ervoor dat de tests passen
 
 uitvragen gewenste wachtwoord
-🟩 maak invoerveld in HTML
-🟩 voeg listener toe
-🟩 schrijf test voor input-functie
-🟩 schrijf input-functie
+✅ maak invoerveld in HTML
+✅ voeg listener toe
+🟩 schrijf test voor input-functie,
+_*kan niet, testen met DOM-invoer niet mogelijk*_
+✅ schrijf input-functie
 
 _Refactor code_
 🟩 verbeter tijdelijke namen van variabelen

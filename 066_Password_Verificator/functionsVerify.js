@@ -5,7 +5,7 @@ const isNotNull = (requestedPassword) => {
 
 const hasRightLength = (requestedPassword) => {
   if (requestedPassword.length <= 9) {
-    console.log(requestedPassword);
+    // console.log(requestedPassword);
     // console.log("korter dan 9");
     return true;
   } else {
@@ -51,7 +51,7 @@ const verifyPassword = (requestedPassword) => {
     minimumConditionsReached(conditions) &&
     hasLowerCaseCharacter(requestedPassword);
   // console.log(conditions);
-  console.log(`conclusie eindcontrole: ${result}`);
+  // console.log(`conclusie eindcontrole: ${result}`);
   return result;
 };
 
@@ -72,4 +72,4 @@ functions = {
   testFunction,
 };
 
-module.exports = functions;
+// module.exports = functions;

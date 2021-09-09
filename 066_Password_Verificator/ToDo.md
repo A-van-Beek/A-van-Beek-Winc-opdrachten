@@ -25,13 +25,13 @@ uitvragen gewenste wachtwoord
 ✅ maak invoerveld in HTML
 ✅ voeg listener toe
 🟩 schrijf test voor input-functie,
-_*kan niet, testen met DOM-invoer niet mogelijk*_
+_**kan niet, testen met DOM-invoer niet mogelijk**_
 ✅ schrijf input-functie
 
 _Refactor code_
-🟩 verbeter tijdelijke namen van variabelen
-🟩 schoon code op
-🟩 voeg relevante commentaarregels toe
-🟩 vink to-do-list af
+✅ verbeter tijdelijke namen van variabelen
+✅ schoon code op
+✅ voeg relevante commentaarregels toe
+✅ vink to-do-list af
 
 _test-wachtwoorden:_ - henkie1 - 1234a - z - henkie1234 - HENKhenk - Henk33$ - 1234 - ' ' (leeg)

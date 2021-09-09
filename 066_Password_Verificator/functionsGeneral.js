@@ -1,7 +1,5 @@
-console.log("welkom bij de algemene functies");
-
 function checkPassword(requestedPassword) {
-  console.log("checking password");
+  // console.log("checking password");
   const checkedPassword = verifyPassword(requestedPassword);
   if (checkedPassword === true) {
     alert(`Password: ${requestedPassword} is goedgekeurd`);
@@ -12,7 +10,6 @@ function checkPassword(requestedPassword) {
 
 // test functie (AvB)
 const testFunctionScript = () => {
-  // console.log("testing");
   return "testing";
 };
 
@@ -21,4 +18,4 @@ functionsScript = {
   testFunctionScript,
 };
 
-module.exports = functionsScript;
+// module.exports = functionsScript;

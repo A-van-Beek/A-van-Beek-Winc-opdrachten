@@ -4,25 +4,22 @@ const testFunctionScript = () => {
   return "testing";
 };
 
-const corn = {
-  name: "corn",
-  yield: 30,
-};
-
-const pumpkin = {
-  name: "pumpkin",
-  yield: 4,
-};
-
 // Get yield for plant with no environment factors
 const getYieldForPlant = (crop) => {
-  console.log(crop.yield);
+  console.log(`The yield of a single plant of corn is ${crop.yield}`);
   return crop.yield;
+};
+
+// Get yield for crop, simple
+const getYieldForCrop = (input) => {
+  const harvest = input.crop.yield * input.numCrops;
+  console.log(`The yield of a field of ${input.crop.name} is ${harvest}`);
+  return harvest;
 };
 
 module.exports = {
   testFunctionScript,
   getYieldForPlant,
-  // getYieldForCrop,
+  getYieldForCrop,
   // getTotalYield,
 };

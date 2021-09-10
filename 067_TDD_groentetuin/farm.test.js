@@ -16,29 +16,29 @@ describe("getYieldForPlant", () => {
     name: "corn",
     yield: 30,
   };
-  const pumpkin = {
-    name: "pumpkin",
-    yield: 4,
-  };
+  // const pumpkin = {
+  //   name: "pumpkin",
+  //   yield: 4,
+  // };
 
   test("Get yield for plant with no environment factors", () => {
     expect(getYieldForPlant(corn)).toBe(30);
   });
 });
 
-// describe("getYieldForCrop", () => {
-//   test("Get yield for crop, simple", () => {
-//     const corn = {
-//       name: "corn",
-//       yield: 3,
-//     };
-//     const input = {
-//       crop: corn,
-//       numCrops: 10,
-//     };
-//     expect(getYieldForCrop(input)).toBe(30);
-//   });
-// });
+describe("getYieldForCrop", () => {
+  test("Get yield for crop, simple", () => {
+    const corn = {
+      name: "corn",
+      yield: 3,
+    };
+    const input = {
+      crop: corn,
+      numCrops: 10,
+    };
+    expect(getYieldForCrop(input)).toBe(30);
+  });
+});
 
 // describe("getTotalYield", () => {
 //   test("Calculate total yield with multiple crops", () => {

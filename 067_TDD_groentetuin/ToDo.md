@@ -1,4 +1,4 @@
-**Hier een eigen ToDo-list**
+**Hier een ToDo-list**
 🟩 ✳️ ✅
 
 _definities_
@@ -15,14 +15,18 @@ _definities_
 _voorbereiding_
 ✅ opbouw basis files
 ✅ create ToDo's
-🟩 stage & commit changes in githup
+✅ stage & commit changes in githup
 ✅ installatie jest-files
 ✅ create script.test.js file
 ✅ test-run standaard testje
 ✅ stage & commit changes in githup
 
 _codering_
-🟩 .....
+🟩 bereken kosten voor een crop: getCostsForCrop
+🟩 bereken inkomsten voor crop zonder omgevingsfactoren: getRevenueForCrop
+🟩 bereken winst voor crop zonder omgevingsfactoren: getProfitForCrop
+🟩 bereken winst voor meerdere crops zonder omgevingsfactoren: getTotalProfit
+🟩 implementeer omgevingsafhankelijken in de functies (aanpassen ipv nieuw!): zie Winc pagina
 
 _Refactor code_
 🟩 verbeter tijdelijke namen van variabelen

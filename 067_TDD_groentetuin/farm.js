@@ -1,10 +1,12 @@
 // test functie (AvB)
 const testFunctionScript = () => {
+  console.log("testing");
   return "testing";
 };
 
-functionsScript = {
+module.exports = {
   testFunctionScript,
+  // getYieldForPlant,
+  // getYieldForCrop,
+  // getTotalYield,
 };
-
-module.exports = functionsScript;

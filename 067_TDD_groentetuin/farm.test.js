@@ -1,12 +1,15 @@
-const functionsScript = require("./farm");
+const farmFunctions = ({
+  testFunctionScript,
+  getYieldForPlant,
+  getYieldForCrop,
+  getTotalYield,
+} = require("./farm"));
+// tests from Winc, do NOT change !
 
 // kleine test voor de koppeling
-test("Console.log vanuit functionsGeneral.js is testing", () => {
-  expect(functionsScript.testFunctionScript()).toBe("testing");
+test("Console.log vanuit farm.js is testing", () => {
+  expect(farmFunctions.testFunctionScript()).toBe("testing");
 });
-
-// const { getYieldForPlant, getYieldForCrop, getTotalYield } = require("./farm");
-// // tests from Winc, do NOT change !
 
 // describe("getYieldForPlant", () => {
 //   const corn = {

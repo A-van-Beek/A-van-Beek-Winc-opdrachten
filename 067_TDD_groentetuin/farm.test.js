@@ -16,6 +16,10 @@ describe("getYieldForPlant", () => {
     name: "corn",
     yield: 30,
   };
+  const pumpkin = {
+    name: "pumpkin",
+    yield: 4,
+  };
 
   test("Get yield for plant with no environment factors", () => {
     expect(getYieldForPlant(corn)).toBe(30);

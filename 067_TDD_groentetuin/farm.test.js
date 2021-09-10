@@ -11,16 +11,16 @@ test("Console.log vanuit farm.js is testing", () => {
   expect(farmFunctions.testFunctionScript()).toBe("testing");
 });
 
-// describe("getYieldForPlant", () => {
-//   const corn = {
-//     name: "corn",
-//     yield: 30,
-//   };
+describe("getYieldForPlant", () => {
+  const corn = {
+    name: "corn",
+    yield: 30,
+  };
 
-//   test("Get yield for plant with no environment factors", () => {
-//     expect(getYieldForPlant(corn)).toBe(30);
-//   });
-// });
+  test("Get yield for plant with no environment factors", () => {
+    expect(getYieldForPlant(corn)).toBe(30);
+  });
+});
 
 // describe("getYieldForCrop", () => {
 //   test("Get yield for crop, simple", () => {

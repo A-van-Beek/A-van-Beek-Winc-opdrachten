@@ -1,4 +1,2 @@
 // hier het script
-console.log("Hallo");
-
-testFunctionScript();
+console.log("Welkom bij de console.log");

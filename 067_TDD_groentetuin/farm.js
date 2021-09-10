@@ -4,9 +4,19 @@ const testFunctionScript = () => {
   return "testing";
 };
 
+const corn = {
+  name: "corn",
+  yield: 30,
+};
+
+// Get yield for plant with no environment factors
+const getYieldForPlant = (corn) => {
+  return corn.yield;
+};
+
 module.exports = {
   testFunctionScript,
-  // getYieldForPlant,
+  getYieldForPlant,
   // getYieldForCrop,
   // getTotalYield,
 };

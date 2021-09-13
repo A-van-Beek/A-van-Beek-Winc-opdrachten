@@ -13,13 +13,23 @@ const getYieldForPlant = (crop) => {
 // Get yield for crop, simple
 const getYieldForCrop = (input) => {
   const harvest = input.crop.yield * input.numCrops;
-  console.log(`The yield of a field of ${input.crop.name} is ${harvest}`);
+  console.log(`The harvest of a field of ${input.crop.name} is ${harvest}`);
   return harvest;
+};
+
+// Calculate total yield with multiple crops
+const getTotalYield = (crops) => {
+  totalHarvest = 0;
+  crops.forEach((crop) => {
+    totalHarvest += crop.crop.yield * crop.numCrops;
+  });
+  console.log(`The yield of all crops is ${totalHarvest}`);
+  return totalHarvest;
 };
 
 module.exports = {
   testFunctionScript,
   getYieldForPlant,
   getYieldForCrop,
-  // getTotalYield,
+  getTotalYield,
 };

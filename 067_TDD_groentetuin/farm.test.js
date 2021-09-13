@@ -16,10 +16,10 @@ describe("getYieldForPlant", () => {
     name: "corn",
     yield: 30,
   };
-  // const pumpkin = {
-  //   name: "pumpkin",
-  //   yield: 4,
-  // };
+  const pumpkin = {
+    name: "pumpkin",
+    yield: 4,
+  };
 
   test("Get yield for plant with no environment factors", () => {
     expect(getYieldForPlant(corn)).toBe(30);
@@ -40,22 +40,23 @@ describe("getYieldForCrop", () => {
   });
 });
 
-// describe("getTotalYield", () => {
-//   test("Calculate total yield with multiple crops", () => {
-//     const corn = {
-//       name: "corn",
-//       yield: 3,
-//     };
-//     const pumpkin = {
-//       name: "pumpkin",
-//       yield: 4,
-//     };
-//     const crops = [
-//       { crop: corn, numCrops: 5 },
-//       { crop: pumpkin, numCrops: 2 },
-//     ];
-//     expect(getTotalYield({ crops })).toBe(23);
-//   });
+describe("getTotalYield", () => {
+  test("Calculate total yield with multiple crops", () => {
+    const corn = {
+      name: "corn",
+      yield: 3,
+    };
+    const pumpkin = {
+      name: "pumpkin",
+      yield: 4,
+    };
+    const crops = [
+      { crop: corn, numCrops: 5 },
+      { crop: pumpkin, numCrops: 2 },
+    ];
+    expect(getTotalYield({ crops })).toBe(23);
+  });
+});
 
 //   test("Calculate total yield with 0 amount", () => {
 //     const corn = {

@@ -21,7 +21,10 @@ const getYieldForCrop = (input) => {
 const getTotalYield = (crops) => {
   totalHarvest = 0;
   crops.forEach((crop) => {
-    totalHarvest += crop.crop.yield * crop.numCrops;
+    console.log(crop.crop.name);
+    if (crop.numCrops != 0) {
+      totalHarvest += crop.crop.yield * crop.numCrops;
+    }
   });
   console.log(`The yield of all crops is ${totalHarvest}`);
   return totalHarvest;

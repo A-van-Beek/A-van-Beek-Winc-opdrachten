@@ -11,9 +11,15 @@ const pumpkin = {
   yield: 4,
 };
 
+const lettuce = {
+  name: "lettuce",
+  yield: 2,
+};
+
 const crops = [
   { crop: corn, numCrops: 5 },
   { crop: pumpkin, numCrops: 2 },
+  { crop: lettuce, numCrops: 0 },
 ];
 
 const input = {

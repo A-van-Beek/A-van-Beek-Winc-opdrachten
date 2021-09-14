@@ -96,12 +96,19 @@ describe("getCostsForCrop", () => {
     ];
     expect(getCostsForCrop(crops)).toBe(7);
   });
-  // test("Calculate total costs with 0 amount", () => {
-  //   const corn = {
-  //     name: "corn",
-  //     yield: 3,
-  //   };
-  //   const crops = [{ crop: corn, numCrops: 0 }];
-  //   expect(getCostsForCrop({ crops })).toBe(0);
-  // });
+  test("Calculate total costs with 0 amount", () => {
+    const corn = {
+      name: "corn",
+      yield: 3,
+    };
+    const pumpkin = {
+      name: "pumpkin",
+      yield: 4,
+    };
+    const crops = [
+      { crop: corn, numCrops: 5 },
+      { crop: pumpkin, numCrops: 0 },
+    ];
+    expect(getCostsForCrop(crops)).toBe(5);
+  });
 });

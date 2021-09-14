@@ -23,9 +23,9 @@ _voorbereiding_
 
 _codering_
 ✅ getCostsForCrop
-🟩 getRevenueForCrop
-🟩 getProfitForCrop
-🟩 getTotalProfit
+✅ getRevenueForCrop
+✅ getProfitForCrop
+✅ getTotalProfit
 🟩 implementeer omgevingsafhankelijken in de functies (aanpassen ipv nieuw!): zie Winc pagina
 
 _Refactor code_

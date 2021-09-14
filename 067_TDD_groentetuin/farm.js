@@ -59,7 +59,7 @@ const getProfitForCrop = (crops) => {
   return totalProfit;
 };
 
-module.exports = {
+const farmFunctions = {
   testFunctionScript,
   getYieldForPlant,
   getYieldForCrop,
@@ -68,3 +68,5 @@ module.exports = {
   getRevenueForCrop,
   getProfitForCrop,
 };
+
+module.exports = farmFunctions;

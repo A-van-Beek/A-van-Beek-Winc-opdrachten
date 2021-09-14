@@ -58,8 +58,14 @@ const getRevenueForCrop = (crops) => {
       totalRevenue += crops.numCrops * crops.crop.salePrice;
     }
   });
-  console.log(`The revenue of the crops is ${totalRevenue}`);
+  // console.log(`The revenue of the crops is ${totalRevenue}`);
   return totalRevenue;
+};
+
+const getProfitForCrop = (crops) => {
+  totalProfit = getRevenueForCrop(crops) - getCostsForCrop(crops);
+  console.log(`The revenue of the crops is ${totalProfit}`);
+  return totalProfit;
 };
 
 module.exports = {
@@ -69,4 +75,5 @@ module.exports = {
   getTotalYield,
   getCostsForCrop,
   getRevenueForCrop,
+  getProfitForCrop,
 };

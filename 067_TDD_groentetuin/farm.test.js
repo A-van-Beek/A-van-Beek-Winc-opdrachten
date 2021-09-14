@@ -5,6 +5,7 @@ const farmFunctions = ({
   getTotalYield,
   getCostsForCrop,
   getRevenueForCrop,
+  getProfitForCrop,
 } = require("./farm"));
 // tests from Winc, do NOT change !
 
@@ -157,5 +158,57 @@ describe("getRevenueForCrop", () => {
       { crop: pumpkin, numCrops: 0 },
     ];
     expect(getRevenueForCrop(crops)).toBe(10);
+  });
+});
+
+describe("getProfitForCrop", () => {
+  test("Calculate profit per single crop", () => {
+    const corn = {
+      name: "corn",
+      yield: 3,
+      salePrice: 2,
+    };
+    const crops = [{ crop: corn, numCrops: 5 }];
+    expect(getProfitForCrop(crops)).toBe(5);
+  });
+  test("Calculate profit multiple crops", () => {
+    const corn = {
+      name: "corn",
+      yield: 3,
+      salePrice: 2,
+    };
+    const pumpkin = {
+      name: "pumpkin",
+      yield: 4,
+      salePrice: 3,
+    };
+    const crops = [
+      { crop: corn, numCrops: 2 },
+      { crop: pumpkin, numCrops: 5 },
+    ];
+    expect(getProfitForCrop(crops)).toBe(12);
+  });
+  test("Calculate profits with 0 amount crop", () => {
+    const corn = {
+      name: "corn",
+      yield: 3,
+      salePrice: 2,
+    };
+    const pumpkin = {
+      name: "pumpkin",
+      yield: 4,
+      salePrice: 3,
+    };
+    const lettuce = {
+      name: "lettuce",
+      yield: 2,
+      salePrice: 4,
+    };
+    const crops = [
+      { crop: corn, numCrops: 2 },
+      { crop: pumpkin, numCrops: 5 },
+      { crop: lettuce, numCrops: 0 },
+    ];
+    expect(getProfitForCrop(crops)).toBe(12);
   });
 });

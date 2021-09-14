@@ -1,5 +1,3 @@
-// const { getCostsForCrop } = require("./farm");
-
 // hier het script
 console.log("Welkom bij de console.log");
 
@@ -24,7 +22,7 @@ const lettuce = {
 const crops = [
   { crop: corn, numCrops: 2 },
   { crop: pumpkin, numCrops: 5 },
-  // { crop: lettuce, numCrops: 0 },
+  { crop: lettuce, numCrops: 0 },
 ];
 
 const input = {
@@ -36,4 +34,5 @@ const input = {
 // getYieldForCrop(input);
 // getTotalYield(crops);
 // getCostsForCrop(crops);
-getRevenueForCrop(crops);
+// getRevenueForCrop(crops);
+getProfitForCrop(crops);

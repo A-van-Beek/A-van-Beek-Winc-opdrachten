@@ -21,7 +21,7 @@ const getYieldForCrop = (input) => {
 const getTotalYield = (crops) => {
   totalHarvest = 0;
   crops.forEach((crop) => {
-    console.log(crop.crop.name);
+    // console.log(crop.crop.name);
     if (crop.numCrops != 0) {
       totalHarvest += crop.crop.yield * crop.numCrops;
     }
@@ -30,9 +30,21 @@ const getTotalYield = (crops) => {
   return totalHarvest;
 };
 
+// calculate cost per crop
+const getCostsForCrop = (crops) => {
+  // const totalCosts = 0;
+  // console.log(crops);
+  // console.log(crops.crop.name);
+  // console.log(crops.numCrops);
+  totalCosts = crops.numCrops * 1;
+  console.log(`The cost of the crop is ${totalCosts}`);
+  return totalCosts;
+};
+
 module.exports = {
   testFunctionScript,
   getYieldForPlant,
   getYieldForCrop,
   getTotalYield,
+  getCostsForCrop,
 };

@@ -22,10 +22,10 @@ _voorbereiding_
 ✅ stage & commit changes in githup
 
 _codering_
-🟩 bereken kosten voor een crop: getCostsForCrop
-🟩 bereken inkomsten voor crop zonder omgevingsfactoren: getRevenueForCrop
-🟩 bereken winst voor crop zonder omgevingsfactoren: getProfitForCrop
-🟩 bereken winst voor meerdere crops zonder omgevingsfactoren: getTotalProfit
+🟩 getCostsForCrop
+🟩 getRevenueForCrop
+🟩 getProfitForCrop
+🟩 getTotalProfit
 🟩 implementeer omgevingsafhankelijken in de functies (aanpassen ipv nieuw!): zie Winc pagina
 
 _Refactor code_

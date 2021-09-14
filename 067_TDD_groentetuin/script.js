@@ -23,7 +23,7 @@ const lettuce = {
 
 const crops = [
   { crop: corn, numCrops: 2 },
-  // { crop: pumpkin, numCrops: 5 },
+  { crop: pumpkin, numCrops: 5 },
   // { crop: lettuce, numCrops: 0 },
 ];
 

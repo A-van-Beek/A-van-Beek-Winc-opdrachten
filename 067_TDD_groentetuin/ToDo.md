@@ -22,7 +22,7 @@ _voorbereiding_
 ✅ stage & commit changes in githup
 
 _codering_
-🟩 getCostsForCrop
+✅ getCostsForCrop
 🟩 getRevenueForCrop
 🟩 getProfitForCrop
 🟩 getTotalProfit

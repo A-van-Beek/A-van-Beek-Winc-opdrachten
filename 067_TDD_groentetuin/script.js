@@ -20,8 +20,8 @@ const lettuce = {
 
 const crops = [
   { crop: corn, numCrops: 2 },
-  { crop: pumpkin, numCrops: 2 },
-  { crop: lettuce, numCrops: 0 },
+  { crop: pumpkin, numCrops: 5 },
+  // { crop: lettuce, numCrops: 0 },
 ];
 
 const input = {
@@ -32,4 +32,4 @@ const input = {
 // getYieldForPlant(corn);
 // getYieldForCrop(input);
 // getTotalYield(crops);
-getCostsForCrop({ crop: corn, numCrops: 8 });
+getCostsForCrop(crops);

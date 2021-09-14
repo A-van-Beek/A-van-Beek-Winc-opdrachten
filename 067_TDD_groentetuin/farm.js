@@ -51,14 +51,14 @@ const getCostsForCrop = (crops) => {
 const getRevenueForCrop = (crops) => {
   totalRevenue = 0;
   crops.forEach((crops) => {
-    console.log(crops.crop.name);
-    console.log(crops.numCrops);
-    console.log(crops.crop.salePrice);
+    // console.log(crops.crop.name);
+    // console.log(crops.numCrops);
+    // console.log(crops.crop.salePrice);
     if (crops.numCrops != 0) {
       totalRevenue += crops.numCrops * crops.crop.salePrice;
     }
   });
-  console.log(`The revenue of the single crop is ${totalRevenue}`);
+  console.log(`The revenue of the crops is ${totalRevenue}`);
   return totalRevenue;
 };
 

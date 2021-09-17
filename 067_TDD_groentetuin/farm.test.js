@@ -63,66 +63,82 @@ describe("getTotalYield", () => {
   });
 });
 
-// describe("getCostsForCrop", () => {
-//   test("Calculate cost per crop", () => {
-//     const crops = [{ crop: vegetables.corn, numCrops: 5 }];
-//     expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
-//   });
-//   test("Calculate cost multiple crops", () => {
-//     const crops = [
-//       { crop: vegetables.corn, numCrops: 5 },
-//       { crop: vegetables.pumpkin, numCrops: 2 },
-//     ];
-//     expect(farmFunctions.getCostsForCrop(crops)).toBe(7);
-//   });
-//   test("Calculate total costs with 0 amount", () => {
-//     const crops = [
-//       { crop: vegetables.corn, numCrops: 5 },
-//       { crop: vegetables.pumpkin, numCrops: 0 },
-//     ];
-//     expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
-//   });
-// });
+describe("getCostsForCrop", () => {
+  test("Calculate cost per crop", () => {
+    const crops = [{ crop: vegetables.corn, numCrops: 5 }];
+    expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
+  });
+  test("Calculate cost multiple crops", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 5 },
+      { crop: vegetables.pumpkin, numCrops: 2 },
+    ];
+    expect(farmFunctions.getCostsForCrop(crops)).toBe(7);
+  });
+  test("Calculate total costs with 0 amount", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 5 },
+      { crop: vegetables.pumpkin, numCrops: 0 },
+    ];
+    expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
+  });
+});
 
-// describe("getRevenueForCrop", () => {
-//   test("Calculate revenue per single crop", () => {
-//     const crops = [{ crop: vegetables.corn, numCrops: 5 }];
-//     expect(farmFunctions.getRevenueForCrop(crops)).toBe(10);
-//   });
-//   test("Calculate revenue multiple crops", () => {
-//     const crops = [
-//       { crop: vegetables.corn, numCrops: 5 },
-//       { crop: vegetables.pumpkin, numCrops: 2 },
-//     ];
-//     expect(farmFunctions.getRevenueForCrop(crops)).toBe(16);
-//   });
-//   test("Calculate revenue with 0 amount crop", () => {
-//     const crops = [
-//       { crop: vegetables.corn, numCrops: 5 },
-//       { crop: vegetables.pumpkin, numCrops: 0 },
-//     ];
-//     expect(farmFunctions.getRevenueForCrop(crops)).toBe(10);
-//   });
-// });
+describe("getRevenueForCrop", () => {
+  //to recieve by selling
+  test("Calculate revenue per single crop", () => {
+    const crops = [{ crop: vegetables.corn, numCrops: 5 }];
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(30);
+  });
+  test("Calculate revenue multiple crops", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 5 }, // 30
+      { crop: vegetables.pumpkin, numCrops: 2 }, // 24
+    ];
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(54);
+  });
+  test("Calculate revenue with 0 amount crop", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 5 }, // 30
+      { crop: vegetables.pumpkin, numCrops: 0 }, // 0
+    ];
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(30);
+  });
+  test("Calculate revenue with crop and 1 environmental factor", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 6, sun: "low" }, //18
+      { crop: vegetables.pumpkin, numCrops: 0 }, //0
+    ];
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(18);
+  });
+});
 
-// describe("getProfitForCrop", () => {
-//   test("Calculate profit per single crop", () => {
-//     const crops = [{ crop: vegetables.corn, numCrops: 5 }];
-//     expect(farmFunctions.getProfitForCrop(crops)).toBe(5);
-//   });
-//   test("Calculate profit multiple crops", () => {
-//     const crops = [
-//       { crop: vegetables.corn, numCrops: 2 },
-//       { crop: vegetables.pumpkin, numCrops: 5 },
-//     ];
-//     expect(farmFunctions.getProfitForCrop(crops)).toBe(12);
-//   });
-//   test("Calculate profits with 0 amount crop", () => {
-//     const crops = [
-//       { crop: vegetables.corn, numCrops: 2 },
-//       { crop: vegetables.pumpkin, numCrops: 5 },
-//       { crop: vegetables.lettuce, numCrops: 0 },
-//     ];
-//     expect(farmFunctions.getProfitForCrop(crops)).toBe(12);
-//   });
-// });
+describe("getProfitForCrop", () => {
+  test("Calculate profit per single crop", () => {
+    const crops = [{ crop: vegetables.corn, numCrops: 5 }]; //30-5 = 25
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(25);
+  });
+  test("Calculate profit multiple crops", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 2 }, //10
+      { crop: vegetables.pumpkin, numCrops: 5 }, //60-5=55
+    ];
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(65);
+  });
+  test("Calculate profits with 0 amount crop", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 2 }, //10
+      { crop: vegetables.pumpkin, numCrops: 5 }, //55
+      { crop: vegetables.lettuce, numCrops: 0 }, //0
+    ];
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(65);
+  });
+  test("Calculate profits with environmental factors", () => {
+    const crops = [
+      { crop: vegetables.corn, numCrops: 2, sun: "high" }, //18-2=16
+      { crop: vegetables.pumpkin, numCrops: 5 }, //55
+      { crop: vegetables.lettuce, numCrops: 0 }, //0
+    ];
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(71);
+  });
+});

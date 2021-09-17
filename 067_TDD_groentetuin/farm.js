@@ -68,10 +68,10 @@ const getCostsForCrop = (crops) => {
 // calculate revenue single crop
 const getRevenueForCrop = (crops) => {
   totalRevenue = 0;
-  crops.forEach((crops) => {
-    if (crops.numCrops != 0) {
-      totalRevenue += crops.numCrops * crops.crop.salePrice;
-    }
+  crops.forEach((crop) => {
+    salePriceCrop = crop.crop.salePrice;
+    harvest = getYieldForCrop(crop);
+    totalRevenue += harvest * salePriceCrop;
   });
   console.log(`The revenue of the crops is ${totalRevenue}`);
   return totalRevenue;

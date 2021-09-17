@@ -2,19 +2,15 @@
 console.log("Welkom bij de console.log");
 
 const crops = [
-  { crop: vegetables.corn, numCrops: 2 },
-  { crop: vegetables.pumpkin, numCrops: 5 },
-  { crop: vegetables.lettuce, numCrops: 0 },
+  { crop: vegetables.corn, numCrops: 5, sun: "high" },
+  { crop: vegetables.pumpkin, numCrops: 2 },
 ];
 
-const input = {
-  crop: vegetables.corn,
-  numCrops: 10,
-};
+const input = { crop: vegetables.corn, numCrops: 5, sun: "high" };
 
 // getYieldForPlant(corn);
 // getYieldForCrop(input);
-// getTotalYield(crops);
+getTotalYield(crops);
 // getCostsForCrop(crops);
-getRevenueForCrop(crops);
+// getRevenueForCrop(crops);
 // getProfitForCrop(crops);

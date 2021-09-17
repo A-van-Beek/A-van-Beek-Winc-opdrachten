@@ -6,15 +6,39 @@ const testFunctionScript = () => {
 
 // Get yield for plant with no environment factors
 const getYieldForPlant = (crop) => {
-  console.log(`The yield of a single plant of corn is ${crop.yield}`);
+  // console.log(`The yield of a single plant of corn is ${crop.yield}`);
   return crop.yield;
 };
 
-// Get yield for crop, simple
-const getYieldForCrop = (input) => {
-  const harvest = input.crop.yield * input.numCrops;
-  console.log(`The harvest of a field of ${input.crop.name} is ${harvest}`);
-  return harvest;
+// Get yield for crop, include factors
+const getYieldForCrop = (crop) => {
+  if (crop.sun === undefined) {
+    const inputSun = "medium";
+    const inputYield = crop.crop.yield;
+    const inputNumCrops = crop.numCrops;
+    const inputCropName = crop.crop.name;
+    const harvest =
+      inputYield *
+      ((100 + crop.crop.factors.sun[inputSun]) / 100) *
+      inputNumCrops;
+    console.log(
+      `The harvest of ${inputCropName}, no environmental factor is ${harvest}`
+    );
+    return harvest;
+  } else {
+    const inputSun = crop.sun;
+    const inputYield = crop.crop.yield;
+    const inputNumCrops = crop.numCrops;
+    const inputCropName = crop.crop.name;
+    const harvest =
+      inputYield *
+      ((100 + crop.crop.factors.sun[inputSun]) / 100) *
+      inputNumCrops;
+    console.log(
+      `The harvest of ${inputCropName} in the ${inputSun} sun is ${harvest}`
+    );
+    return harvest;
+  }
 };
 
 // Calculate total yield with multiple crops
@@ -22,10 +46,10 @@ const getTotalYield = (crops) => {
   totalHarvest = 0;
   crops.forEach((crop) => {
     if (crop.numCrops != 0) {
-      totalHarvest += crop.crop.yield * crop.numCrops;
+      totalHarvest += getYieldForCrop(crop);
     }
   });
-  console.log(`The yield of all crops is ${totalHarvest}`);
+  console.log(`The total yield of all crops is ${totalHarvest}`);
   return totalHarvest;
 };
 

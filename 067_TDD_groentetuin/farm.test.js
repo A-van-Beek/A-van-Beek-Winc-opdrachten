@@ -65,19 +65,19 @@ describe("getTotalYield", () => {
 
 describe("getCostsForCrop", () => {
   test("Calculate cost per crop", () => {
-    const crops = [{ crop: vegetables.corn, numCrops: 5 }];
+    const crops = [{ crop: vegetables.corn, numCrops: 5 }]; //5*1=5
     expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
   });
   test("Calculate cost multiple crops", () => {
     const crops = [
-      { crop: vegetables.corn, numCrops: 5 },
-      { crop: vegetables.pumpkin, numCrops: 2 },
+      { crop: vegetables.corn, numCrops: 5 }, // 5*1=5
+      { crop: vegetables.pumpkin, numCrops: 2 }, //2*2=4
     ];
-    expect(farmFunctions.getCostsForCrop(crops)).toBe(7);
+    expect(farmFunctions.getCostsForCrop(crops)).toBe(9);
   });
   test("Calculate total costs with 0 amount", () => {
     const crops = [
-      { crop: vegetables.corn, numCrops: 5 },
+      { crop: vegetables.corn, numCrops: 5 }, // 5*1=5
       { crop: vegetables.pumpkin, numCrops: 0 },
     ];
     expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
@@ -120,25 +120,25 @@ describe("getProfitForCrop", () => {
   });
   test("Calculate profit multiple crops", () => {
     const crops = [
-      { crop: vegetables.corn, numCrops: 2 }, //10
-      { crop: vegetables.pumpkin, numCrops: 5 }, //60-5=55
+      { crop: vegetables.corn, numCrops: 2 }, //12-2=10
+      { crop: vegetables.pumpkin, numCrops: 5 }, //60-10=50
     ];
-    expect(farmFunctions.getProfitForCrop(crops)).toBe(65);
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(60);
   });
   test("Calculate profits with 0 amount crop", () => {
     const crops = [
-      { crop: vegetables.corn, numCrops: 2 }, //10
-      { crop: vegetables.pumpkin, numCrops: 5 }, //55
+      { crop: vegetables.corn, numCrops: 2 }, //12-2=10
+      { crop: vegetables.pumpkin, numCrops: 5 }, //60-10=50
       { crop: vegetables.lettuce, numCrops: 0 }, //0
     ];
-    expect(farmFunctions.getProfitForCrop(crops)).toBe(65);
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(60);
   });
   test("Calculate profits with environmental factors", () => {
     const crops = [
       { crop: vegetables.corn, numCrops: 2, sun: "high" }, //18-2=16
-      { crop: vegetables.pumpkin, numCrops: 5 }, //55
+      { crop: vegetables.pumpkin, numCrops: 5 }, //60-10=50
       { crop: vegetables.lettuce, numCrops: 0 }, //0
     ];
-    expect(farmFunctions.getProfitForCrop(crops)).toBe(71);
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(66);
   });
 });

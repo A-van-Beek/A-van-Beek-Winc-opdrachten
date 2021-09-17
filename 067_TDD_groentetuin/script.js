@@ -11,6 +11,6 @@ const input = { crop: vegetables.corn, numCrops: 5, sun: "high" };
 // getYieldForPlant(corn);
 // getYieldForCrop(input);
 // getTotalYield(crops);
-// getCostsForCrop(crops);
-getRevenueForCrop(crops);
+getCostsForCrop(crops);
+// getRevenueForCrop(crops);
 // getProfitForCrop(crops);

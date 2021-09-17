@@ -58,7 +58,8 @@ const getCostsForCrop = (crops) => {
   totalCosts = 0;
   crops.forEach((crops) => {
     if (crops.numCrops != 0) {
-      totalCosts += crops.numCrops * 1;
+      sowingPriceCrop = crops.numCrops * crops.crop.sowingPrice;
+      totalCosts += sowingPriceCrop;
     }
   });
   console.log(`The costs of the multiple crops is ${totalCosts}`);

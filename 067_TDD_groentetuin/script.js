@@ -6,6 +6,13 @@ const crops = [
     wind: "low",
     rain: "high",
   },
+  {
+    crop: vegetables.pumpkin,
+    numCrops: 3,
+    sun: "low",
+    wind: "medium",
+    rain: "high",
+  },
 ];
 
 const input = {
@@ -17,8 +24,8 @@ const input = {
 };
 
 // getYieldForPlant(corn);
-getYieldForCrop(input);
+// getYieldForCrop(input);
 // getTotalYield(crops);
 // getCostsForCrop(crops);
 // getRevenueForCrop(crops);
-// getProfitForCrop(crops);
+getProfitForCrop(crops);

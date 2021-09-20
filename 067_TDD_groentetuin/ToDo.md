@@ -26,7 +26,12 @@ _codering_
 ✅ getRevenueForCrop
 ✅ getProfitForCrop
 ✅ getTotalProfit
-🟩 implementeer omgevingsafhankelijken in de functies (aanpassen ipv nieuw!): zie Winc pagina
+✅ implementeer omgevingsafhankelijken in de functies (aanpassen ipv nieuw!): zie Winc pagina
+
+_make inputform_
+🟩 make input fields
+🟩 add button submit
+🟩 add eventlisteners
 
 _Refactor code_
 🟩 verbeter tijdelijke namen van variabelen

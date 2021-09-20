@@ -1,14 +1,14 @@
 const crops = [
   {
     crop: vegetables.corn,
-    numCrops: 2,
-    sun: "high",
+    numCrops: 3,
+    sun: "low",
     wind: "low",
     rain: "high",
   },
   {
     crop: vegetables.pumpkin,
-    numCrops: 3,
+    numCrops: 5,
     sun: "low",
     wind: "medium",
     rain: "high",

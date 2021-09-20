@@ -3,7 +3,11 @@ const corn = {
   yield: 3,
   salePrice: 2,
   sowingPrice: 1,
-  factors: { sun: { low: -50, medium: 0, high: 50 } },
+  factors: {
+    sun: { low: -50, medium: 0, high: 50 },
+    wind: { low: 50, medium: 0, high: -50 },
+    rain: { low: -25, medium: 0, high: 30 },
+  },
 };
 
 const pumpkin = {
@@ -11,7 +15,11 @@ const pumpkin = {
   yield: 4,
   salePrice: 3,
   sowingPrice: 2,
-  factors: { sun: { low: -25, medium: 0, high: 25 } },
+  factors: {
+    sun: { low: -50, medium: 0, high: 50 },
+    wind: { low: 50, medium: 0, high: -50 },
+    rain: { low: -25, medium: 0, high: 30 },
+  },
 };
 
 const lettuce = {
@@ -19,7 +27,11 @@ const lettuce = {
   yield: 2,
   salePrice: 4,
   sowingPrice: 1.5,
-  factors: { sun: { low: 10, medium: 0, high: 60 } },
+  factors: {
+    sun: { low: -50, medium: 0, high: 50 },
+    wind: { low: 0, medium: 0, high: 0 },
+    rain: { low: -25, medium: 0, high: 75 },
+  },
 };
 
 vegetables = {

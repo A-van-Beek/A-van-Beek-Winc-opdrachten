@@ -1,16 +1,24 @@
-// hier het script
-console.log("Welkom bij de console.log");
-
 const crops = [
-  { crop: vegetables.corn, numCrops: 5, sun: "high" },
-  { crop: vegetables.pumpkin, numCrops: 2 },
+  {
+    crop: vegetables.corn,
+    numCrops: 2,
+    sun: "high",
+    wind: "low",
+    rain: "high",
+  },
 ];
 
-const input = { crop: vegetables.corn, numCrops: 5, sun: "high" };
+const input = {
+  crop: vegetables.corn,
+  numCrops: 2,
+  sun: "high",
+  wind: "low",
+  rain: "high",
+};
 
 // getYieldForPlant(corn);
-// getYieldForCrop(input);
+getYieldForCrop(input);
 // getTotalYield(crops);
-getCostsForCrop(crops);
+// getCostsForCrop(crops);
 // getRevenueForCrop(crops);
 // getProfitForCrop(crops);

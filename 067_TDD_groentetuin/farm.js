@@ -10,35 +10,55 @@ const getYieldForPlant = (crop) => {
   return crop.yield;
 };
 
-// Get yield for crop, include factors
+// // Get yield for crop, include factors
+// const getYieldForCrop = (crop) => {
+//   if (crop.sun === undefined) {
+//     const inputSun = "medium";
+//     const inputYield = crop.crop.yield;
+//     const inputNumCrops = crop.numCrops;
+//     const inputCropName = crop.crop.name;
+//     const harvest =
+//       inputYield *
+//       ((100 + crop.crop.factors.sun[inputSun]) / 100) *
+//       inputNumCrops;
+//     console.log(
+//       `The harvest of ${inputCropName}, no environmental factor is ${harvest}`
+//     );
+//     return harvest;
+//   } else {
+//     const inputSun = crop.sun;
+//     const inputYield = crop.crop.yield;
+//     const inputNumCrops = crop.numCrops;
+//     const inputCropName = crop.crop.name;
+//     const harvest =
+//       inputYield *
+//       ((100 + crop.crop.factors.sun[inputSun]) / 100) *
+//       inputNumCrops;
+//     console.log(
+//       `The harvest of ${inputCropName} in the ${inputSun} sun is ${harvest}`
+//     );
+//     return harvest;
+//   }
+// };
+
+// Get yield for crop, include multiple factors
 const getYieldForCrop = (crop) => {
-  if (crop.sun === undefined) {
-    const inputSun = "medium";
-    const inputYield = crop.crop.yield;
-    const inputNumCrops = crop.numCrops;
-    const inputCropName = crop.crop.name;
-    const harvest =
-      inputYield *
-      ((100 + crop.crop.factors.sun[inputSun]) / 100) *
-      inputNumCrops;
-    console.log(
-      `The harvest of ${inputCropName}, no environmental factor is ${harvest}`
-    );
-    return harvest;
-  } else {
-    const inputSun = crop.sun;
-    const inputYield = crop.crop.yield;
-    const inputNumCrops = crop.numCrops;
-    const inputCropName = crop.crop.name;
-    const harvest =
-      inputYield *
-      ((100 + crop.crop.factors.sun[inputSun]) / 100) *
-      inputNumCrops;
-    console.log(
-      `The harvest of ${inputCropName} in the ${inputSun} sun is ${harvest}`
-    );
-    return harvest;
-  }
+  const inputSun = crop.sun;
+  const inputWind = crop.wind;
+  const inputRain = crop.rain;
+  const inputYield = crop.crop.yield;
+  const inputNumCrops = crop.numCrops;
+  const inputCropName = crop.crop.name;
+  const harvest =
+    inputYield *
+    ((100 + crop.crop.factors.sun[inputSun]) / 100) *
+    ((100 + crop.crop.factors.wind[inputWind]) / 100) *
+    ((100 + crop.crop.factors.rain[inputRain]) / 100) *
+    inputNumCrops;
+  console.log(
+    `The harvest of ${inputCropName} in the ${inputSun} sun, the ${inputWind} wind and the ${inputRain} rain is ${harvest}`
+  );
+  return harvest;
 };
 
 // Calculate total yield with multiple crops

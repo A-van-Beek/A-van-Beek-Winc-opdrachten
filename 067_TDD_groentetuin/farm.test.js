@@ -23,7 +23,7 @@ describe("getYieldForCrop", () => {
       wind: "medium",
       rain: "medium",
     };
-    expect(farmFunctions.getYieldForCrop(crops)).toBe(6);
+    expect(farmFunctions.getYieldForCrop(crops)).toBe(6.0);
   });
   test("Get yield for crop, 1 environmental factor", () => {
     const crops = {
@@ -33,7 +33,7 @@ describe("getYieldForCrop", () => {
       wind: "medium",
       rain: "medium",
     };
-    expect(farmFunctions.getYieldForCrop(crops)).toBe(3);
+    expect(farmFunctions.getYieldForCrop(crops)).toBe(3.0);
   });
   test("Get yield for crop, 1 environmental factor medium", () => {
     const crops = {
@@ -43,7 +43,7 @@ describe("getYieldForCrop", () => {
       wind: "medium",
       rain: "medium",
     };
-    expect(farmFunctions.getYieldForCrop(crops)).toBe(6);
+    expect(farmFunctions.getYieldForCrop(crops)).toBe(6.0);
   });
   test("Get yield for crop, multiple environmental factors", () => {
     const crops = {
@@ -75,7 +75,7 @@ describe("getTotalYield", () => {
         rain: "medium",
       },
     ];
-    expect(farmFunctions.getTotalYield(crops)).toBe(23);
+    expect(farmFunctions.getTotalYield(crops)).toBe(23.0);
   });
 
   test("Calculate total yield with 0 amount", () => {
@@ -88,7 +88,7 @@ describe("getTotalYield", () => {
         rain: "medium",
       },
     ];
-    expect(farmFunctions.getTotalYield(crops)).toBe(0);
+    expect(farmFunctions.getTotalYield(crops)).toBe(0.0);
   });
 
   test("Calculate total yield with multiple crops, including 1 environmental factor", () => {
@@ -123,7 +123,7 @@ describe("getCostsForCrop", () => {
         rain: "medium",
       },
     ]; //5*1=5
-    expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
+    expect(farmFunctions.getCostsForCrop(crops)).toBe(5.0);
   });
   test("Calculate cost multiple crops", () => {
     const crops = [
@@ -142,7 +142,7 @@ describe("getCostsForCrop", () => {
         rain: "medium",
       }, //2*2=4
     ];
-    expect(farmFunctions.getCostsForCrop(crops)).toBe(9);
+    expect(farmFunctions.getCostsForCrop(crops)).toBe(9.0);
   });
   test("Calculate total costs with 0 amount", () => {
     const crops = [
@@ -161,7 +161,7 @@ describe("getCostsForCrop", () => {
         rain: "medium",
       },
     ];
-    expect(farmFunctions.getCostsForCrop(crops)).toBe(5);
+    expect(farmFunctions.getCostsForCrop(crops)).toBe(5.0);
   });
 });
 
@@ -177,7 +177,7 @@ describe("getRevenueForCrop", () => {
         rain: "medium",
       },
     ];
-    expect(farmFunctions.getRevenueForCrop(crops)).toBe(30);
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(30.0);
   });
   test("Calculate revenue multiple crops", () => {
     const crops = [
@@ -196,7 +196,7 @@ describe("getRevenueForCrop", () => {
         rain: "medium",
       }, // 24
     ];
-    expect(farmFunctions.getRevenueForCrop(crops)).toBe(54);
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(54.0);
   });
   test("Calculate revenue with 0 amount crop", () => {
     const crops = [
@@ -215,7 +215,7 @@ describe("getRevenueForCrop", () => {
         rain: "medium",
       }, // 0
     ];
-    expect(farmFunctions.getRevenueForCrop(crops)).toBe(30);
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(30.0);
   });
   test("Calculate revenue with crop and 1 environmental factor", () => {
     const crops = [
@@ -234,7 +234,7 @@ describe("getRevenueForCrop", () => {
         rain: "medium",
       }, //0
     ];
-    expect(farmFunctions.getRevenueForCrop(crops)).toBe(18);
+    expect(farmFunctions.getRevenueForCrop(crops)).toBe(18.0);
   });
 });
 
@@ -249,7 +249,7 @@ describe("getProfitForCrop", () => {
         rain: "medium",
       },
     ]; //30-5 = 25
-    expect(farmFunctions.getProfitForCrop(crops)).toBe(25);
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(25.0);
   });
   test("Calculate profit multiple crops", () => {
     const crops = [
@@ -268,7 +268,7 @@ describe("getProfitForCrop", () => {
         rain: "medium",
       }, //60-10=50
     ];
-    expect(farmFunctions.getProfitForCrop(crops)).toBe(60);
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(60.0);
   });
   test("Calculate profits with 0 amount crop", () => {
     const crops = [
@@ -294,7 +294,7 @@ describe("getProfitForCrop", () => {
         rain: "medium",
       }, //0
     ];
-    expect(farmFunctions.getProfitForCrop(crops)).toBe(60);
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(60.0);
   });
   test("Calculate profits with environmental factors", () => {
     const crops = [
@@ -320,6 +320,6 @@ describe("getProfitForCrop", () => {
         rain: "medium",
       }, //0
     ];
-    expect(farmFunctions.getProfitForCrop(crops)).toBe(66);
+    expect(farmFunctions.getProfitForCrop(crops)).toBe(66.0);
   });
 });

@@ -18,15 +18,16 @@ const getYieldForCrop = (crop) => {
   const inputYield = crop.crop.yield;
   const inputNumCrops = crop.numCrops;
   const inputCropName = crop.crop.name;
-  const harvest = (
+  const harvest =
     inputYield *
     ((100 + crop.crop.factors.sun[inputSun]) / 100) *
     ((100 + crop.crop.factors.wind[inputWind]) / 100) *
     ((100 + crop.crop.factors.rain[inputRain]) / 100) *
-    inputNumCrops
-  ).toFixed(2);
+    inputNumCrops;
   console.log(
-    `The harvest of ${inputCropName} in the ${inputSun} sun, the ${inputWind} wind and the ${inputRain} rain is ${harvest}`
+    `The harvest of ${inputCropName} in the ${inputSun} sun, the ${inputWind} wind and the ${inputRain} rain is ${harvest.toFixed(
+      2
+    )}`
   );
   return harvest;
 };
@@ -39,7 +40,7 @@ const getTotalYield = (crops) => {
       totalHarvest += getYieldForCrop(crop);
     }
   });
-  console.log(`The total yield of all crops is ${totalHarvest}`);
+  console.log(`The total yield of all crops is ${totalHarvest.toFixed(2)}`);
   return totalHarvest;
 };
 
@@ -52,7 +53,7 @@ const getCostsForCrop = (crops) => {
       totalCosts += sowingPriceCrop;
     }
   });
-  console.log(`The costs of the multiple crops is ${totalCosts}`);
+  console.log(`The costs of the multiple crops is ${totalCosts.toFixed(2)}`);
   return totalCosts;
 };
 
@@ -64,13 +65,13 @@ const getRevenueForCrop = (crops) => {
     harvest = getYieldForCrop(crop);
     totalRevenue += harvest * salePriceCrop;
   });
-  console.log(`The sales revenue of the crops is ${totalRevenue}`);
+  console.log(`The sales revenue of the crops is ${totalRevenue.toFixed(2)}`);
   return totalRevenue;
 };
 
 const getProfitForCrop = (crops) => {
   totalProfit = getRevenueForCrop(crops) - getCostsForCrop(crops);
-  console.log(`The gain of the crops is ${totalProfit}`);
+  console.log(`The gain of the crops is ${totalProfit.toFixed(2)}`);
   return totalProfit;
 };
 

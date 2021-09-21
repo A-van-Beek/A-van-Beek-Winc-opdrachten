@@ -36,36 +36,36 @@
             <option value="lettuce">lettuce</option>
           </optgroup>
           <optgroup label="Fruits">
-            <option value="apricot">corn</option>
-            <option value="apple">pumpkin</option>
-            <option value="pear">lettuce</option>
+            <option value="apricot">apricot</option>
+            <option value="apple">apple</option>
+            <option value="pear">pear</option>
           </optgroup>
         </select>
         <br /><br />
 
         <label for="numCrops">Number of crops</label>
-        <input type="text" id="numCrops" name="numCrops" />
+        <input type="number" id="numCrops" value="0" name="numCrops" />
         <br /><br />
 
         <label for="sun">Choose amount of sun:</label>
         <select name="sun" id="sun">
-          <option value="lowSun">low</option>
-          <option value="mediumSun" selected>medium</option>
-          <option value="highSun">high</option></select
+          <option value="low">low</option>
+          <option value="medium" selected>medium</option>
+          <option value="high">high</option></select
         ><br /><br />
 
         <label for="wind">Choose amount of wind:</label>
         <select name="wind" id="wind">
-          <option value="lowWind">low</option>
-          <option value="mediumWind" selected>medium</option>
-          <option value="highWind">high</option></select
+          <option value="low">low</option>
+          <option value="medium" selected>medium</option>
+          <option value="high">high</option></select
         ><br /><br />
 
         <label for="rain">Choose amount of rain:</label>
         <select name="rain" id="rain">
-          <option value="lowRain">low</option>
-          <option value="mediumRain" selected>medium</option>
-          <option value="highRain">high</option></select
+          <option value="low">low</option>
+          <option value="medium" selected>medium</option>
+          <option value="high">high</option></select
         ><br /><br />
 
         <br /><br />
@@ -75,6 +75,12 @@
           type="submit"
           id="calculateProfit"
           value="calculate total profit"
+        />
+        <br /><br />
+        <input
+          type="submit"
+          id="showPurchasedCrops"
+          value="show purchased crops"
         />
         <br /><br />
         <input type="submit" id="reset" value="reset garden" />

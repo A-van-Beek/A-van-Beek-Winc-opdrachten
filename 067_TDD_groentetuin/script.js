@@ -1,14 +1,21 @@
-// var crops = [];
+var crops = [];
 
-const crops = [
-  {
-    crop: vegetables.corn,
-    numCrops: 3,
-    sun: "low",
-    wind: "medium",
-    rain: "high",
-  },
-];
+// const crops = [
+//   {
+//     crop: vegetables.corn,
+//     numCrops: 3,
+//     sun: "low",
+//     wind: "medium",
+//     rain: "high",
+//   },
+//   {
+//     crop: vegetables.pumpkin,
+//     numCrops: 5,
+//     sun: "low",
+//     wind: "medium",
+//     rain: "high",
+//   },
+// ];
 
 // getYieldForCrop({
 //   crop: vegetables.corn,
@@ -27,13 +34,14 @@ document
     const addWind = document.getElementById("wind").value;
     const addRain = document.getElementById("rain").value;
     const newCrop = {
-      crop: addCrop,
+      crop: "vegetables." + addCrop,
       numCrops: addNumCrops,
       sun: addSun,
       wind: addWind,
       rain: addRain,
     };
     crops.push(newCrop);
+    console.log(crops);
     resetInput();
     return crops;
   });
@@ -46,16 +54,16 @@ function resetInput() {
   document.getElementById("rain").value = "medium";
 }
 
-document
-  .getElementById("showPurchasedCrops")
-  .addEventListener("mouseover", function () {
-    console.log(crops);
-  });
+// document
+//   .getElementById("showPurchasedCrops")
+//   .addEventListener("mouseover", function () {
+//     console.log(crops);
+//   });
 
 document
   .getElementById("calculateProfit")
   .addEventListener("click", function () {
-    console.log("calculating your profit");
+    console.log(crops);
     getProfitForCrop(crops);
   });
 

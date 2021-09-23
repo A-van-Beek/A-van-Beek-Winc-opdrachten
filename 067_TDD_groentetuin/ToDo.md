@@ -29,8 +29,8 @@ _codering_
 ✅ implementeer omgevingsafhankelijken in de functies (aanpassen ipv nieuw!): zie Winc pagina
 
 _make inputform_
-🟩 make input fields
-🟩 add button submit
+✅ make input fields
+✅ add button submit
 🟩 add eventlisteners
 
 _Refactor code_

@@ -7,7 +7,6 @@ import MyFooter from "./components/MyFooter.js";
 
 ReactDOM.render(
   <div>
-    {/* <Header /> */}
     <MyInfo />
     <MyFooter />
   </div>,

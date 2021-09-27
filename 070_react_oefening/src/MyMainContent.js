@@ -2,10 +2,10 @@ import React from "react";
 
 function MyMainContent() {
   return (
-    <div>
+    <main>
       <h2>titel van de paragraaf</h2>
       <div> en de bijbehorende tekst, blabla</div>
-    </div>
+    </main>
   );
 }
 

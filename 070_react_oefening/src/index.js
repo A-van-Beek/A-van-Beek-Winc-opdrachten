@@ -1,9 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import MyHeader from "./MyHeader";
+import MyNavbar from "./MyNavbar";
+import MyFooter from "./MyFooter";
+import MyMainContent from "./MyMainContent";
 
 ReactDOM.render(
-  <h1>Oefening parent - child</h1>,
+  <div>
+    <MyHeader />
+    <MyNavbar />
+    <MyMainContent />
+    <MyFooter />
+  </div>,
   document.getElementById("root")
 );

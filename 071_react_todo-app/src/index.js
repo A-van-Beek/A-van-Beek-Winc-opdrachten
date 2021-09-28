@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-// import App from "./components/App";
-import MyFooter from "./components/MyFooter";
+
+import App from "./components/App";
 import MyHeader from "./components/MyHeader";
-import MyMainContent from "./components/MyMainContent";
+import MyFooter from "./components/MyFooter";
 
 ReactDOM.render(
   <div>
     <MyHeader />
-    <MyMainContent />
+    <App />
     <MyFooter />
   </div>,
   document.getElementById("root")

@@ -3,14 +3,17 @@ import React from "react";
 import MyHeader from "./components/MyHeader";
 import MyMainContent from "./components/MyMainContent";
 import MyFooter from "./components/MyFooter";
-import MyText from "./components/MyText";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   return (
-    <div>
+    <div className="todo-list">
       <MyHeader />
       <MyMainContent />
-      <MyText />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
       <MyFooter />
     </div>
   );

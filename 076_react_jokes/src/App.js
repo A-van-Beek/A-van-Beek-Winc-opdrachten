@@ -1,16 +1,25 @@
 import "./App.css";
 import Joke from "./Joke";
 
-return (
-  <div className="jokes">
-    <Joke
-      joke={{
-        question: "What is a good joke?",
-        punchline: "The one that makes you laugh",
-        imgUrl: "http://placekitten.com/300/200",
-      }}
-    />
-  </div>
-);
+function App() {
+  return (
+    <div className="jokes">
+      <Joke
+        joke={{
+          question: "What is a good joke?",
+          punchline: "The one that makes you laugh",
+          imgUrl: "http://placekitten.com/300/200",
+        }}
+      />
+      <Joke
+        joke={{
+          question: "What's the best thing aboud Switzerland ?",
+          punchline: "I don't know, but the flag is a big plus.",
+          imgUrl: "http://placekitten.com/300/200",
+        }}
+      />
+    </div>
+  );
+}
 
 export default App;

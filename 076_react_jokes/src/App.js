@@ -18,6 +18,13 @@ function App() {
           imgUrl: "http://placekitten.com/300/200",
         }}
       />
+      <Joke
+        joke={{
+          question:
+            "It’s hard to explain puns to kleptomaniacs because they always take things literally.",
+          imgUrl: "http://placekitten.com/300/200",
+        }}
+      />
     </div>
   );
 }

@@ -1,32 +1,15 @@
 import "./App.css";
 import Joke from "./Joke";
+import jokesData from "./jokesData";
 
 function App() {
-  return (
-    <div className="jokes">
-      <Joke
-        joke={{
-          question: "What is a good joke?",
-          punchline: "The one that makes you laugh",
-          imgUrl: "http://placekitten.com/300/200",
-        }}
-      />
-      <Joke
-        joke={{
-          question: "What's the best thing aboud Switzerland ?",
-          punchline: "I don't know, but the flag is a big plus.",
-          imgUrl: "http://placekitten.com/300/200",
-        }}
-      />
-      <Joke
-        joke={{
-          question:
-            "It’s hard to explain puns to kleptomaniacs because they always take things literally.",
-          imgUrl: "http://placekitten.com/300/200",
-        }}
-      />
-    </div>
-  );
+  const jokeComponents = jokesData.map((joke) => {
+    return (
+      <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine} />
+    );
+  });
+
+  return <div className="jokes">{jokeComponents}</div>;
 }
 
 export default App;

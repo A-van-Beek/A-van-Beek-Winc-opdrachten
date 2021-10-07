@@ -1,3 +1,14 @@
+.question {
+  background-color: #282c34;
+  color: white;
+}
+
+.answer {
+  background-color: #646663;
+  color: red;
+  margin-left: 25px;
+}
+
 .App {
   text-align: center;
 }

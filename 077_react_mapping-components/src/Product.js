@@ -9,7 +9,7 @@ function Product(props) {
           style: "currency",
           currency: "USD",
         })}{" "}
-        - {props.product.description}-{" "}
+        -_-_-_{" "}
         <button
           type="button"
           className="button"

@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <MyHeader />
-      <div className="products">{productComponent}</div>;
+      <div className="products">{productComponent}</div>
     </div>
   );
 }

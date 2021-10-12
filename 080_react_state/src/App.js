@@ -1,25 +1,22 @@
 import React from "react";
-import "./App.css"; // is deze noodzakelijk??
-import todosData from "./todosData";
 
-import MyHeader from "./components/MyHeader";
-import MyMainContent from "./components/MyMainContent";
-import MyFooter from "./components/MyFooter";
-import TodoItem from "./components/TodoItem";
+// https://scrimba.com/p/p4Mrt9/cQnMDHD
 
-function App() {
-  const todoItems = todosData.map((item) => {
-    return <TodoItem key={item.id} item={item} />;
-  });
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      answer: "Yes",
+    };
+  }
 
-  return (
-    <div>
-      <MyHeader />
-      <MyMainContent />
-      <div className="todo-list">{todoItems}</div>
-      <MyFooter />
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <h1>Is state important to know? {this.state.answer}</h1>
+      </div>
+    );
+  }
 }
 
 export default App;

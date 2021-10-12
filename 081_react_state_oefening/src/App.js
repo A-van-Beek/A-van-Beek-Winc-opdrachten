@@ -9,7 +9,7 @@ class App extends React.Component {
     super();
     this.state = {
       name: "Jantje",
-      age: "12",
+      age: 13,
     };
   }
 

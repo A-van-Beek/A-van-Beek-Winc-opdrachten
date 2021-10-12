@@ -1,17 +1,7 @@
 import React from "react";
 
-const styleBasic = {
-  color: "black",
-  backgroundColor: "#FF2D00",
-  fontSize: "20px",
-};
-
 function MyHeader() {
-  return (
-    <header className="navbar" style={styleBasic}>
-      This is the header
-    </header>
-  );
+  return <header className="header">ToDo list, part 3</header>;
 }
 
 export default MyHeader;

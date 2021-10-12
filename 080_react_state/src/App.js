@@ -1,8 +1,10 @@
 import React from "react";
+// alternatief: import React, {Component} from "react"
 
 // https://scrimba.com/p/p4Mrt9/cQnMDHD
 
 class App extends React.Component {
+  //of bij alternatief hierboven: class App extends Component
   constructor() {
     super();
     this.state = {

@@ -7,15 +7,27 @@ import React, { Component } from "react";
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      loading: false,
+      character: {},
+    };
   }
 
   componentDidMount() {
-    fetch("https://swapi.co/api/people/1");
+    this.setState({ loading: true });
+    fetch("https://swapi.dev/api/people/2")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          loading: false,
+          character: data,
+        });
+      });
   }
 
   render() {
-    return <div>Code goes here</div>;
+    const text = this.state.loading ? "loading..." : this.state.character.name;
+    return <div>{text}</div>;
   }
 }
 

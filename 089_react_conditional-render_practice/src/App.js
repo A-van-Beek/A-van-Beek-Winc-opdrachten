@@ -5,22 +5,40 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      isLoading: true,
+      isLoggedIn: false,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     this.setState({ isLoggedIn: true });
+  //   }, 3500);
+  // }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isLoading: false,
-      });
-    }, 2500);
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   console.log(
+  //     "Before the update, the login-status was " + prevState.isLoggedIn
+  //   );
+  // }
+
+  // componentDidUpdate() {
+  //   console.log("The updated inlogstatus is " + this.state.isLoggedIn);
+  // }
+
+  handleClick() {
+    this.setState((prevState) => {
+      return {
+        isLoggedIn: !prevState.isLoggedIn,
+      };
+    });
   }
 
   render() {
+    let buttonText = this.state.isLoggedIn ? "LOG OUT" : "LOG IN";
     return (
       <div>
-        <Conditional isLoading={this.state.isLoading} />
+        <button onClick={this.handleClick}>{buttonText}</button>
+        {this.state.isLoggedIn ? <h1>You are in !</h1> : <Conditional />}
       </div>
     );
   }

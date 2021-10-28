@@ -29,6 +29,7 @@ class App extends Component {
       isLactoseFree: false,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -42,10 +43,15 @@ class App extends Component {
         });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    alert("Yes");
+  }
+
   render() {
     return (
       <main>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             value={this.state.firstName}

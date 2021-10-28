@@ -18,41 +18,144 @@ import React, { Component } from "react";
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      firstName: "",
+      lastName: "",
+      age: "",
+      gender: "",
+      destination: "",
+      isVegan: false,
+      isKosher: false,
+      isLactoseFree: false,
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    const { name, value, type, checked } = event.target;
+    type === "checkbox"
+      ? this.setState({
+          [name]: checked,
+        })
+      : this.setState({
+          [name]: value,
+        });
   }
 
   render() {
     return (
       <main>
         <form>
-          <input placeholder="First Name" />
+          <input
+            type="text"
+            value={this.state.firstName}
+            name="firstName"
+            placeholder="First Name"
+            onChange={this.handleChange}
+          />
           <br />
-          <input placeholder="Last Name" />
+          <input
+            type="text"
+            value={this.state.lastName}
+            name="lastName"
+            placeholder="Last Name"
+            onChange={this.handleChange}
+          />
           <br />
-          <input placeholder="Age" />
+          <input
+            type="number"
+            value={this.state.age}
+            name="age"
+            placeholder="Age"
+            onChange={this.handleChange}
+          />
+          <br />
+          <label>
+            Gender
+            <br />
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              checked={this.state.gender === "male"}
+              onChange={this.handleChange}
+            />
+            Male
+          </label>
+          <br />
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              checked={this.state.gender === "female"}
+              onChange={this.handleChange}
+            />
+            Female
+          </label>
+          <br />
+          <br />
+          <label>Destination: </label>
+          <select
+            value={this.state.destination}
+            onChange={this.handleChange}
+            name="destination"
+          >
+            <option value="">--- pick a destination --- </option>
+            <option value="paris">Paris</option>
+            <option value="london">London</option>
+            <option value="amsterdam">Amsterdam</option>
+            <option value="berlin">Berlin</option>
+          </select>
+          <br />
           <br />
 
-          {/* Create radio buttons for gender here */}
-          <br />
+          <label>
+            Dietary restrictions
+            <br />
+            <input
+              type="checkbox"
+              name="isVegan"
+              checked={this.state.isVegan}
+              onChange={this.handleChange}
+            />
+            Vegan?
+            <input
+              type="checkbox"
+              name="isKosher"
+              checked={this.state.isKosher}
+              onChange={this.handleChange}
+            />
+            Kosher?
+            <input
+              type="checkbox"
+              name="isLactoseFree"
+              checked={this.state.isLactoseFree}
+              onChange={this.handleChange}
+            />
+            Lactose free?
+          </label>
 
-          {/* Create select box for location here */}
           <br />
-
-          {/* Create check boxes for dietary restrictions here */}
           <br />
-
           <button>Submit</button>
+          {/* create alert with the entered info*/}
         </form>
         <hr />
         <h2>Entered information:</h2>
-        <p>Your name: {/* First and last name here */}</p>
-        <p>Your age: {/* Age here */}</p>
-        <p>Your gender: {/* Gender here */}</p>
-        <p>Your destination: {/* Destination here */}</p>
         <p>
-          Your dietary restrictions:
-          {/* Dietary restrictions here, comma separated */}
+          Your name: {this.state.firstName} {this.state.lastName}
         </p>
+        <p>Your age: {this.state.age}</p>
+        <p>Your gender: {this.state.gender}</p>
+        <p>
+          Your destination: {this.state.destination}
+          <br />
+          <br />
+        </p>
+        <p>Vegan: {this.state.isVegan ? "yes" : "no"}</p>
+        <p>Kosher: {this.state.isKosher ? "yes" : "no"}</p>
+        <p>Lactose free: {this.state.isLactoseFree ? "yes" : "no"}</p>
       </main>
     );
   }

@@ -12,6 +12,7 @@ class App extends Component {
       favColor: "",
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -26,8 +27,10 @@ class App extends Component {
       : this.setState({ [name]: value });
   }
 
-  handleSubmit(event) {
+  handleSubmit() {
     // hier verdere actie
+    // deze werkt nog niet !!
+    console.log("submitted");
   }
 
   render() {

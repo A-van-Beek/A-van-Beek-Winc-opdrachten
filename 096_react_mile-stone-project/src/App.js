@@ -1,12 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 import Header from "./Header";
+import MemeGenerator from "./MemeGenerator";
 
 function App() {
   return (
     <div>
       <Header />
-      <h3>Hello world !</h3>
+      <MemeGenerator />
     </div>
   );
 }

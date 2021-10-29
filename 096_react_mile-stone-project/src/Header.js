@@ -1,7 +1,7 @@
 import React from "react";
 
 function Header() {
-  return <header className="title">My own header</header>;
+  return <h1>My own header</h1>;
 }
 
 export default Header;

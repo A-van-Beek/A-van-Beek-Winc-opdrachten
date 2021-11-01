@@ -1,30 +1,36 @@
 import React, { useState } from "react";
 
 function App() {
-  const [answer] = useState("Yes");
+  const [count, setCount] = useState(0);
+  const [answer, setAnswer] = useState("Yes");
+
+  function increment() {
+    setCount((prevCount) => prevCount + 1);
+  }
+
+  function decrement() {
+    setCount((prevCount) => prevCount - 1);
+  }
+
+  function toggleAnswer() {
+    setAnswer((prevAnswer) => prevAnswer + "Yes");
+  }
 
   return (
     <div>
-      <h1>Is state important to know? {answer}</h1>
+      <h1>{count}</h1>
+      <button onClick={increment}>Increment!</button>
+      <button onClick={decrement}>Decrement!</button>
+      <br />
+      <br />
+      <h1>Is it working?</h1>
+      <button onClick={toggleAnswer}>toggle answer</button>
+      <br />
+      <br />
+      <br />
+      <div>{answer}</div>
     </div>
   );
 }
-
-// class App extends React.Component {
-//     constructor() {
-//         super()
-//         this.state = {
-//             answer: "Yes"
-//         }
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 <h1>Is state important to know? {this.state.answer}</h1>
-//             </div>
-//         )
-//     }
-// }
 
 export default App;

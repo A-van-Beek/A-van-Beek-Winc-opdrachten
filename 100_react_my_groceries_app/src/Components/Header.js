@@ -4,10 +4,10 @@ function Header() {
   return (
     <header>
       <img
-        src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png"
-        alt="Problem?"
-      />
-      <p>Meme Generator</p>
+        src="https://tessakortenbach.nl/wp-content/uploads/2020/10/boodschappen-doen.png"
+        alt="problem"
+      ></img>
+      <p>Boodschappenlijst</p>
     </header>
   );
 }

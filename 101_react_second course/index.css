@@ -4,3 +4,19 @@ body {
   padding: 0;
   background-color: rgb(215, 242, 243);
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > li {
+  /* hiermee bedoelen we: className én li-elementen */
+  padding: 10px;
+}

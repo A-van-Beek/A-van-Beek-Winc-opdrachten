@@ -46,6 +46,10 @@ nav > h4 {
 main {
   padding: 57px 27px;
   color: white;
+  background-image: url(./images/logo512.png);
+  background-repeat: no-repeat;
+  background-position-x: 143%;
+  background-size: 45%;
 }
 
 .main--title {
@@ -62,4 +66,9 @@ main {
 .main--facts > li {
   line-height: 19px;
   padding-block: 10px;
+}
+
+.main--facts > li::marker {
+  color: #61dafb;
+  font-size: 30px;
 }

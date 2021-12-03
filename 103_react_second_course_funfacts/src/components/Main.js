@@ -12,6 +12,7 @@ function Main() {
         <li className="main-item">
           Powers thousands of enterprise apps, including mobile apps
         </li>
+        <li className="main-item">just fun !</li>
       </ul>
     </div>
   );

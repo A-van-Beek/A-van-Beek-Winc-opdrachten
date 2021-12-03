@@ -1,11 +1,12 @@
 import React from "react";
+import myLogo from "../myLogo192.png";
 
 function MyHeader() {
   return (
     <header>
       <nav className="nav">
         <img
-          src="https://tessakortenbach.nl/wp-content/uploads/2020/10/boodschappen-doen.png"
+          src={myLogo}
           width="60px"
           className="nav-logo"
           alt="stupid 404 code!"

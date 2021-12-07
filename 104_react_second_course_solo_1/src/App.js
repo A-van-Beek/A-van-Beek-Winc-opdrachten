@@ -1,7 +1,8 @@
 import "./App.css";
+import Info from "./components/Info.js";
 
 function App() {
-  return <div>app is working</div>;
+  return <Info />;
 }
 
 export default App;

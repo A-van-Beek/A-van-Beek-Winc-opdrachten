@@ -1,27 +1,32 @@
 import React from "react";
 import "./App.css";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 // import Hero from "./components/Hero";
 import Card from "./components/Card";
 import data from "./data.js";
 
 function App() {
-  const cardElements = data.map((x) => {
+  //<Hero />
+  const cards = data.map((item) => {
     return (
       <Card
-        img={x.coverImg}
-        rating={x.stats.rating}
-        reviewCount={x.stats.reviewCount}
-        location={x.location}
-        title={x.title}
-        price={x.price}
+        key={item.id}
+        img={item.coverImg}
+        rating={item.stats.rating}
+        reviewCount={item.stats.reviewCount}
+        location={item.location}
+        title={item.title}
+        price={item.price}
       />
     );
   });
-  return <div>{cardElements}</div>;
+
+  return (
+    <div>
+      <Navbar />
+      <section className="cards-list">{cards}</section>
+    </div>
+  );
 }
 
 export default App;
-
-// <Navbar />
-// {/* <Hero /> */}

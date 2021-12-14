@@ -1,9 +1,11 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      <h1>het werkt</h1>
+      <Navbar />
+      <h2>hier de eerste card</h2>
     </div>
   );
 }

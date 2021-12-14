@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin-left: 15px;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+.header {
+  width: 550;
+  height: 65px;
+  left: 0px;
+  top: 5px;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header--icon {
+  height: 100%;
+  margin-right: 10px;
+}
+
+.header--title {
+  width: 140px;
+  height: 24px;
+  left: 58px;
+  margin-right: auto;
+
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.1em;
+
+  color: #ffffff;
+}
+
+.header--project {
+  position: absolute;
+  width: 189px;
+  height: 14px;
+  left: 324px;
+  top: 25px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+
+  color: #ffffff;
+}

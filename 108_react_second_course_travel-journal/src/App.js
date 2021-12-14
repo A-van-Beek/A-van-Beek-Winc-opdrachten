@@ -1,11 +1,16 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import data from "./components/data.js";
+import Card from "./components/Card";
 
 function App() {
+  const cards = data.map((item) => {
+    return <Card key={item.id} item={item} />;
+  });
   return (
     <div>
       <Navbar />
-      <h2>hier de eerste card</h2>
+      <section className="cards-list">{cards}</section>
     </div>
   );
 }

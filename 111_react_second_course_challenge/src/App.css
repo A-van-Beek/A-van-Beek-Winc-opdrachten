@@ -3,56 +3,30 @@
 }
 
 body {
-  font-family: "Karla", sans-serif;
-  margin: 0;
-}
-
-main {
-  padding: 36px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  height: 65px;
-  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  background-color: #70b85d;
   color: white;
   padding: 20px;
-}
-
-.header--img {
-  height: 100%;
-  margin-right: 6px;
-}
-
-.header--title {
-  font-size: 20px;
-  margin-right: auto;
-}
-
-.header--project {
-  font-weight: 500;
-  font-size: 12px;
-}
-
-.form {
-  display: grid;
-  grid-template: 40px 40px / 1fr 1fr;
-  gap: 17px;
-}
-.form--input {
   font-family: "Karla", sans-serif;
-  border-radius: 5px;
-  border: 1px solid #d5d4d8;
-  text-indent: 5px;
+  font-size: 1.3rem;
 }
 
-.form--button {
-  grid-column: 1 / -1;
-  font-family: "Karla", sans-serif;
-  border-radius: 5px;
-  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+button {
+  width: 100%;
+  background-color: transparent;
+  padding: 1rem;
   color: white;
-  border: none;
+  border: 2px solid white;
+  border-radius: 50px;
   cursor: pointer;
+  font-family: "Karla", sans-serif;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #fffef1;
+  color: #2c5e2e;
+}
+
+button:focus {
+  outline: 0;
 }

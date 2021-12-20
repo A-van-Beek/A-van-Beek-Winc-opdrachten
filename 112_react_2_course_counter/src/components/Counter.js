@@ -1,13 +1,26 @@
 import React from "react";
 
 function Counter() {
+  const [count, setCount] = React.useState(0);
+
+  function add() {
+    setCount(count + 1);
+  }
+
+  function minus() {
+    setCount(count - 1);
+  }
   return (
     <div className="counter">
-      <button className="counter--minus">–</button>
+      <button onClick={minus} className="counter--minus">
+        –
+      </button>
       <div className="counter--count">
-        <h1>0</h1>
+        <h1>{count}</h1>
       </div>
-      <button className="counter--plus">+</button>
+      <button onClick={add} className="counter--plus">
+        +
+      </button>
     </div>
   );
 }

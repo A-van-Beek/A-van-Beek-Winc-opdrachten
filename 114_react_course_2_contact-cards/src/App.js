@@ -7,13 +7,12 @@ function App() {
     lastName: "Hein",
     phone: "+1 (719) 333-1212",
     email: "itsNOTmyrealname@example.com",
-    isFavorite: false,
+    isFavorite: true,
   });
-  /**
-   * Challenge: Fill in the values in the markup
-   * using the properties of our state object above
-   * (Ignore `isFavorite` for now)
-   */
+
+  let starIcon =
+    contact.isFavorite === true ? "star-empty.png" : "star-filled.png";
+  console.log(starIcon);
 
   function toggleFavorite() {
     console.log("Toggle Favorite");
@@ -22,16 +21,23 @@ function App() {
   return (
     <main>
       <article className="card">
-        <img src="./images/user.png" className="card--image" />
+        <img
+          src="./images/user.png"
+          alt="oeps-portret"
+          className="card--image"
+        />
         <div className="card--info">
           <img
-            src={`../images/star-empty.png`}
+            src={`../images/${starIcon}`}
+            alt="oeps-star"
             className="card--favorite"
             onClick={toggleFavorite}
           />
-          <h2 className="card--name">John Doe</h2>
-          <p className="card--contact">+1 (719) 555-1212</p>
-          <p className="card--contact">itsmyrealname@example.com</p>
+          <h2 className="card--name">
+            {contact.firstName} {contact.lastName}
+          </h2>
+          <p className="card--contact">{contact.phone}</p>
+          <p className="card--contact">{contact.email}</p>
         </div>
       </article>
     </main>

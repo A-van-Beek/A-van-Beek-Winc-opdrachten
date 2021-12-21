@@ -7,15 +7,19 @@ function App() {
     lastName: "Hein",
     phone: "+1 (719) 333-1212",
     email: "itsNOTmyrealname@example.com",
-    isFavorite: true,
+    isFavorite: false,
   });
 
   let starIcon =
     contact.isFavorite === true ? "star-empty.png" : "star-filled.png";
-  console.log(starIcon);
 
   function toggleFavorite() {
-    console.log("Toggle Favorite");
+    setContact((prevContact) => {
+      return {
+        ...prevContact,
+        isFavorite: !prevContact.isFavorite,
+      };
+    });
   }
 
   return (

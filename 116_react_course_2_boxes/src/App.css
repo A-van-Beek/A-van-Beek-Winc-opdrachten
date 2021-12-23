@@ -29,3 +29,20 @@ section {
   font-size: 20px;
   margin-right: auto;
 }
+
+.box--item {
+  height: 20px;
+  border: solid 2px green;
+}
+
+.box--item-off {
+  height: 20px;
+  border: solid 2px green;
+  background-color: green;
+}
+
+.box--item-on {
+  height: 20px;
+  border: solid 2px green;
+  background-color: lightskyblue;
+}

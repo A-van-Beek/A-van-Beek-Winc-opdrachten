@@ -1,14 +1,14 @@
+import React from "react";
 import "./App.css";
 import Header from "./components/Header";
+import Main from "./components/Main";
 
 function App() {
-  // const [user, setUser] = React.useState("Jane");
-
   return (
-    <main>
+    <section>
       <Header />
-      {/* <Body /> */}
-    </main>
+      <Main />
+    </section>
   );
 }
 

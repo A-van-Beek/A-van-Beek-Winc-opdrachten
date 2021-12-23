@@ -2,14 +2,34 @@ import React from "react";
 import memesData from "../memesData";
 
 function Meme() {
-  const [memeImage, setMemeImage] = React.useState(
-    "https://i.imgflip.com/1jwhww.jpg"
-  );
+  /**
+   * The 2 text states can default to empty strings for now,
+   * amd randomImage should default to "http://i.imgflip.com/1bij.jpg"
+   *
+   * Next, create a new state variable called `allMemeImages`
+   * which will default to `memesData`, which we imported above
+   *
+   * Lastly, update the `getMemeImage` function and the markup
+   * to reflect our newly reformed state object and array in the
+   * correct way.
+   */
+
+  const [meme, setMeme] = React.useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "http://i.imgflip.com/1bij.jpg",
+  });
+
+  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
 
   function getMemeImage() {
-    const memesArray = memesData.data.memes;
+    const memesArray = allMemeImages.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
-    setMemeImage(memesArray[randomNumber].url);
+    const url = memesArray[randomNumber].url;
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      randomImage: url,
+    }));
   }
 
   return (
@@ -21,7 +41,7 @@ function Meme() {
           Get a new meme image 🖼
         </button>
       </div>
-      <img src={memeImage} alt="oeps" />
+      <img src={meme.randomImage} alt="oeps" />
     </main>
   );
 }

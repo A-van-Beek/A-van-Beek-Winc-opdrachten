@@ -7,7 +7,7 @@ function App() {
   return (
     <section>
       <Header />
-      <Main darkMode={true} />
+      <Main darkMode={false} />
     </section>
   );
 }

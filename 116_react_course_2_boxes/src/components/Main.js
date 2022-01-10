@@ -1,7 +1,12 @@
 import React from "react";
 import boxes from "./boxes";
 
-function Body() {
+function Main(props) {
+  console.log(props.darkMode);
+  const styles = {
+    backgroundColor: props.darkMode === true ? "#b0c2cf" : "#2e3133",
+  };
+
   const [boxArray, setBoxArray] = React.useState(boxes);
 
   const boxElements = boxArray.map((box) => {
@@ -14,11 +19,11 @@ function Body() {
   });
 
   return (
-    <main className="main">
+    <main className="main" style={styles}>
       <h1>Boxes will go here</h1>
       {boxElements}
     </main>
   );
 }
 
-export default Body;
+export default Main;

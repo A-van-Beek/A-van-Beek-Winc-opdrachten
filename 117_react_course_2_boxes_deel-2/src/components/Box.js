@@ -11,6 +11,7 @@ export default function Box(props) {
    *
    * Goal: clicking each box should toggle it on and off.
    */
+  console.log(props.on);
   const styles = {
     backgroundColor: props.on ? "#222222" : "transparent",
   };

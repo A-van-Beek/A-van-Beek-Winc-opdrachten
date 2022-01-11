@@ -11,7 +11,9 @@ export default function Joke(props) {
     <div>
       {props.setup && <h3>{props.setup}</h3>}
       {isShown === true && <p>{props.punchline}</p>}
-      <button onClick={toggleShown}>show punchline</button>
+      <button onClick={toggleShown}>
+        {isShown ? "Hide" : "Show"} punchline
+      </button>
       <hr />
     </div>
   );

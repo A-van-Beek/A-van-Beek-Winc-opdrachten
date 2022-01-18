@@ -39,7 +39,10 @@ export default function App() {
     // if (formData.password === formData.confirmPassword) {
     //   console.log("Successfully signed up");
     // } else console.log("passwords to not match");
-    if (formData.okayToEmail === true) {
+    if (
+      formData.password === formData.confirmPassword &&
+      formData.okayToEmail === true
+    ) {
       console.log("Thanks for signing up for our newsletter!");
     }
   }

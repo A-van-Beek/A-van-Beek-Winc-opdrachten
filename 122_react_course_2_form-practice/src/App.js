@@ -33,8 +33,8 @@ export default function App() {
     event.preventDefault();
     //via een ternary:
     formData.password === formData.confirmPassword
-      ? console.log("yes")
-      : console.log("no");
+      ? console.log("Successfully signed up")
+      : console.log("Passwords do not match");
     // of via een if-statement:
     // if (formData.password === formData.confirmPassword) {
     //   console.log("Successfully signed up");

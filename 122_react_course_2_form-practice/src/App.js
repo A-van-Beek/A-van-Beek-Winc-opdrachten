@@ -1,15 +1,23 @@
 import React from "react";
 import "./App.css";
 
+/**
+ * Challenge: Connect the form to local state
+ *
+ * 4. Also when submitting the form, if the person checked
+ *    the "newsletter" checkbox, log "Thanks for signing
+ *    up for our newsletter!" to the console.
+ */
+
 export default function App() {
   const [formData, setFormData] = React.useState({
     email: "",
     password: "",
     confirmPassword: "",
-    okayToEmail: true,
+    okayToEmail: false,
   });
 
-  console.log(formData);
+  // console.log(formData);
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
@@ -23,7 +31,17 @@ export default function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData);
+    //via een ternary:
+    formData.password === formData.confirmPassword
+      ? console.log("yes")
+      : console.log("no");
+    // of via een if-statement:
+    // if (formData.password === formData.confirmPassword) {
+    //   console.log("Successfully signed up");
+    // } else console.log("passwords to not match");
+    if (formData.okayToEmail === true) {
+      console.log("Thanks for signing up for our newsletter!");
+    }
   }
 
   return (

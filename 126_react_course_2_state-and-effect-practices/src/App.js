@@ -10,10 +10,16 @@ export default function App() {
    * 3. Only display `<WindowTracker>` if `show` is `true`
    */
 
+  const [isShown, setIsShown] = React.useState(true);
+  function toggleShown() {
+    setIsShown((prevShown) => !prevShown);
+    console.log(isShown);
+  }
+
   return (
     <div className="container">
-      <button>Toggle WindowTracker</button>
-      <WindowTracker />
+      <button onClick={toggleShown}>Toggle WindowTracker</button>
+      {isShown === true && <WindowTracker />}
     </div>
   );
 }

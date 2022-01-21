@@ -13,7 +13,7 @@ export default function App() {
   const [isShown, setIsShown] = React.useState(true);
   function toggleShown() {
     setIsShown((prevShown) => !prevShown);
-    console.log(isShown);
+    // console.log(isShown);
   }
 
   return (

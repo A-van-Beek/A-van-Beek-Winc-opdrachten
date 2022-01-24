@@ -2,6 +2,12 @@ import React from "react";
 import reactIconSmall from "../images/react-icon-small.png";
 
 export default function Navbar(props) {
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
+
   return (
     <nav className={props.darkMode ? "dark" : ""}>
       <img
@@ -13,7 +19,7 @@ export default function Navbar(props) {
 
       <div className="toggler">
         <p className="toggler--light">Light</p>
-        <div className="toggler--slider" onClick={props.toggleDarkMode}>
+        <div className="toggler--slider" onClick={toggleDarkMode}>
           <div className="toggler--slider--circle"></div>
         </div>
         <p className="toggler--dark">Dark</p>

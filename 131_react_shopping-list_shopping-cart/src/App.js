@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
-import GroceryItem from "./components/GroceryItem";
+// import GroceryItem from "./components/GroceryItem";
+import List from "./components/List";
 import "./App.css";
 
 /**
@@ -11,7 +12,7 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <GroceryItem /> */}
+      <List />
     </div>
   );
 }

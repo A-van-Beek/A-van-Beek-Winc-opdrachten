@@ -1,0 +1,6 @@
+Part 1: Make a shopping list
+
+1. Create a React App
+2. In the components folder, create a JavaScript file called List.js,
+    it contains a class-based component List.
+    List renders a <ul> with <li>s (fill in some nice groceries you normally buy)

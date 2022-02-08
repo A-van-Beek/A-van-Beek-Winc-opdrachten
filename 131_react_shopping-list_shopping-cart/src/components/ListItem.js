@@ -1,6 +1,6 @@
 import React from "react";
 
-function GroceryItem(props) {
+function ListItem(props) {
   const completedStyle = {
     fontStyle: "italic",
     color: "blue",
@@ -8,17 +8,17 @@ function GroceryItem(props) {
   };
 
   return (
-    <ul className="todo-item">
+    <ul className="list-item">
       <li style={props.item.completed ? completedStyle : null}>
         <input
           type="checkbox"
           checked={props.item.completed}
           onChange={() => props.handleChange(props.item.id)}
         />
-        {props.item.thing}
+        {props.item.title}
       </li>
     </ul>
   );
 }
 
-export default GroceryItem;
+export default ListItem;

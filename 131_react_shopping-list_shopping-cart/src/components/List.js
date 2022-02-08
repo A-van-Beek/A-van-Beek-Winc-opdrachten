@@ -1,6 +1,6 @@
 import React from "react";
 import listData from "./listData";
-import GroceryItem from "./GroceryItem";
+import ListItem from "./ListItem";
 
 class List extends React.Component {
   constructor() {
@@ -15,6 +15,8 @@ class List extends React.Component {
     this.setState((prevState) => {
       const updatedTodos = prevState.todos.map((todo) => {
         if (todo.id === id) {
+          console.log(`item: ${id}, ${todo.title}, ${todo.completed}`);
+          console.log(`gewijzigd: ${!todo.completed}`);
           return {
             ...todo,
             completed: !todo.completed,
@@ -22,8 +24,8 @@ class List extends React.Component {
         }
         return todo;
       });
-      console.log(prevState.todos);
-      console.log(updatedTodos);
+      // console.log(prevState.todos);
+      // console.log(updatedTodos);
       return {
         todos: updatedTodos,
       };
@@ -32,10 +34,10 @@ class List extends React.Component {
 
   render() {
     const todoItems = this.state.todos.map((item) => (
-      <GroceryItem key={item.id} item={item} handleChange={this.handleChange} />
+      <ListItem key={item.id} item={item} handleChange={this.handleChange} />
     ));
 
-    return <div className="todo-list">{todoItems}</div>;
+    return <div className="-list">{todoItems}</div>;
   }
 }
 

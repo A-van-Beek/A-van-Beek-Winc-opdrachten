@@ -1,6 +1,28 @@
 Part 1: Make a shopping list
+✅ Create a React App
+✅ create List.js in folder components
+✅ List.js renders a <ul> with <li>items
+✅ export List.js in App.js
 
-1. Create a React App
-2. In the components folder, create a JavaScript file called List.js,
-    it contains a class-based component List.
-    List renders a <ul> with <li>s (fill in some nice groceries you normally buy)
+Part 2: make items a separate component
+✅ create file ListItem.js with a functional component ListItem with a prop: title
+✅ import ListItem in List
+✅ replace the <li> elements with new imported ListItem
+✅ pass down props: give each <ListItem/> an appropriate prop for title
+
+Part 3: render the items dynamically
+✅ give List a state
+✅ initalize the state of List in constructor
+    (https://reactjs.org/docs/state-and-lifecycle.html)
+✅ initial state has an array groceryItems (plural!)
+✅ move grocery titles to state and make it an array of objects
+    groceryItems: [
+        {id: 1, title: "Appels"},
+        {id: 2, title: "Carton of milk"}
+    ]
+✅ use array.map to render each object in groceryItems in <ListItem/>
+✅ give each component the correct id and title as prop
+✅ give each ListItem a key
+    <ListItem key={item.id}
+    zie verder screenshots in Winc
+

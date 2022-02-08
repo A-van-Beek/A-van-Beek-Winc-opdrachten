@@ -1,14 +1,20 @@
 const listData = [
   {
     id: 1,
-    thing: "appels",
+    title: "appels",
     amount: 1,
     completed: false,
   },
   {
     id: 2,
-    thing: "peren",
+    title: "peren",
     amount: 2,
+    completed: false,
+  },
+  {
+    id: 3,
+    title: "milk",
+    amount: 1,
     completed: false,
   },
 ];

@@ -13,7 +13,25 @@ const listData = [
   },
   {
     id: 3,
-    title: "milk",
+    title: "melk",
+    amount: 1,
+    completed: false,
+  },
+  {
+    id: 4,
+    title: "brood",
+    amount: 1,
+    completed: false,
+  },
+  {
+    id: 5,
+    title: "wijn",
+    amount: 3,
+    completed: false,
+  },
+  {
+    id: 6,
+    title: "salami",
     amount: 1,
     completed: false,
   },

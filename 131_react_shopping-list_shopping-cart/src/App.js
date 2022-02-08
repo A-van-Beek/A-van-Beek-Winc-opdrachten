@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 // import GroceryItem from "./components/GroceryItem";
 import List from "./components/List";
+import ShoppingCart from "./components/ShoppingCart";
+import Split from "react-split";
 import "./App.css";
 
 /**
@@ -12,7 +14,10 @@ function App() {
   return (
     <div>
       <Header />
-      <List />
+      <Split sizes={[30, 70]} direction="vertical" className="split">
+        <List />
+        <ShoppingCart />
+      </Split>
     </div>
   );
 }

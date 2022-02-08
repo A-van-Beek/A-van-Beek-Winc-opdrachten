@@ -37,7 +37,14 @@ class List extends React.Component {
       <ListItem key={item.id} item={item} handleChange={this.handleChange} />
     ));
 
-    return <div className="-list">{todoItems}</div>;
+    return (
+      <section className="pane list">
+        <div className="list--item">
+          <h3>boodschappen</h3>
+        </div>
+        {todoItems}
+      </section>
+    );
   }
 }
 

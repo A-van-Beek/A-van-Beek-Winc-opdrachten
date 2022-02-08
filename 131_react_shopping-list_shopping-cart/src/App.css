@@ -7,6 +7,23 @@ body {
   background-color: whitesmoke;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.pane {
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.list {
+  background-color: aqua;
+}
+
+.cart {
+  background-color: lightgreen;
+}
+
 header {
   height: 100px;
   display: flex;
@@ -29,8 +46,8 @@ header > img {
   margin-left: 2%;
 }
 
-ul {
-  list-style-type: none;
+.split {
+  display: flex;
 }
 
 header > p {
@@ -44,7 +61,7 @@ header > p {
 div {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
 }
 
@@ -65,4 +82,23 @@ button:hover {
 
 button:focus {
   outline: 0;
+}
+
+.sidebar {
+  width: 20%;
+  height: 100vh;
+}
+
+.sidebar--note {
+  display: flex;
+}
+
+.list--item {
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+}
+
+.list--item > h3 {
+  font-size: 1.25rem;
 }

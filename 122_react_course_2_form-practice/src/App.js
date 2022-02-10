@@ -17,7 +17,7 @@ export default function App() {
     okayToEmail: false,
   });
 
-  // console.log(formData);
+  console.log(formData);
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
@@ -28,6 +28,8 @@ export default function App() {
       };
     });
   }
+
+  // console.log(formData);
 
   function handleSubmit(event) {
     event.preventDefault();

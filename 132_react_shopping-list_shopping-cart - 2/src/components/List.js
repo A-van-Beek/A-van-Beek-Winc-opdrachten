@@ -8,6 +8,7 @@ class List extends React.Component {
       items: [{ text: "appels", key: 123 }],
     };
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   addItem(e) {
@@ -23,11 +24,18 @@ class List extends React.Component {
           items: prevState.items.concat(newItem),
         };
       });
-
       this._inputElement.value = "";
     }
-    console.log(this.state.items); //werkt niet helemaal !
     e.preventDefault();
+  }
+
+  deleteItem(key) {
+    var filterdItems = this.state.items.filter(function (item) {
+      return item.key !== key;
+    });
+    this.setState({
+      items: filterdItems,
+    });
   }
 
   render() {
@@ -45,7 +53,7 @@ class List extends React.Component {
         <div className="list--item">
           <h3>boodschappen</h3>
         </div>
-        <BuyItem entries={this.state.items} />
+        <BuyItem entries={this.state.items} delete={this.deleteItem} />
       </section>
     );
   }

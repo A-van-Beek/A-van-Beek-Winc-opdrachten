@@ -13,7 +13,6 @@ class BuyItem extends React.Component {
   createTasks(item) {
     return (
       <li key={item.key}>
-        <input type="checkbox" checked={item.completed} />
         {item.text}
         <button className="delete-btn" onClick={() => this.delete(item.key)}>
           <i className="gg-trash trash-icon"></i>

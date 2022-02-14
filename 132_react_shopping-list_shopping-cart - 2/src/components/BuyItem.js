@@ -10,12 +10,19 @@ class BuyItem extends React.Component {
     this.props.delete(key);
   }
 
+  toCart(key) {
+    this.props.toCart(key);
+  }
+
   createTasks(item) {
     return (
       <li key={item.key}>
-        {item.text}
         <button className="delete-btn" onClick={() => this.delete(item.key)}>
           <i className="gg-trash trash-icon"></i>
+        </button>
+        {item.text}
+        <button className="cart-btn" onClick={() => this.toCart(item.key)}>
+          <i className="gg-shopping-cart shopping-cart-icon"></i>
         </button>
       </li>
     );

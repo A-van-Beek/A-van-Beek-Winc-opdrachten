@@ -9,6 +9,7 @@ class List extends React.Component {
     };
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.itemToCart = this.itemToCart.bind(this);
   }
 
   addItem(e) {
@@ -39,6 +40,13 @@ class List extends React.Component {
     });
   }
 
+  itemToCart(key) {
+    var itemToFind = this.state.items.filter(function (item) {
+      return item.key === key;
+    });
+    console.log(itemToFind);
+  }
+
   render() {
     return (
       <section className="pane list">
@@ -54,7 +62,11 @@ class List extends React.Component {
         <div className="list--item">
           <h3>boodschappen</h3>
         </div>
-        <BuyItem entries={this.state.items} delete={this.deleteItem} />
+        <BuyItem
+          entries={this.state.items}
+          delete={this.deleteItem}
+          toCart={this.itemToCart}
+        />
       </section>
     );
   }

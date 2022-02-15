@@ -27,7 +27,6 @@ class List extends React.Component {
       });
       this._inputElement.value = "";
     }
-    console.log(this.state.items);
     e.preventDefault();
   }
 

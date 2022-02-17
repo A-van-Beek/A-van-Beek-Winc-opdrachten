@@ -5,7 +5,7 @@ class List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [{ text: "appels", key: 123 }],
+      items: props.items,
     };
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);

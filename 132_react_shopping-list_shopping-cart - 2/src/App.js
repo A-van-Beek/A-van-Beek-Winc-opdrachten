@@ -18,6 +18,7 @@ class App extends React.Component {
         { text: "kaki-vrucht", key: 321 },
         { text: "papaya", key: 333 },
       ],
+      items: [{ text: "appels", key: 123 }],
     };
   }
 
@@ -26,7 +27,7 @@ class App extends React.Component {
       <div>
         <Header />
         <Split sizes={[30, 70]} direction="vertical" className="split">
-          <List />
+          <List items={this.state.items} />
           <ShoppingCart cartItems={this.state.cartItems} />
         </Split>
       </div>

@@ -25,10 +25,10 @@ class CartItem extends React.Component {
   }
 
   render() {
-    var toCartEntries = this.props.entries;
-    var toCartItems = toCartEntries.map(this.createCartItems);
+    var toCartEntries = this.props.cartEntries;
+    var listCartItems = toCartEntries.map(this.createCartItems);
 
-    return <ul className="theCartList">{toCartItems}</ul>;
+    return <ul className="theCartList">{listCartItems}</ul>;
   }
 }
 

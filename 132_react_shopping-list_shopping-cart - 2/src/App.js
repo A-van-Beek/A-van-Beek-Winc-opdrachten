@@ -14,11 +14,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      items: [{ text: "appels", key: 123 }],
       cartItems: [
         { text: "kaki-vrucht", key: 321 },
         { text: "papaya", key: 333 },
       ],
-      items: [{ text: "appels", key: 123 }],
     };
   }
 

@@ -6,6 +6,7 @@ class List extends React.Component {
     super(props);
     this.state = {
       items: props.items,
+      cartItems: props.cartItems,
     };
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
@@ -23,6 +24,7 @@ class List extends React.Component {
       this.setState((prevState) => {
         return {
           items: prevState.items.concat(newItem),
+          cartItems: prevState.cartItems,
         };
       });
       this._inputElement.value = "";
@@ -34,8 +36,11 @@ class List extends React.Component {
     var filterdItems = this.state.items.filter(function (item) {
       return item.key !== key;
     });
-    this.setState({
-      items: filterdItems,
+    this.setState((prevState) => {
+      return {
+        items: filterdItems,
+        cartItems: prevState.cartItems,
+      };
     });
   }
 
@@ -43,7 +48,13 @@ class List extends React.Component {
     var itemToFind = this.state.items.filter(function (item) {
       return item.key === key;
     });
-    console.log(itemToFind);
+    // console.log(itemToFind);
+    this.setState((prevState) => {
+      return {
+        items: prevState.items,
+        cartItems: prevState.cartItems.concat(itemToFind),
+      };
+    });
   }
 
   render() {

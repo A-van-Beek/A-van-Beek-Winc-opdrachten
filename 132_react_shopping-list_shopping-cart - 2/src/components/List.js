@@ -48,11 +48,12 @@ class List extends React.Component {
     var itemToFind = this.state.items.filter(function (item) {
       return item.key === key;
     });
+    var cartItemsNew = this.state.cartItems.concat(itemToFind);
     // console.log(itemToFind);
     this.setState((prevState) => {
       return {
         items: prevState.items,
-        cartItems: prevState.cartItems.concat(itemToFind),
+        cartItems: cartItemsNew,
       };
     });
   }

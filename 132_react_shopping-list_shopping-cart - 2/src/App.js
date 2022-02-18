@@ -30,7 +30,7 @@ class App extends React.Component {
       <div>
         <Header />
         <Split sizes={[30, 70]} direction="vertical" className="split">
-          <List items={this.state.items} />
+          <List items={this.state.items} cartItems={this.state.cartItems} />
           <ShoppingCart cartItems={this.state.cartItems} />
         </Split>
       </div>

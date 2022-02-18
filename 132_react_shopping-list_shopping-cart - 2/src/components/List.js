@@ -19,7 +19,7 @@ class List extends React.Component {
         text: this._inputElement.value,
         key: Date.now(),
       };
-      console.log(newItem);
+      console.log(`op lijstje: ${newItem.text}`);
 
       this.setState((prevState) => {
         return {
@@ -49,7 +49,7 @@ class List extends React.Component {
       return item.key === key;
     });
     var cartItemsNew = this.state.cartItems.concat(itemToFind);
-    // console.log(itemToFind);
+    console.log(`in wagentje: ${itemToFind[0].text}`);
     this.setState((prevState) => {
       return {
         items: prevState.items,
@@ -59,6 +59,8 @@ class List extends React.Component {
   }
 
   render() {
+    console.log("cartItems vanuit mandje:");
+    console.log(this.state.cartItems);
     return (
       <section className="pane list">
         <form onSubmit={this.addItem}>

@@ -24,6 +24,8 @@ class ShoppingCart extends React.Component {
   }
 
   render() {
+    console.log("cartItems vanuit Cart:");
+    console.log(this.state.cartItems);
     return (
       <section className="pane cart">
         <div className="cart--item">

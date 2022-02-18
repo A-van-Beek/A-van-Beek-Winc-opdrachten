@@ -14,7 +14,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [{ text: "appels", key: 123 }],
+      items: [
+        { text: "appels", key: 123 },
+        { text: "peren", key: 456 },
+      ],
       cartItems: [
         { text: "kaki-vrucht", key: 321 },
         { text: "papaya", key: 333 },

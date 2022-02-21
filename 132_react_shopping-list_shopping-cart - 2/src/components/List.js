@@ -59,8 +59,8 @@ class List extends React.Component {
   }
 
   render() {
-    console.log("cartItems vanuit mandje:");
-    console.log(this.state.cartItems);
+    // console.log("cartItems vanuit mandje:");
+    // console.log(this.state.cartItems);
     return (
       <section className="pane list">
         <form onSubmit={this.addItem}>

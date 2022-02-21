@@ -12,6 +12,10 @@ class ShoppingCart extends React.Component {
   }
 
   deleteCartItem(key) {
+    var toDeleteCartItem = this.state.cartItems.filter(function (item) {
+      return item.key === key;
+    });
+    console.log(`delte item in winkelwagen: ${toDeleteCartItem[0].text}`);
     var filterdCartItems = this.state.cartItems.filter(function (item) {
       return item.key !== key;
     });

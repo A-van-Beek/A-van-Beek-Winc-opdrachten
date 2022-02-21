@@ -33,6 +33,11 @@ class List extends React.Component {
   }
 
   deleteItem(key) {
+    var toDeleteItem = this.state.items.filter(function (item) {
+      return item.key === key;
+    });
+    console.log(`delete item van lijst: ${toDeleteItem[0].text}`);
+
     var filterdItems = this.state.items.filter(function (item) {
       return item.key !== key;
     });

@@ -1,18 +1,20 @@
 import React from "react";
 
 function SongForm() {
-  const [formData, setSongData] = React.useState({
+  const formData = {
     id: "",
     title: "",
     performer: "",
     genre: "",
     rating: "",
-  });
+  };
 
   // console.log(formData);
 
   function handleChange(event) {
     const { name, value } = event.target;
+    formData.id = Date.now();
+    formData.title = this._;
     // this.setState({
     //   [name]: value,
     // });

@@ -23,7 +23,8 @@ class Form extends Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state);
+    var newSong = this.state;
+    console.log(newSong);
     event.preventDefault();
   }
 

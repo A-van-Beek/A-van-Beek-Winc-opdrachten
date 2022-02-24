@@ -18,8 +18,6 @@ function App() {
 
       <Form />
 
-      {/* <SongForm /> */}
-
       <h1>Your top-list</h1>
       <SongList songs={songs} />
     </div>

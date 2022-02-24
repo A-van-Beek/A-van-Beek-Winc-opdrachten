@@ -1,6 +1,6 @@
 import counterReducer from "./counter";
 import loggedReducer from "./isLogged";
-import addSongTitleReducer from "./songTitleReducer";
+import songTitleReducer from "./songTitleReducer";
 import { combineReducers } from "redux";
 
 // deze index verzamelt alle reducers
@@ -8,7 +8,7 @@ import { combineReducers } from "redux";
 const allReducers = combineReducers({
   counter: counterReducer,
   isLogged: loggedReducer,
-  songTitles: addSongTitleReducer,
+  songTitles: songTitleReducer,
 });
 
 export default allReducers;

@@ -1,15 +1,15 @@
 import songData from "../songData";
 
-const addSongTitle = (state = songData, action) => {
+const songTitles = (state = songData, action) => {
   switch (action.type) {
     case "editSong":
       return state + 1;
     case "ADD_SONG":
-      return console.log(songData);
+      return state;
 
     default:
       return state;
   }
 };
 
-export default addSongTitle;
+export default songTitles;

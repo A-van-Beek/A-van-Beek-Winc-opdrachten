@@ -8,6 +8,7 @@ function SongList(props) {
       key={song.id}
       title={song.title}
       performer={song.performer}
+      genre={song.genre}
       rating={song.rating}
     />
   ));

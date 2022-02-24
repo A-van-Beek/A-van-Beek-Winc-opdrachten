@@ -4,7 +4,10 @@ function Song(props) {
   return (
     <div className="song-item">
       <p>
-        "{props.title}" van {props.performer} met {props.rating} punten
+        "{props.title}" van {props.performer} met {props.rating} punten.
+        <br />
+        Genre: {props.genre}
+        <br />
       </p>
     </div>
   );

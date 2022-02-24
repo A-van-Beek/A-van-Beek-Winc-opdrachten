@@ -6,6 +6,13 @@ const songData = [
     genre: "pop",
     rating: 5,
   },
+  {
+    id: 2,
+    title: "What you wish",
+    performer: "Better or worse",
+    genre: "classic",
+    rating: 2,
+  },
 ];
 
 export default songData;

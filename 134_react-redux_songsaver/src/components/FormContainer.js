@@ -25,6 +25,12 @@ class Form extends Component {
   handleSubmit(event) {
     var newSong = this.state;
     console.log(newSong);
+    this.setState({
+      title: "",
+      performer: "",
+      genre: "",
+      rating: "",
+    });
     event.preventDefault();
   }
 

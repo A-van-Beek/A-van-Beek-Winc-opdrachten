@@ -12,7 +12,6 @@ function App() {
   const songs = useSelector((state) => state.addSongTitle);
   const dispatch = useDispatch();
 
-  console.log(songs);
   return (
     <div className="App">
       <Header />

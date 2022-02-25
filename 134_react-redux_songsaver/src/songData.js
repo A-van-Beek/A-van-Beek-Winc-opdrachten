@@ -16,3 +16,12 @@ const songData = [
 ];
 
 export default songData;
+/**
+ * is dit de store?
+ * moet dat dan niet worden:
+ *  {
+ * songs: [{id: 1, title: "", etc}]
+ * currentUser: {}
+ *  }
+ *
+ */

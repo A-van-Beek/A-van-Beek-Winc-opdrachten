@@ -17,3 +17,20 @@ export const addSong = () => {
     type: "ADD_SONG",
   };
 };
+
+/**
+ * simpelste vorm:
+ *  {
+ *  type: "ADD_BUG",
+ *  description: "..."
+ *  }
+ *
+ * oorspronkelijke vorm:
+ *  {
+ *    type: "ADD_BUG",
+ *    payload: {
+ *      description: "..."
+ *    }
+ *   }
+ *
+ */

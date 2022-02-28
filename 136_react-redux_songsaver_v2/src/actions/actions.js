@@ -20,3 +20,10 @@ export const bugRemoved = (id) => ({
     id, // aangezien id: id afgekort kan worden weergegeven.
   },
 });
+
+export const songAdded = (descriptiveArray) => ({
+  type: actions.SONG_ADDED,
+  payload: {
+    descriptiveArray: descriptiveArray,
+  },
+});

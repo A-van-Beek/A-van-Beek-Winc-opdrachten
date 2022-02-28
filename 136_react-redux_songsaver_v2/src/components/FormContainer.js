@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import FormComponent from "./FormComponent";
+import { songAdded } from "../actions/actions";
+import store from "../store";
 
-class Form extends Component {
+class FormContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -24,13 +26,15 @@ class Form extends Component {
 
   handleSubmit(event) {
     var newSong = this.state;
-    console.log(newSong);
+    songAdded(newSong);
     this.setState({
       title: "",
       performer: "",
       genre: "",
       rating: "",
     });
+    store.dispatch(songAdded(newSong));
+    console.log(newSong, store.getState());
     event.preventDefault();
   }
 
@@ -45,4 +49,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default FormContainer;

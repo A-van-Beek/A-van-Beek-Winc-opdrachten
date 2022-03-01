@@ -1,13 +1,14 @@
 import React from "react";
+import store from "./store";
+import { songAdded } from "./actions/actions";
+import Header from "./components/Header";
+import FormContainer from "./components/FormContainer";
+
 // import { useSelector, useDispatch } from "react-redux";
 // import allReducer from "./reducers/allReducers";
 // import bugReducer from "./reducers/bugReducer";
-import store from "./store";
-// import { bugAdded, bugRemoved, bugResolved } from "./actions/actions";
-import { songAdded } from "./actions/actions";
 // import { BUG_REMOVED, BUG_RESOLVED } from "./actions/actionTypes";
-import Header from "./components/Header";
-import FormContainer from "./components/FormContainer";
+// import { bugAdded, bugRemoved, bugResolved } from "./actions/actions";
 
 const unsubscribe = store.subscribe(() => {
   // hier werk je met de DOM elements !
@@ -15,20 +16,15 @@ const unsubscribe = store.subscribe(() => {
 });
 
 // store.dispatch(bugAdded("bug 1"));
-// store.dispatch(bugAdded("bug 2"));
-// store.dispatch(bugAdded("bug 3"));
-// store.dispatch(bugRemoved(2));
-// store.dispatch(bugResolved(1));
-// store.dispatch(bugResolved(1));
 
-let newSong = {
-  title: "Toen en nu",
-  performer: "RoepieRoepie",
-  genre: "classic",
-  rating: "9",
-};
-store.dispatch(songAdded(newSong));
-
+// let newSong = {
+//   title: "Toen en nu",
+//   performer: "RoepieRoepie",
+//   genre: "classic",
+//   rating: "9",
+// };
+// store.dispatch(songAdded(newSong));
+console.log("Store init ! ", store.getState());
 unsubscribe();
 
 function App() {

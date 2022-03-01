@@ -1,20 +1,19 @@
 import React from "react";
+import store from "../store";
 import Song from "./Song";
 
-function SongList(props) {
-  console.log(props.songs);
-  const songList = props.songs.map((song) => (
-    <Song
-      key={song.id}
-      title={song.title}
-      performer={song.performer}
-      genre={song.genre}
-      rating={song.rating}
-    />
+function SongList() {
+  const listSongs = store.getState().songReducer;
+
+  const songItems = listSongs.map((item) => (
+    <li key={item.id}>
+      {item.title} ({item.artist}) met score {item.rating}
+    </li>
   ));
+
   return (
     <div>
-      <div className="songlist">{songList}</div>
+      <div className="songlist">{songItems}</div>
     </div>
   );
 }

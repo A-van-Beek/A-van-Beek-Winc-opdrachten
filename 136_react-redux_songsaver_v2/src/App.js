@@ -3,6 +3,7 @@ import store from "./store";
 import { songAdded } from "./actions/actions";
 import Header from "./components/Header";
 import FormContainer from "./components/FormContainer";
+import SongList from "./components/SongList";
 
 // import { useSelector, useDispatch } from "react-redux";
 // import allReducer from "./reducers/allReducers";
@@ -33,7 +34,7 @@ function App() {
       <Header />
       <FormContainer />
       <h1> Your top-list</h1>
-      {/* <Songlist songs={songs} /> */}
+      <SongList />
     </div>
   );
 }

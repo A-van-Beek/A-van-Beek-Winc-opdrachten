@@ -1,6 +1,5 @@
 import React from "react";
 import store from "../store";
-import Song from "./Song";
 
 function SongList() {
   const listSongs = store.getState().songReducer;

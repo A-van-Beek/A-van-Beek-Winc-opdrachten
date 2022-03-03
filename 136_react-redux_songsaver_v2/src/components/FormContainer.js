@@ -8,7 +8,7 @@ class FormContainer extends Component {
     super();
     this.state = {
       title: "",
-      performer: "",
+      artist: "",
       genre: "",
       rating: "",
     };
@@ -29,7 +29,7 @@ class FormContainer extends Component {
     songAdded(newSong);
     this.setState({
       title: "",
-      performer: "",
+      artist: "",
       genre: "",
       rating: "",
     });

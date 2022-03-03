@@ -16,10 +16,10 @@ function FormComponent(props) {
           <br />
 
           <input
-            name="performer"
-            value={props.data.performer}
+            name="artist"
+            value={props.data.artist}
             onChange={props.handleChange}
-            placeholder="performer"
+            placeholder="artist"
           />
           <br />
 
@@ -54,7 +54,7 @@ function FormComponent(props) {
         <hr />
         <h2>Entered information:</h2>
         <p> Your song: {props.data.title} </p>
-        <p> Your performer: {props.data.performer}</p>
+        <p> Your artist: {props.data.artist}</p>
         <p> Your genre: {props.data.genre}</p>
         <p> Your rating: {props.data.rating}</p>
       </div>

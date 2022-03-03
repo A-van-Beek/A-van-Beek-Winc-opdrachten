@@ -10,14 +10,18 @@ const unsubscribe = store.subscribe(() => {
   console.log("Store changed ! ", store.getState());
 });
 
-const newSong = {
-  title: "TjaTjaTja",
-  artist: "FadoForEver",
-  genre: "pop",
-  rating: 3,
-};
-console.log(newSong.title);
+// /**
+//  * hardcoded add a newSong
+//  */
+// const newSong = {
+//   title: "TjaTjaTja",
+//   artist: "FadoForEver",
+//   genre: "pop",
+//   rating: 3,
+// };
+// console.log(newSong.title);
 // store.dispatch(songAdded(newSong));
+
 unsubscribe();
 
 function App() {

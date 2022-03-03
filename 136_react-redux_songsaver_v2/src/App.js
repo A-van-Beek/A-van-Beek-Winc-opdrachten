@@ -4,12 +4,9 @@ import { songAdded } from "./actions/actions";
 import Header from "./components/Header";
 import FormContainer from "./components/FormContainer";
 
-// import { useSelector, useDispatch } from "react-redux";
-// import allReducer from "./reducers/allReducers";
-
-const unsubscribe = store.subscribe(() => {
-  console.log("Store changed ! ", store.getState());
-});
+// const unsubscribe = store.subscribe(() => {
+//   console.log("Store changed ! ", store.getState());
+// });
 
 // /**
 //  * hardcoded new song
@@ -23,8 +20,7 @@ const unsubscribe = store.subscribe(() => {
 // console.log(newSong.title);
 // // store.dispatch(songAdded(newSong));
 
-console.log("Store init ! ", store.getState());
-unsubscribe();
+// console.log("Store init ! ", store.getState());
 
 function App() {
   return (

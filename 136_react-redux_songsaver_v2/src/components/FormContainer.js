@@ -35,7 +35,6 @@ class FormContainer extends Component {
       rating: "",
     });
     store.dispatch(songAdded(newSong));
-    console.log(newSong, store.getState());
     event.preventDefault();
   }
 

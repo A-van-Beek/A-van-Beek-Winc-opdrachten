@@ -57,6 +57,7 @@ function FormComponent(props) {
         <p> Your artist: {props.data.artist}</p>
         <p> Your genre: {props.data.genre}</p>
         <p> Your rating: {props.data.rating}</p>
+        <hr />
       </div>
     </main>
   );

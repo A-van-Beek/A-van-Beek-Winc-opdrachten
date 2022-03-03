@@ -20,9 +20,16 @@ const initialState = [
 function songReducer(state = initialState, action) {
   switch (action.type) {
     case actions.SONG_ADDED:
-      return [...state, { descriptiveArray: action.payload.descriptiveArray }];
-    // case actions.SONG_REMOVED:
-    //   return state.filter((bug) => bug.id !== action.payload.id);
+      return [
+        ...state,
+        {
+          id: Date.now(),
+          title: action.payload.description.title,
+          artist: action.payload.description.artist,
+          genre: action.payload.description.genre,
+          rating: action.payload.description.rating,
+        },
+      ];
     default:
       return state;
   }

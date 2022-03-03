@@ -7,24 +7,23 @@ import SongList from "./components/SongList";
 
 // import { useSelector, useDispatch } from "react-redux";
 // import allReducer from "./reducers/allReducers";
-// import bugReducer from "./reducers/bugReducer";
-// import { BUG_REMOVED, BUG_RESOLVED } from "./actions/actionTypes";
-// import { bugAdded, bugRemoved, bugResolved } from "./actions/actions";
 
 const unsubscribe = store.subscribe(() => {
-  // hier werk je met de DOM elements !
   console.log("Store changed ! ", store.getState());
 });
 
-// store.dispatch(bugAdded("bug 1"));
-
-// let newSong = {
-//   title: "Toen en nu",
-//   performer: "RoepieRoepie",
-//   genre: "classic",
-//   rating: "9",
-// };
+/**
+ * hardcoded new song
+ */
+const newSong = {
+  title: "TjaTjaTja",
+  artist: "FadoForEver",
+  genre: "pop",
+  rating: 3,
+};
+console.log(newSong.title);
 // store.dispatch(songAdded(newSong));
+
 console.log("Store init ! ", store.getState());
 unsubscribe();
 

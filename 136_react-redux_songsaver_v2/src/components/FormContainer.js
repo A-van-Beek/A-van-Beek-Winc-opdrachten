@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FormComponent from "./FormComponent";
 import { songAdded } from "../actions/actions";
 import store from "../store";
+import SongList from "./SongList";
 
 class FormContainer extends Component {
   constructor() {
@@ -40,11 +41,15 @@ class FormContainer extends Component {
 
   render() {
     return (
-      <FormComponent
-        handleSubmit={this.handleSubmit}
-        handleChange={this.handleChange}
-        data={this.state}
-      />
+      <div>
+        <FormComponent
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          data={this.state}
+        />
+        <h1> Your top-list</h1>
+        <SongList />
+      </div>
     );
   }
 }

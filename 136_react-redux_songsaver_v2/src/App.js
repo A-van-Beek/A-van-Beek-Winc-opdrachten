@@ -33,7 +33,7 @@ function App() {
           paddingBottom: "1rem",
         }}
       >
-        <Link to="/about">About</Link> |{" "}
+        <Link to="/about">About</Link> | <Link to="/blogs">Blogs</Link> |{" "}
       </nav>
       <FormContainer />
     </div>

@@ -16,7 +16,6 @@ const newSong = {
 };
 // console.log(newSong.title);
 store.dispatch(songAdded(newSong));
-store.dispatch(songDeleted(1));
 
 class FormContainer extends Component {
   constructor() {
@@ -29,6 +28,7 @@ class FormContainer extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onClick = this.onClick.bind(this);
   }
 
   handleChange(event) {
@@ -52,6 +52,14 @@ class FormContainer extends Component {
     event.preventDefault();
   }
 
+  onClick(event) {
+    this.setState({
+      id: "",
+    });
+    store.dispatch(songDeleted(1));
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div>
@@ -62,6 +70,8 @@ class FormContainer extends Component {
         />
         <h1> Your top-list</h1>
         <SongList />
+        <hr />
+        <button onClick={this.onClick}>delete Dancing Queen</button>
       </div>
     );
   }

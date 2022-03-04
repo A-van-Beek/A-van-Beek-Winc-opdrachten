@@ -42,6 +42,7 @@ function songReducer(state = initialState, action) {
       var newState = state.filter(function (song) {
         return song.id !== action.payload.id;
       });
+      console.log(newState);
       return newState;
     default:
       return state;

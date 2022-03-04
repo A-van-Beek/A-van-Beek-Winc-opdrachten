@@ -1,8 +1,22 @@
 import React, { Component } from "react";
 import FormComponent from "./FormComponent";
-import { songAdded } from "../actions/actions";
+import { songAdded, songDeleted } from "../actions/actions";
 import store from "../store";
 import SongList from "./SongList";
+
+// /**
+//  * hardcoded new song
+//  */
+const newSong = {
+  id: 6,
+  title: "TjaTjaTja",
+  artist: "FadoForEver",
+  genre: "pop",
+  rating: 3,
+};
+// console.log(newSong.title);
+store.dispatch(songAdded(newSong));
+store.dispatch(songDeleted(1));
 
 class FormContainer extends Component {
   constructor() {

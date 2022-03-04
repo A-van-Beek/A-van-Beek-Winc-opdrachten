@@ -15,6 +15,13 @@ const initialState = [
     genre: "pop",
     rating: 1,
   },
+  {
+    id: 3,
+    title: "To be young, gifted and black",
+    artist: "Nina Simone",
+    genre: "jazz",
+    rating: 3,
+  },
 ];
 
 function songReducer(state = initialState, action) {
@@ -30,6 +37,12 @@ function songReducer(state = initialState, action) {
           rating: action.payload.description.rating,
         },
       ];
+    case actions.SONG_DELETED:
+      console.log("deleting song-id: 1");
+      var newState = state.filter(function (song) {
+        return song.id !== action.payload.id;
+      });
+      return newState;
     default:
       return state;
   }

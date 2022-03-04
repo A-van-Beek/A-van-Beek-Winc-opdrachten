@@ -4,6 +4,7 @@ import { songAdded } from "./actions/actions";
 import Header from "./components/Header";
 import FormContainer from "./components/FormContainer";
 import { Outlet, Link } from "react-router-dom";
+import Nav from "./components/Nav";
 
 // const unsubscribe = store.subscribe(() => {
 //   console.log("Store changed ! ", store.getState());
@@ -27,14 +28,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="/about">About</Link> | <Link to="/blogs">Blogs</Link> |{" "}
-      </nav>
+      <Nav />
       <FormContainer />
     </div>
   );

@@ -27,7 +27,7 @@ const isGameOver = (game) => {
     return true;
   }
   if (
-    getWrongLetters(game.chosenWord, game.guessedLetters).length >
+    getWrongLetters(game.chosenWord, game.guessedLetters).length >=
     game.maxGuesses
   ) {
     return true;
@@ -52,7 +52,7 @@ const App = (props) => {
     <div className="App">
       <h1>Simple 'Hangman' Game</h1>
       <p>[no people will actually be harmed during this game]</p>
-      <p>exercise 5: unsolved</p>
+      <p>exercise 5: solved (isGameOver guessesLeft >= max guesses)</p>
       {gameOver}
       <TextInput
         currentChosenLetter={game.currentChosenLetter}

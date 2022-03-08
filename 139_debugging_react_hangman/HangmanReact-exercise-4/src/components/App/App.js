@@ -52,7 +52,7 @@ const App = (props) => {
     <div className="App">
       <h1>Simple 'Hangman' Game</h1>
       <p>[no people will actually be harmed during this game]</p>
-      <p>exercise 4: unsolved</p>
+      <p>exercise 4: solved (correction guessLetterHandler in AppContainer)</p>
       {gameOver}
       <TextInput
         currentChosenLetter={game.currentChosenLetter}

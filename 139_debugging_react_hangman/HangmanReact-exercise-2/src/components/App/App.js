@@ -11,17 +11,17 @@ import WronglyGuessedLetters from "../WronglyGuessedLetters/WronglyGuessedLetter
 
 const wordGuessed = (word, guessedLetters) => {
   word = word.split("");
-  const remaining = word.filter(letter => !guessedLetters.includes(letter));
+  const remaining = word.filter((letter) => !guessedLetters.includes(letter));
   return remaining.length === 0;
 };
 
 const getWrongLetters = (word, guessedLetters) =>
-  guessedLetters.filter(letter => !word.split("").includes(letter));
+  guessedLetters.filter((letter) => !word.split("").includes(letter));
 
 const isGameOver = (game, wrongLetters, wordWasGuessed) =>
   wordWasGuessed || wrongLetters.length >= game.maxGuesses;
 
-const App = props => {
+const App = (props) => {
   const game = props.game;
   const wordWasGuessed = wordGuessed(game.chosenWord, game.guessedLetters);
   const wrongLetters = getWrongLetters(game.chosenWord, game.guessedLetters);
@@ -35,6 +35,7 @@ const App = props => {
     <div className="App">
       <h1>Simple 'Hangman' Game</h1>
       <p>[no people will actually be harmed during this game]</p>
+      <p>exercise 2: unsolved</p>
       {gameOver}
       <TextInput
         currentChosenLetter={game.currentChosenLetter}

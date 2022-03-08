@@ -28,14 +28,14 @@ const App = (props) => {
   const gameIsOver = isGameOver(game, wrongLetters, wordWasGuessed);
 
   const gameOver = gameIsOver ? (
-    <GameOver chosenWord={game.chosenWord} wordGuesed={wordWasGuessed} />
+    <GameOver chosenWord={game.chosenWord} wordGuessed={wordWasGuessed} />
   ) : null;
 
   return (
     <div className="App">
       <h1>Simple 'Hangman' Game</h1>
       <p>[no people will actually be harmed during this game]</p>
-      <p>exercise 1: unsolved</p>
+      <p>exercise 1: solved (spelling mistake app.js: wordGuesed)</p>
       {gameOver}
       <TextInput
         currentChosenLetter={game.currentChosenLetter}

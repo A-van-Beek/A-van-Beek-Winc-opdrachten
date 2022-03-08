@@ -13,9 +13,10 @@ const wordGuessed = (word, guessedLetters) => {
   word = word.split("");
   // remove all letters from word that are already guessed
   // We can do this with a for loop to.
-  let remaining = word.filter((letter) =>
-    // If the letter is guessed return false (we want to remove that then)
-    guessedLetters.includes(letter)
+  let remaining = word.filter(
+    (letter) =>
+      // If the letter is guessed return false (we want to remove that then)
+      !guessedLetters.includes(letter)
   );
   // If we have letters left the word is not yet guessed
   return remaining.length === 0;
@@ -51,7 +52,7 @@ const App = (props) => {
     <div className="App">
       <h1>Simple 'Hangman' Game</h1>
       <p>[no people will actually be harmed during this game]</p>
-      <p>exercise 3: unsolved</p>
+      <p>exercise 3: solved (app.js: definition let remaining) </p>
       {gameOver}
       <TextInput
         currentChosenLetter={game.currentChosenLetter}

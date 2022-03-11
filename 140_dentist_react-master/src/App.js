@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./routes/Home";
 import Calendar from "./routes/Calendar";
 import Day from "./routes/Day";
+import Clients from "./routes/Clients";
 
 import store from "./store";
 // import * as actions from "./actions/actions";
@@ -20,7 +21,7 @@ const unsubscribe = store.subscribe(() => {
 const appointments = generateRandomAppointments(70);
 
 // console.log array met alle clienten
-console.log(store.getState().clientReducer);
+// console.log(store.getState().clientReducer);
 unsubscribe();
 
 const App = () => (
@@ -37,6 +38,9 @@ const App = () => (
           <li>
             <Link to="/day">Day view</Link>
           </li>
+          <li>
+            <Link to="/clients">Clients view</Link>
+          </li>
         </ul>
       </nav>
       <main>
@@ -46,6 +50,9 @@ const App = () => (
           </Route>
           <Route path="/day">
             <Day appointments={appointments.filter((app) => app.day === 1)} />
+          </Route>
+          <Route path="/clients">
+            <Clients />
           </Route>
           <Route path="/">
             <Home />

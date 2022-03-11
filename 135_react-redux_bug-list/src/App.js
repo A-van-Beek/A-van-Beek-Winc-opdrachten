@@ -45,7 +45,7 @@ function App() {
   //   },
   // });
   // console.log(store.getState());
-  return <div className="App"></div>;
+  return <div className="App">Zie de console.log !!</div>;
 }
 
 export default App;

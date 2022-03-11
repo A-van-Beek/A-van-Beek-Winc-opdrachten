@@ -1,14 +1,27 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+//routes//
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./routes/Home";
 import Calendar from "./routes/Calendar";
 import Day from "./routes/Day";
 
+import store from "./store";
+// import * as actions from "./actions/actions";
+
 import generateRandomAppointments from "./utils";
 
+const unsubscribe = store.subscribe(() => {
+  // hier werk je met de DOM elements !
+  console.log("Store changed ! ", store.getState());
+});
+
 const appointments = generateRandomAppointments(70);
+
+// console.log array met alle clienten
+console.log(store.getState().clientReducer);
+unsubscribe();
 
 const App = () => (
   <Router>

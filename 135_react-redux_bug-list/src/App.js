@@ -19,6 +19,8 @@ store.dispatch(bugRemoved(2));
 store.dispatch(bugResolved(1));
 store.dispatch(bugResolved(1));
 
+console.log(store.getState().bugReducer);
+
 // store.dispatch({
 //   type: actions.BUG_ADDED,
 //   payload: {

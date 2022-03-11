@@ -1,9 +1,11 @@
 /**
  * collection of cliënts, dentists and assistants
  * first person is sick
+ *
+ * list of basic appointments
  */
 
-let client = [
+export let clients = [
   {
     id: 1,
     gender: "Female",
@@ -506,7 +508,7 @@ let client = [
   },
 ];
 
-let dentist = [
+export let dentists = [
   {
     id: 51,
     gender: "Female",
@@ -559,7 +561,7 @@ let dentist = [
   },
 ];
 
-let assistant = [
+export let assistants = [
   {
     id: 61,
     gender: "Male",
@@ -582,14 +584,29 @@ let assistant = [
   },
 ];
 
-export function getDentists() {
-  return dentist;
-}
+export let appointments = [
+  {
+    id: 123,
+    dayOfMonth: 1,
+    time: 16,
+    patient: "Lieke Kramer",
+    assistant: "Johanneke van Loon",
+    dentist: "Lotte Vos",
+  },
+];
 
-export function getClients() {
-  return client;
-}
+// export function getDentists() {
+//   return dentists;
+// }
 
-export function getAssistants() {
-  return assistant;
-}
+// export function getClients() {
+//   return clients;
+// }
+
+// export function getAssistants() {
+//   return assistants;
+// }
+
+// export function getAppointments() {
+//   return appointments;
+// }

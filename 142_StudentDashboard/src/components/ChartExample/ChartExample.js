@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 import {
   VictoryBar,
   VictoryChart,
@@ -935,16 +936,7 @@ const assignmentRatingAverageWithLabels = assignmentRatingAverage.map(
 
 const chartExample = () => (
   <>
-    <nav
-      style={{
-        borderBottom: "solid 1px",
-        paddingBottom: "1rem",
-      }}
-    >
-      <Link to="/">home</Link> |{" "}
-      <Link to="/chartExample">chartExample view</Link>
-    </nav>
-    <Outlet />
+    <Navbar />
     <VictoryChart domainPadding={15} theme={wincTheme}>
       <VictoryGroup offset={20}>
         <VictoryBar

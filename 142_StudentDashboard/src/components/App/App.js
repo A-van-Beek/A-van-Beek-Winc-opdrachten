@@ -3,6 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 import store from "../../store";
 import Header from "../Header/Header";
 import ChartExample from "../ChartExample/ChartExample";
+import Navbar from "../Navbar/Navbar";
+
 import "./App.css";
 
 function App() {
@@ -15,11 +17,7 @@ function App() {
     <div className="App">
       <h1>Studenten overzicht</h1>
       <Header />
-      <nav>
-        <Link to="/">home</Link> |{" "}
-        <Link to="/chartExample">chartExample view</Link>
-      </nav>
-      <Outlet />
+      <Navbar />
     </div>
   );
 }

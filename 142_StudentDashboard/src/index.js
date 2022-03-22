@@ -4,6 +4,7 @@ import App from "./components/App/App";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ChartExample from "./components/ChartExample/ChartExample";
+import StudentView from "./components/StudentView/StudentView";
 
 const rootElement = document.getElementById("root");
 render(
@@ -11,6 +12,7 @@ render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="ChartExample" element={<ChartExample />} />
+      <Route path="StudentView" element={<StudentView />} />
       <Route
         path="*"
         element={

@@ -15,9 +15,9 @@ function App() {
   // console.log(store.getState());
   return (
     <div className="App">
-      <h1>Studenten overzicht</h1>
-      <Header />
+      <Header page="Studenten overzicht" />
       <Navbar />
+      <h1>Hier de intro</h1>
     </div>
   );
 }

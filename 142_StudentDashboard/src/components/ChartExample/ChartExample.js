@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import Header from "../Header/Header";
 import {
   VictoryBar,
   VictoryChart,
@@ -936,6 +937,7 @@ const assignmentRatingAverageWithLabels = assignmentRatingAverage.map(
 
 const chartExample = () => (
   <>
+    <Header page="Grafisch overzicht" />
     <Navbar />
     <VictoryChart domainPadding={15} theme={wincTheme}>
       <VictoryGroup offset={20}>

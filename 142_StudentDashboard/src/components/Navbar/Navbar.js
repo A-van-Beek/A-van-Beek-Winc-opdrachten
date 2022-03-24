@@ -6,8 +6,8 @@ function Navbar() {
     <>
       <nav>
         <Link to="/">home</Link> |{" "}
-        <Link to="/chartExample">chartExample view</Link> |{" "}
-        <Link to="/studentView">student view</Link>
+        <Link to="/chartExample">grafisch overzicht</Link> |{" "}
+        <Link to="/studentView">studenten overzicht</Link>
       </nav>
       <Outlet />
     </>

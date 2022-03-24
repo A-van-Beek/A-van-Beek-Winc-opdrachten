@@ -2,9 +2,12 @@ import React from "react";
 
 function Student(props) {
   return (
-    <p>
-      {props.first_name} {props.last_name}
-    </p>
+    <li>
+      {props.first_name} {props.last_name} {"  "}
+      <button className="chart-btn" onClick={console.log()}>
+        <i className="fa fa-line-chart"></i>
+      </button>
+    </li>
   );
 }
 

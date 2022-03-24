@@ -1,7 +1,7 @@
 import React from "react";
 import store from "../../store";
 import "./StudentView.css";
-import { Outlet, Link, renderMatches } from "react-router-dom";
+// import { Outlet, Link, renderMatches } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import Student from "./Student";
@@ -14,7 +14,6 @@ class StudentView extends React.Component {
 
   render() {
     const stateStudents = this.state;
-    console.log(stateStudents);
     const students = stateStudents.map((student) => (
       <Student
         key={student.student_id}

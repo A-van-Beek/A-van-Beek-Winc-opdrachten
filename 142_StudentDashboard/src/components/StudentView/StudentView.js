@@ -13,8 +13,8 @@ class StudentView extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(first_name) {
-    console.log(first_name);
+  handleClick(student_id) {
+    console.log(student_id);
   }
 
   render() {
@@ -24,6 +24,7 @@ class StudentView extends React.Component {
         key={student.student_id}
         first_name={student.first_name}
         last_name={student.last_name}
+        student_id={student.student_id}
         handleClick={this.handleClick}
       />
     ));

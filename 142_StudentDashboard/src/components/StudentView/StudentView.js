@@ -10,6 +10,11 @@ class StudentView extends React.Component {
   constructor() {
     super();
     this.state = store.getState().studentsReducer;
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(first_name) {
+    console.log(first_name);
   }
 
   render() {
@@ -19,6 +24,7 @@ class StudentView extends React.Component {
         key={student.student_id}
         first_name={student.first_name}
         last_name={student.last_name}
+        handleClick={this.handleClick}
       />
     ));
     return (

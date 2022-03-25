@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Student(props) {
   return (
@@ -8,7 +9,9 @@ function Student(props) {
         className="chart-btn"
         onClick={() => props.handleClick(props.student_id)}
       >
-        <i className="fa fa-line-chart"></i>
+        <Link to="/chart">
+          <i className="fa fa-line-chart"></i>
+        </Link>
       </button>
     </li>
   );

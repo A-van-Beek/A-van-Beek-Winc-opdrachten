@@ -9,7 +9,7 @@ import Student from "./Student";
 class StudentView extends React.Component {
   constructor() {
     super();
-    this.state = store.getState().studentsReducer;
+    this.state = store.getState();
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -18,7 +18,7 @@ class StudentView extends React.Component {
   }
 
   render() {
-    const stateStudents = this.state;
+    const stateStudents = this.state.studentsReducer;
     const students = stateStudents.map((student) => (
       <Student
         key={student.student_id}

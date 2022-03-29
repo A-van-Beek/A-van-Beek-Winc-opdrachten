@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../Header/Header";
 // import ChartExample from "../ChartExample/ChartExample";
 import Navbar from "../Navbar/Navbar";
+import average from "../calculations";
 
 import "./App.css";
 
@@ -13,6 +14,7 @@ function App() {
   // console.log(store.getState().scoreReducer);
   // console.log(store.getState().exerciseReducer);
   // console.log(store.getState());
+  console.log(average);
   return (
     <div className="App">
       <Header page="Studenten overzicht" />

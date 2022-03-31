@@ -1,11 +1,15 @@
 import store from "../store";
 
-const scoreReducer = store.getState().scoreReducer;
-var scoreDifficult = 0;
+const myData = store.getState().dataReducer;
+let arrayScoreDifficult = myData.map((a) => a.difficult_rate);
+let totalScoreDiff = arrayScoreDifficult.reduce(function (
+  totalScoreDiff,
+  current
+) {
+  return totalScoreDiff + current;
+},
+0);
 
-scoreReducer.map(function getScore(item) {
-  console.log(item.difficult_score);
-  return scoreDifficult;
-});
+let averageDifficult = totalScoreDiff / arrayScoreDifficult.length;
 
-export default scoreDifficult;
+export default averageDifficult;

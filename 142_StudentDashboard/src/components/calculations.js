@@ -1,5 +1,11 @@
 import store from "../store";
 
-let myAverage = 6;
+const scoreReducer = store.getState().scoreReducer;
+var scoreDifficult = 0;
 
-export default myAverage;
+scoreReducer.map(function getScore(item) {
+  console.log(item.difficult_score);
+  return scoreDifficult;
+});
+
+export default scoreDifficult;

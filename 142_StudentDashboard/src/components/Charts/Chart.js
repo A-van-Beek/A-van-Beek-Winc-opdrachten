@@ -25,9 +25,6 @@ class Chart extends React.Component {
 
     return (
       <>
-        <Header page="Grafisch overzicht" />
-        <Navbar />
-        <h1>hier de grafieken</h1>
         <v.VictoryChart
           // domainPadding will add space to each side of VictoryBar to
           // prevent it from overlapping the axis

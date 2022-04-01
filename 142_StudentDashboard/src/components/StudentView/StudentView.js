@@ -22,8 +22,19 @@ class StudentView extends React.Component {
       return [...new Map(data.map((x) => [key(x), x])).values()];
     }
     const studentUnique = filterStudents(this.state, (it) => it.student_id);
+    const studentUniqueSort = studentUnique.sort((a, b) => {
+      let fa = a.student_name,
+        fb = b.student_name;
+      if (fa < fb) {
+        return -1;
+      }
+      if (fa > fb) {
+        return 1;
+      }
+      return 0;
+    });
 
-    const students = studentUnique.map((student) => (
+    const students = studentUniqueSort.map((student) => (
       <Student
         key={student.student_id}
         first_name={student.student_name}

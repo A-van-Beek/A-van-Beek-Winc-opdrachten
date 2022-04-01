@@ -1,6 +1,7 @@
 import React from "react";
 
 function Student(props) {
+  // console.log(props);
   return (
     <li>
       {props.first_name} {props.last_name} {"  "}

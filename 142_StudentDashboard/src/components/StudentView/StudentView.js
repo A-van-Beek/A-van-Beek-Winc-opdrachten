@@ -9,7 +9,7 @@ import Student from "./Student";
 class StudentView extends React.Component {
   constructor() {
     super();
-    this.state = store.getState();
+    this.state = store.getState().dataReducer;
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -18,16 +18,20 @@ class StudentView extends React.Component {
   }
 
   render() {
-    const stateStudents = this.state.studentsReducer;
-    const students = stateStudents.map((student) => (
+    function filterStudents(data, key) {
+      return [...new Map(data.map((x) => [key(x), x])).values()];
+    }
+    const studentUnique = filterStudents(this.state, (it) => it.student_id);
+
+    const students = studentUnique.map((student) => (
       <Student
         key={student.student_id}
-        first_name={student.first_name}
-        last_name={student.last_name}
+        first_name={student.student_name}
         student_id={student.student_id}
         handleClick={this.handleClick}
       />
     ));
+
     return (
       <>
         <Header page="Studenten view" />

@@ -29,8 +29,23 @@ class Chart extends React.Component {
         <v.VictoryChart
           // domainPadding will add space to each side of VictoryBar to
           // prevent it from overlapping the axis
-          domainPadding={20}
+          domainPadding={30}
         >
+          <v.VictoryGroup offset={20}>
+            <v.VictoryBar
+              data={ratingsList}
+              x="exercise"
+              y="fun_score"
+              style={{ data: { fill: "green" } }}
+            />
+            <v.VictoryBar
+              data={ratingsList}
+              x="exercise"
+              y="difficult_rate"
+              style={{ data: { fill: "blue" } }}
+            />
+          </v.VictoryGroup>
+
           <v.VictoryAxis
             // tickValues specifies both the number of ticks and where
             // they are placed on the axis
@@ -42,19 +57,22 @@ class Chart extends React.Component {
             // tickFormat specifies how ticks should be displayed
             // tickFormat={(x) => `$${x / 1000}k`}
           />
-          <v.VictoryBar
-            data={ratingsList}
-            // data accessor for x values
-            x="exercise"
-            // data accessor for y values
-            y="fun_score"
-            style={{ data: { fill: "lightgreen" } }}
-          />
-          <v.VictoryBar
-            data={ratingsList}
-            x="assignment"
-            y="difficult_rate"
-            style={{ data: { fill: "red" } }}
+          <v.VictoryLegend
+            data={[
+              {
+                name: "Hoe Leuk?",
+                symbol: {
+                  fill: "green",
+                },
+              },
+              {
+                name: "Hoe Moeilijk?",
+                symbol: {
+                  fill: "blue",
+                },
+              },
+            ]}
+            orientation="horizontal"
           />
         </v.VictoryChart>
       </>

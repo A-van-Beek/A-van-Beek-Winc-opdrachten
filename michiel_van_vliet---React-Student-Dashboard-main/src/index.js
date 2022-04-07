@@ -14,7 +14,7 @@ ReactDOM.render(
       <Header />
       <App />
       <Footer />
-    </Provider>
+
   </React.StrictMode>,
   document.getElementById("root")
 );

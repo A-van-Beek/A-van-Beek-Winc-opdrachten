@@ -10,7 +10,7 @@ const Chart = ({ ratingsList }) => {
         // prevent it from overlapping the axis
         domainPadding={30}
       >
-        <v.VictoryGroup offset={20}>
+        <v.VictoryGroup offset={3}>
           {/* offset regelt de afstand 2 balken */}
           <v.VictoryBar
             data={ratingsList}
@@ -31,11 +31,25 @@ const Chart = ({ ratingsList }) => {
           // they are placed on the axis
           tickValues={[1, 2, 3, 4]}
           // tickFormat={["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"]}
+          // label="Opdracht"
+          tickLabelComponent={
+            <v.VictoryLabel
+              angle={60} //scheefzetten tekst
+              style={{ fontSize: 7, color: "black" }}
+              textAnchor={"start"}
+            />
+          }
         />
         <v.VictoryAxis
           dependentAxis
-          // tickFormat specifies how ticks should be displayed
-          // tickFormat={(x) => `$${x / 1000}k`}
+          // label="Rating"
+          domain={[0, 5]}
+          tickLabelComponent={
+            <v.VictoryLabel
+              style={{ fontSize: 10, color: "black" }}
+              textAnchor={"end"}
+            />
+          }
         />
         <v.VictoryLegend
           data={[
@@ -52,7 +66,7 @@ const Chart = ({ ratingsList }) => {
               },
             },
           ]}
-          orientation="horizontal"
+          orientation="vertical"
         />
       </v.VictoryChart>
     </>

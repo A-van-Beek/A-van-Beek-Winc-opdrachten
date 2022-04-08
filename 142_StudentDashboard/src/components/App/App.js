@@ -9,7 +9,7 @@ import averageDifficult from "../calculations";
 import "./App.css";
 
 function App() {
-  console.log(averageDifficult);
+  console.log("test gemiddelde: ", averageDifficult);
 
   return (
     <div className="App">

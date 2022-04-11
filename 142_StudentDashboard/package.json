@@ -9,6 +9,7 @@
     "node-csv": "^0.1.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-gauge-chart": "^0.4.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-scripts": "3.2.0",

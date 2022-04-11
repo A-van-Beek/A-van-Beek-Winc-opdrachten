@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 // import ChartExample from "../ChartExample/ChartExample";
 import Navbar from "../Navbar/Navbar";
 import averageDifficult from "../calculations";
+import MyGaugeChart from "../Charts/MyGaugeChart";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
       <Header page="Studenten overzicht" />
       <Navbar />
       <h1>Hier de intro</h1>
+      <MyGaugeChart />
     </div>
   );
 }

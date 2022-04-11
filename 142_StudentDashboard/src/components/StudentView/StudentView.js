@@ -59,7 +59,7 @@ class StudentView extends React.Component {
         <h1>hier overzicht van studenten</h1>
         <div>{students}</div>
         <hr />
-        <Chart />
+        {/* <Chart /> */}
       </>
     );
   }

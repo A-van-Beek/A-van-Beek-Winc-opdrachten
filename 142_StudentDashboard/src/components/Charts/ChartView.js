@@ -4,11 +4,11 @@ import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import Chart from "../Charts/Chart";
 import ChartVertical from "./ChartVertical";
+import { getShortName, getAverage } from "../Functions";
 
 //ik noem de overkoepelende deel "view" en het
 //onderliggende grafiek-deel "chart"
 // bij Michiel heet dit: Chart
-
 // toegang tot state:
 const data = store.getState().dataReducer;
 
@@ -50,28 +50,6 @@ exerciseList.forEach((entry) => {
 });
 
 // console.log("exerciseRating: ", exerciseRating);
-
-// functie getAverage voor een list in props.
-const getAverage = (list) => {
-  if (list.length === 0) {
-    return 0;
-  } else {
-    let total = 0;
-    list.forEach((number) => {
-      total += number;
-    });
-    return total / list.length;
-  }
-};
-
-//functie voor het afkorten van lange assignment-namen
-const getShortName = (assignmentName) => {
-  if (assignmentName.length > 6) {
-    return assignmentName.slice(0, 5) + "*";
-  } else {
-    return assignmentName;
-  }
-};
 
 let ratingsList = [];
 exerciseRating.forEach((exercise) => {

@@ -10,6 +10,6 @@ let totalScoreDiff = arrayScoreDifficult.reduce(function (
 },
 0);
 
-let averageDifficult = totalScoreDiff / arrayScoreDifficult.length;
-
+let averageDifficult =
+  Math.round((totalScoreDiff / arrayScoreDifficult.length) * 100) / 100;
 export default averageDifficult;

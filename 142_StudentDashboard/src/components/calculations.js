@@ -10,6 +10,13 @@ let totalScoreDiff = arrayScoreDifficult.reduce(function (
 },
 0);
 
-let averageDifficult =
+export const averageDifficult =
   Math.round((totalScoreDiff / arrayScoreDifficult.length) * 100) / 100;
-export default averageDifficult;
+
+let arrayScoreFun = myData.map((a) => a.fun_score);
+let totalScoreFun = arrayScoreFun.reduce(function (totalScoreFun, current) {
+  return totalScoreFun + current;
+}, 0);
+
+export const averageFun =
+  Math.round((totalScoreFun / arrayScoreFun.length) * 100) / 100;

@@ -1,6 +1,6 @@
 import React from "react";
 import GaugeChart from "react-gauge-chart";
-import averageDifficult from "../calculations";
+import { averageDifficult, averageFun } from "../calculations";
 
 function MyGaugeChart() {
   const chartStyle = {
@@ -27,6 +27,7 @@ function MyGaugeChart() {
       <chart-title style={chartTitle}>
         difficult rate average: {averageDifficult}
       </chart-title>
+      <div>average fun: {averageFun}</div>
     </>
   );
 }

@@ -5,7 +5,6 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ChartExample from "./components/ChartExample/ChartExample";
 import StudentView from "./components/StudentView/StudentView";
-import Chart from "./components/Charts/Chart";
 import ChartView from "./components/Charts/ChartView";
 
 const rootElement = document.getElementById("root");

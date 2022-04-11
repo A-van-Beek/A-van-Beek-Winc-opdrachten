@@ -4,7 +4,6 @@ import React from "react";
 import Header from "../Header/Header";
 // import ChartExample from "../ChartExample/ChartExample";
 import Navbar from "../Navbar/Navbar";
-import averageDifficult from "../calculations";
 import MyGaugeChart from "../Charts/MyGaugeChart";
 
 import "./App.css";

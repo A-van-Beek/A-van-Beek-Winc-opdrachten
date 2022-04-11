@@ -3,7 +3,7 @@ import store from "../../store";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import Chart from "../Charts/Chart";
-import { useSelector } from "react-redux";
+import ChartVertical from "./ChartVertical";
 
 //ik noem de overkoepelende deel "view" en het
 //onderliggende grafiek-deel "chart"
@@ -99,7 +99,6 @@ exerciseRating.forEach((exercise) => {
   };
   ratingsList.push(newRating);
 });
-console.log("ratingsList: ", ratingsList);
 
 const ChartView = () => {
   return (
@@ -108,6 +107,7 @@ const ChartView = () => {
       <Navbar />
       <h1>hier</h1>
       <Chart ratingsList={ratingsList} />
+      <ChartVertical ratingsList={ratingsList} />
     </>
   );
 };

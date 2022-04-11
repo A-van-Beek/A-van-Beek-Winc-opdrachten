@@ -1,14 +1,16 @@
 import React from "react";
 import * as v from "victory";
 
-// deze heet bij Michiel: RatingsChart
-const Chart = ({ ratingsList }) => {
+// deze geeft de vertikale variant van de staafgrafiek
+const ChartVertical = ({ ratingsList }) => {
   return (
     <>
       <v.VictoryChart
         // domainPadding will add space to each side of VictoryBar to
         // prevent it from overlapping the axis
         domainPadding={30}
+        horizontal={true}
+        height={800}
       >
         <v.VictoryGroup offset={3}>
           {/* offset regelt de afstand 2 balken */}
@@ -33,11 +35,7 @@ const Chart = ({ ratingsList }) => {
           // tickFormat={["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"]}
           // label="Opdracht"
           tickLabelComponent={
-            <v.VictoryLabel
-              angle={60} //scheefzetten tekst
-              style={{ fontSize: 7, color: "black" }}
-              textAnchor={"start"}
-            />
+            <v.VictoryLabel style={{ fontSize: 7, color: "black" }} />
           }
         />
         <v.VictoryAxis
@@ -66,11 +64,11 @@ const Chart = ({ ratingsList }) => {
               },
             },
           ]}
-          orientation="horizontal"
+          orientation="vertical"
         />
       </v.VictoryChart>
     </>
   );
 };
 
-export default Chart;
+export default ChartVertical;

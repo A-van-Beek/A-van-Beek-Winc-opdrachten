@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Children } from "react";
+import { useState } from "react";
 import store from "../../store";
 import "./StudentView.css";
 // import { Outlet, Link, renderMatches } from "react-router-dom";
@@ -16,9 +17,7 @@ import {
 class StudentView extends React.Component {
   constructor() {
     super();
-    this.state = {
-      studentUniqueSort,
-    };
+    this.state = [];
     this.filterStudent = this.filterStudent.bind(this);
   }
 
@@ -26,12 +25,13 @@ class StudentView extends React.Component {
   filterStudent(student_id) {
     console.log(student_id);
     const studentInfo = dataStudent(student_id);
-    console.log(studentInfo);
-    const soloChart = <Chart ratingsList={studentInfo} />;
-    return soloChart;
+    // console.log(studentInfo);
+    this.setState({ studentInfo });
   }
 
   render() {
+    const studentInfo = this.state.studentInfo;
+    console.log(studentInfo ? studentInfo : "niet bekend");
     const students = studentUniqueSort.map((student) => (
       <Student
         key={student.student_id}
@@ -42,9 +42,6 @@ class StudentView extends React.Component {
       />
     ));
 
-    // const studentInfo = dataStudent("s1");
-    // console.log(studentInfo);
-
     return (
       <>
         <Header page="Studenten view" />
@@ -52,7 +49,11 @@ class StudentView extends React.Component {
         <h1>hier overzicht van studenten</h1>
         <div>{students}</div>
         <hr />
-        {/* <Chart ratingsList={studentInfo} /> */}
+        {studentInfo ? (
+          <Chart key="1" ratingsList={studentInfo} />
+        ) : (
+          "nog geen student gekozen"
+        )}
       </>
     );
   }

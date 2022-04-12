@@ -67,5 +67,8 @@ export const studentUniqueSort = studentUnique.sort((a, b) => {
 
 // filteren array van 1 student
 export const dataStudent = (student_id) => {
-  return myData.filter((student) => student.student_id === student_id);
+  const studentRatings = myData.filter(
+    (student) => student.student_id === student_id
+  );
+  return studentRatings;
 };

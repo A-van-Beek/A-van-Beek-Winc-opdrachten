@@ -45,3 +45,22 @@ export const getAverage = (list) => {
     return total / list.length;
   }
 };
+
+//create list unique students
+// ontdubbelen:
+function filterStudents(data, key) {
+  return [...new Map(data.map((x) => [key(x), x])).values()];
+}
+const studentUnique = filterStudents(myData, (it) => it.student_id);
+//sorteren:
+export const studentUniqueSort = studentUnique.sort((a, b) => {
+  let fa = a.student_name,
+    fb = b.student_name;
+  if (fa < fb) {
+    return -1;
+  }
+  if (fa > fb) {
+    return 1;
+  }
+  return 0;
+});

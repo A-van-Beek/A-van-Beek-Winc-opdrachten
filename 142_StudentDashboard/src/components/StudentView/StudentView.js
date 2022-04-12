@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import Student from "./Student";
 import Chart from "../Charts/Chart";
+import { getShortName, getAverage, studentUniqueSort } from "../Functions";
 
 class StudentView extends React.Component {
   constructor() {
@@ -25,24 +26,6 @@ class StudentView extends React.Component {
   }
 
   render() {
-    // ontdubbelen:
-    function filterStudents(data, key) {
-      return [...new Map(data.map((x) => [key(x), x])).values()];
-    }
-    const studentUnique = filterStudents(this.state, (it) => it.student_id);
-    //sorteren:
-    const studentUniqueSort = studentUnique.sort((a, b) => {
-      let fa = a.student_name,
-        fb = b.student_name;
-      if (fa < fb) {
-        return -1;
-      }
-      if (fa > fb) {
-        return 1;
-      }
-      return 0;
-    });
-    //omzetten naar DOM-elementen:
     const students = studentUniqueSort.map((student) => (
       <Student
         key={student.student_id}

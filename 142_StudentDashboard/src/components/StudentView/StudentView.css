@@ -1,6 +1,14 @@
 /* opmaak voor de chart icon */
-.chart-btn {
+.btn {
   /* display: none; */
   background: none;
   border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0;
 }

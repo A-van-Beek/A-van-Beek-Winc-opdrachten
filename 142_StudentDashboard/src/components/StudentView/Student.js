@@ -1,11 +1,10 @@
 import React from "react";
 
 function Student(props) {
-  // console.log(props);
   return (
     <li>
       <button
-        className="chart-btn"
+        className="btn"
         onClick={() => props.handleClick(props.student_id)}
       >
         <i className="fa fa-line-chart"></i>

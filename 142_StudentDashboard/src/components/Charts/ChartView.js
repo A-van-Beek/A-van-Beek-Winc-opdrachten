@@ -8,7 +8,6 @@ import { getShortName, getAverage } from "../Functions";
 
 //ik noem de overkoepelende deel "view" en het
 //onderliggende grafiek-deel "chart"
-// bij Michiel heet dit: Chart
 // toegang tot state:
 const data = store.getState().dataReducer;
 

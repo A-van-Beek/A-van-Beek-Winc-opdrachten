@@ -24,7 +24,7 @@ class StudentView extends React.Component {
   }
   //eindopdracht = final assignment
   filterFinal() {
-    let studentInfo = this.state.studentInfo;
+    let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
     const studentShortInfo = [];
     studentInfo.forEach((element) => {
       if (element.exercise.length > 6) {
@@ -45,7 +45,7 @@ class StudentView extends React.Component {
 
   //fun only
   filterFun() {
-    let studentInfo = this.state.studentInfo;
+    let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
     let studentFunInfo = [];
     studentInfo.forEach((element) => {
       const newExercise = {
@@ -64,7 +64,7 @@ class StudentView extends React.Component {
 
   //difficult only
   filterDiff() {
-    let studentInfo = this.state.studentInfo;
+    let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
     let studentDiffInfo = [];
     studentInfo.forEach((element) => {
       const newExercise = {
@@ -101,7 +101,7 @@ class StudentView extends React.Component {
         <hr />
         {studentInfo ? (
           <div>
-            <h1>Gekozen student: </h1>
+            <h1>Gekozen student: {this.state.studentInfo[0].student_name}</h1>
             <li>
               <button className="btn" onClick={this.filterFinal}>
                 <i className="fa fa-filter"> finals only</i>

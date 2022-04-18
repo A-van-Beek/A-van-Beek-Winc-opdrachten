@@ -78,8 +78,9 @@ const ChartView = () => {
       <h1>Grafieken</h1>
       <div>
         Onderstaande grafieken geeft van alle studenten en alle opdrachten de
-        fun-score en de moeilijkheidsgraad. Dezelfde informatie wordt op twee
-        manieren gepresenteerd, zowel horizontaal als vertikaal georiënteerd.
+        fun-score en de moeilijkheidsgraad. <br />
+        Dezelfde informatie wordt op twee manieren gepresenteerd, zowel
+        horizontaal als vertikaal georiënteerd.
         <br />
         <br />
       </div>

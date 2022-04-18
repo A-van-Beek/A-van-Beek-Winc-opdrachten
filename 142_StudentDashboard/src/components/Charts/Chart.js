@@ -46,7 +46,7 @@ const Chart = ({ ratingsList }) => {
           domain={[0, 5]}
           tickLabelComponent={
             <v.VictoryLabel
-              style={{ fontSize: 10, color: "black" }}
+              style={{ fontSize: 7, color: "black" }}
               textAnchor={"end"}
             />
           }

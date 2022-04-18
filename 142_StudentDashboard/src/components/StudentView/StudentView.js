@@ -94,10 +94,11 @@ class StudentView extends React.Component {
         <Navbar />
         <h1>De studenten</h1>
         <div>
-          Op dit moment is er data van onderstaande studenten. Door het klikken
-          op de icoontjes kan gefilterd worden op één student. Binnen de data
-          van één student kan gekozen worden voor weergave van alleen
-          eindopdrachten, alleen fun of alleen de moeilijkheidgraad.
+          Op dit moment is er data van onderstaande studenten. <br />
+          Door het klikken op de icoontjes kan gefilterd worden op één student.{" "}
+          <br />
+          Binnen de data van één student kan gekozen worden voor weergave van
+          alleen eindopdrachten, alleen fun of alleen de moeilijkheidgraad.
           <br />
           <br />
         </div>

@@ -5,15 +5,8 @@ import * as v from "victory";
 const ChartVertical = ({ ratingsList }) => {
   return (
     <>
-      <v.VictoryChart
-        // domainPadding will add space to each side of VictoryBar to
-        // prevent it from overlapping the axis
-        domainPadding={30}
-        horizontal={true}
-        height={800}
-      >
+      <v.VictoryChart domainPadding={30} horizontal={true} height={800}>
         <v.VictoryGroup offset={3}>
-          {/* offset regelt de afstand 2 balken */}
           <v.VictoryBar
             data={ratingsList}
             x="exercise"
@@ -29,18 +22,13 @@ const ChartVertical = ({ ratingsList }) => {
         </v.VictoryGroup>
 
         <v.VictoryAxis
-          // tickValues specifies both the number of ticks and where
-          // they are placed on the axis
           tickValues={[1, 2, 3, 4]}
-          // tickFormat={["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"]}
-          // label="Opdracht"
           tickLabelComponent={
             <v.VictoryLabel style={{ fontSize: 7, color: "black" }} />
           }
         />
         <v.VictoryAxis
           dependentAxis
-          // label="Rating"
           domain={[0, 5]}
           tickLabelComponent={
             <v.VictoryLabel

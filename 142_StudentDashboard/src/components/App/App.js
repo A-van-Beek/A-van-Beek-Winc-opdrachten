@@ -21,10 +21,11 @@ function App() {
       <Navbar />
       <h1>Opdracht</h1>
       <div>
-        Op deze site worden de resultaten weergegeven van de studenten. Per
-        opdracht is door de student een score gegeven voor de moeilijkheidsgraad
-        en een score voor de "fun". Onderstaande grafieken geven de gemiddelde
-        score van alle studenten en alle opdrachten.
+        Op deze site worden de resultaten weergegeven van de studenten. <br />
+        Per opdracht is door de student een score gegeven voor de
+        moeilijkheidsgraad en een score voor de "fun". <br />
+        Onderstaande grafieken geven de gemiddelde score van alle studenten en
+        alle opdrachten.
         <br />
         <br />
       </div>

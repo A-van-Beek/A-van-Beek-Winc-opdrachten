@@ -12,12 +12,15 @@ class StudentView extends React.Component {
     this.state = [];
     this.filterStudent = this.filterStudent.bind(this);
     this.filterFinal = this.filterFinal.bind(this);
+    this.filterFun = this.filterFun.bind(this);
+    this.filterDiff = this.filterDiff.bind(this);
   }
 
   //mijn handeClick:
   filterStudent(student_id) {
     const studentInfo = dataStudent(student_id);
     this.setState({ studentInfo });
+    console.log("eerste ", studentInfo);
   }
   //eindopdracht = final assignment
   filterFinal() {
@@ -36,6 +39,45 @@ class StudentView extends React.Component {
       }
     });
     studentInfo = studentShortInfo;
+    console.log("tweede: ", studentInfo);
+    this.setState({ studentInfo });
+  }
+
+  //fun only
+  filterFun() {
+    let studentInfo = this.state.studentInfo;
+    let studentFunInfo = [];
+    studentInfo.forEach((element) => {
+      const newExercise = {
+        student_id: element.student_id,
+        student_name: element.student_name,
+        exercise: getShortName(element.exercise),
+        fun_score: element.fun_score,
+        difficult_rate: 0,
+      };
+      studentFunInfo.push(newExercise);
+    });
+    studentInfo = studentFunInfo;
+    console.log(studentInfo[0].student_name);
+    this.setState({ studentInfo });
+  }
+
+  //difficult only
+  filterDiff() {
+    let studentInfo = this.state.studentInfo;
+    let studentDiffInfo = [];
+    studentInfo.forEach((element) => {
+      const newExercise = {
+        student_id: element.student_id,
+        student_name: element.student_name,
+        exercise: getShortName(element.exercise),
+        fun_score: 0,
+        difficult_rate: element.difficult_rate,
+      };
+      studentDiffInfo.push(newExercise);
+    });
+    studentInfo = studentDiffInfo;
+    console.log(studentInfo[0].student_name);
     this.setState({ studentInfo });
   }
 
@@ -59,12 +101,23 @@ class StudentView extends React.Component {
         <hr />
         {studentInfo ? (
           <div>
-            <h1>Gekozen student: {studentInfo[0].student_name}</h1>
+            <h1>Gekozen student: </h1>
             <li>
               <button className="btn" onClick={this.filterFinal}>
                 <i className="fa fa-filter"> finals only</i>
               </button>
             </li>
+            <li>
+              <button className="btn" onClick={this.filterFun}>
+                <i className="fa fa-filter"> fun only</i>
+              </button>
+            </li>
+            <li>
+              <button className="btn" onClick={this.filterDiff}>
+                <i className="fa fa-filter"> difficult rate only</i>
+              </button>
+            </li>
+
             <br />
 
             <Chart key="1" ratingsList={studentInfo} />

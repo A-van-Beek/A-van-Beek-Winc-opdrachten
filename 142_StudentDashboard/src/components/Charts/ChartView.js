@@ -75,7 +75,14 @@ const ChartView = () => {
     <>
       <Header page="Grafisch overzicht" />
       <Navbar />
-      <h1>hier</h1>
+      <h1>Grafieken</h1>
+      <div>
+        Onderstaande grafieken geeft van alle studenten en alle opdrachten de
+        fun-score en de moeilijkheidsgraad. Dezelfde informatie wordt op twee
+        manieren gepresenteerd, zowel horizontaal als vertikaal georiënteerd.
+        <br />
+        <br />
+      </div>
 
       <Chart ratingsList={ratingsList} />
       <ChartVertical ratingsList={ratingsList} />

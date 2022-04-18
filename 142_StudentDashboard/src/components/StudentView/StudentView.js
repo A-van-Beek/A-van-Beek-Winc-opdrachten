@@ -20,7 +20,6 @@ class StudentView extends React.Component {
   filterStudent(student_id) {
     const studentInfo = dataStudent(student_id);
     this.setState({ studentInfo });
-    console.log("eerste ", studentInfo);
   }
   //eindopdracht = final assignment
   filterFinal() {
@@ -39,7 +38,6 @@ class StudentView extends React.Component {
       }
     });
     studentInfo = studentShortInfo;
-    console.log("tweede: ", studentInfo);
     this.setState({ studentInfo });
   }
 
@@ -58,7 +56,6 @@ class StudentView extends React.Component {
       studentFunInfo.push(newExercise);
     });
     studentInfo = studentFunInfo;
-    console.log(studentInfo[0].student_name);
     this.setState({ studentInfo });
   }
 
@@ -77,7 +74,6 @@ class StudentView extends React.Component {
       studentDiffInfo.push(newExercise);
     });
     studentInfo = studentDiffInfo;
-    console.log(studentInfo[0].student_name);
     this.setState({ studentInfo });
   }
 
@@ -96,7 +92,15 @@ class StudentView extends React.Component {
       <>
         <Header page="Studenten view" />
         <Navbar />
-        <h1>De studenten van nu</h1>
+        <h1>De studenten</h1>
+        <div>
+          Op dit moment is er data van onderstaande studenten. Door het klikken
+          op de icoontjes kan gefilterd worden op één student. Binnen de data
+          van één student kan gekozen worden voor weergave van alleen
+          eindopdrachten, alleen fun of alleen de moeilijkheidgraad.
+          <br />
+          <br />
+        </div>
         <div>{students}</div>
         <hr />
         {studentInfo ? (
@@ -123,7 +127,7 @@ class StudentView extends React.Component {
             <Chart key="1" ratingsList={studentInfo} />
           </div>
         ) : (
-          "nog geen student gekozen"
+          "(nog geen student gekozen)"
         )}
       </>
     );

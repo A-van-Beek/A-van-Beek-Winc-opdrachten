@@ -19,7 +19,15 @@ function App() {
     <div className="App">
       <Header page="Studenten overzicht" />
       <Navbar />
-      <h1>Hier de intro</h1>
+      <h1>Opdracht</h1>
+      <div>
+        Op deze site worden de resultaten weergegeven van de studenten. Per
+        opdracht is door de student een score gegeven voor de moeilijkheidsgraad
+        en een score voor de "fun". Onderstaande grafieken geven de gemiddelde
+        score van alle studenten en alle opdrachten.
+        <br />
+        <br />
+      </div>
       <MyGaugeChart percent={averageDifficult} />
       <chart-title style={chartTitle}>
         Difficult rate average: {averageDifficult}

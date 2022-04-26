@@ -12,3 +12,7 @@
 .btn:focus {
   outline: 0;
 }
+
+:link {
+  text-decoration: none;
+}

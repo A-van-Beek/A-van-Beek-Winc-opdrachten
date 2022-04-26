@@ -19,6 +19,7 @@ class StudentView extends React.Component {
   //mijn handeClick:
   filterStudent(student_id) {
     const studentInfo = dataStudent(student_id);
+
     this.setState({ studentInfo });
   }
   //eindopdracht = final assignment
@@ -97,39 +98,8 @@ class StudentView extends React.Component {
           Op dit moment is er data van onderstaande studenten. <br />
           Door het klikken op de icoontjes kan gefilterd worden op één student.{" "}
           <br />
-          Binnen de data van één student kan gekozen worden voor weergave van
-          alleen eindopdrachten, alleen fun of alleen de moeilijkheidgraad.
-          <br />
-          <br />
         </div>
         <div>{students}</div>
-        <hr />
-        {studentInfo ? (
-          <div>
-            <h1>Gekozen student: {this.state.studentInfo[0].student_name}</h1>
-            <li>
-              <button className="btn" onClick={this.filterFinal}>
-                <i className="fa fa-filter"> finals only</i>
-              </button>
-            </li>
-            <li>
-              <button className="btn" onClick={this.filterFun}>
-                <i className="fa fa-filter"> fun only</i>
-              </button>
-            </li>
-            <li>
-              <button className="btn" onClick={this.filterDiff}>
-                <i className="fa fa-filter"> difficult rate only</i>
-              </button>
-            </li>
-
-            <br />
-
-            <Chart key="1" ratingsList={studentInfo} />
-          </div>
-        ) : (
-          "(nog geen student gekozen)"
-        )}
       </>
     );
   }

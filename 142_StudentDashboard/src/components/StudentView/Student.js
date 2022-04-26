@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Student(props) {
   return (
     <li>
-      <button
-        className="btn"
-        onClick={() => props.handleClick(props.student_id)}
-      >
-        <i className="fa fa-line-chart"></i>
-      </button>
-      {props.first_name} {props.last_name} {"  "}
+      <Link to="/studentOne">
+        <button
+          className="btn"
+          onClick={() => props.handleClick(props.student_id)}
+        >
+          <i className="fa fa-line-chart"></i>
+        </button>
+        {props.first_name} {props.last_name} {"  "}
+      </Link>
     </li>
   );
 }

@@ -79,8 +79,7 @@ class StudentOne extends React.Component {
   }
 
   render() {
-    console.log("student solo: ", store.getState().studentReducer);
-
+    console.log("state: ", store.getState());
     const studentInfo = this.state.studentInfo;
     const students = studentUniqueSort.map((student) => (
       <Student
@@ -96,43 +95,34 @@ class StudentOne extends React.Component {
         <Header page="Studenten view" />
         <Navbar />
         <h1>Eén student !</h1>
-        {/* <div>
-          Op dit moment is er data van onderstaande studenten. <br />
-          Door het klikken op de icoontjes kan gefilterd worden op één student.{" "}
-          <br />
+        <div>
           Binnen de data van één student kan gekozen worden voor weergave van
           alleen eindopdrachten, alleen fun of alleen de moeilijkheidgraad.
           <br />
           <br />
         </div>
-        <div>{students}</div>
-        <hr />
-        {studentInfo ? (
-          <div>
-            <h1>Gekozen student: {this.state.studentInfo[0].student_name}</h1>
-            <li>
-              <button className="btn" onClick={this.filterFinal}>
-                <i className="fa fa-filter"> finals only</i>
-              </button>
-            </li>
-            <li>
-              <button className="btn" onClick={this.filterFun}>
-                <i className="fa fa-filter"> fun only</i>
-              </button>
-            </li>
-            <li>
-              <button className="btn" onClick={this.filterDiff}>
-                <i className="fa fa-filter"> difficult rate only</i>
-              </button>
-            </li>
+        <div>
+          <h1>Gekozen student: </h1>
+          <li>
+            <button className="btn" onClick={this.filterFinal}>
+              <i className="fa fa-filter"> finals only</i>
+            </button>
+          </li>
+          <li>
+            <button className="btn" onClick={this.filterFun}>
+              <i className="fa fa-filter"> fun only</i>
+            </button>
+          </li>
+          <li>
+            <button className="btn" onClick={this.filterDiff}>
+              <i className="fa fa-filter"> difficult rate only</i>
+            </button>
+          </li>
 
-            <br />
+          <br />
 
-            <Chart key="1" ratingsList={studentInfo} />
-          </div>
-        ) : (
-          "(nog geen student gekozen)"
-        )} */}
+          <Chart key="1" ratingsList={studentInfo} />
+        </div>
       </>
     );
   }

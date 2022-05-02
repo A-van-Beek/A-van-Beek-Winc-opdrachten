@@ -22,6 +22,10 @@ class StudentView extends React.Component {
   filterStudent(student_id) {
     console.log("handleClick: ", student_id);
     store.dispatch(actions.selectedStudent(student_id));
+    console.log(
+      "store: ",
+      store.getState().studentReducer.selected_student.selected_student
+    );
   }
   //eindopdracht = final assignment
   filterFinal() {

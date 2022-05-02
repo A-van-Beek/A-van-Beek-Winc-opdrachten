@@ -79,10 +79,7 @@ class StudentOne extends React.Component {
   }
 
   render() {
-    console.log(
-      "student solo: ",
-      store.getState().studentReducer.selected_student.selected_student
-    );
+    console.log("student solo: ", store.getState().studentReducer);
 
     const studentInfo = this.state.studentInfo;
     const students = studentUniqueSort.map((student) => (

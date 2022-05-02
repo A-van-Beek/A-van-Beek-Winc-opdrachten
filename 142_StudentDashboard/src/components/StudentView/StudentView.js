@@ -5,6 +5,8 @@ import Header from "../Header/Header";
 import Student from "./Student";
 import Chart from "../Charts/Chart";
 import { studentUniqueSort, dataStudent, getShortName } from "../Functions";
+import * as actions from "../../actions/actions";
+import store from "../../store";
 
 class StudentView extends React.Component {
   constructor() {
@@ -18,9 +20,8 @@ class StudentView extends React.Component {
 
   //mijn handeClick:
   filterStudent(student_id) {
-    const studentInfo = dataStudent(student_id);
-
-    this.setState({ studentInfo });
+    console.log("handleClick: ", student_id);
+    store.dispatch(actions.selectedStudent(student_id));
   }
   //eindopdracht = final assignment
   filterFinal() {

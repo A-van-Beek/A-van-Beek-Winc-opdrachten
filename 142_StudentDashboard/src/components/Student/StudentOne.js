@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Student from "../StudentView/Student";
 import Chart from "../Charts/Chart";
 import { studentUniqueSort, dataStudent, getShortName } from "../Functions";
+import store from "../../store";
 
 class StudentOne extends React.Component {
   constructor() {
@@ -78,6 +79,11 @@ class StudentOne extends React.Component {
   }
 
   render() {
+    console.log(
+      "student solo: ",
+      store.getState().studentReducer.selected_student.selected_student
+    );
+
     const studentInfo = this.state.studentInfo;
     const students = studentUniqueSort.map((student) => (
       <Student

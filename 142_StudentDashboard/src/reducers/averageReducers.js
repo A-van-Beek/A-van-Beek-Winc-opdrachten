@@ -1,7 +1,7 @@
 import * as actions from "../actions/actionTypes";
 
 const initialState = [{ funAverage: 0 }, { diffAverage: 0 }];
-
+// dit is nog lariekoek !
 function averageReducer(state = initialState, action) {
   switch (action.type) {
     case actions.ADD_EXERCISE:

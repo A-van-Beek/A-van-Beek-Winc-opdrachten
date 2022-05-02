@@ -3,7 +3,7 @@ import * as actions from "./actionTypes";
 export const selectedStudent = (student_id) => ({
   type: actions.SELECTED_STUDENT,
   payload: {
-    student_id: student_id,
+    selected_student: student_id,
   },
 });
 

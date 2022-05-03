@@ -17,11 +17,12 @@ class StudentOne extends React.Component {
     this.filterDiff = this.filterDiff.bind(this);
   }
 
-  //mijn handeClick:
   filterStudent(student_id) {
     const studentInfo = dataStudent(student_id);
     this.setState({ studentInfo });
+    console.log(this.state);
   }
+
   //eindopdracht = final assignment
   filterFinal() {
     let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
@@ -79,16 +80,22 @@ class StudentOne extends React.Component {
   }
 
   render() {
-    console.log("state: ", store.getState());
+    const selectedStudent_id =
+      store.getState().studentReducer.selected_student.selected_student;
+
+    const selectedStudent_name = studentUniqueSort.filter(function (student) {
+      return student.student_id === selectedStudent_id;
+    })[0].student_name;
+
     const studentInfo = this.state.studentInfo;
-    const students = studentUniqueSort.map((student) => (
-      <Student
-        key={student.student_id}
-        first_name={student.student_name}
-        student_id={student.student_id}
-        handleClick={this.filterStudent}
-      />
-    ));
+    // const students = studentUniqueSort.map((student) => (
+    //   <Student
+    //     key={student.student_id}
+    //     first_name={student.student_name}
+    //     student_id={student.student_id}
+    //     handleClick={this.filterStudent}
+    //   />
+    // ));
 
     return (
       <>
@@ -96,13 +103,13 @@ class StudentOne extends React.Component {
         <Navbar />
         <h1>Eén student !</h1>
         <div>
-          Binnen de data van één student kan gekozen worden voor weergave van
+          Binnen de data van een student kan gekozen worden voor weergave van
           alleen eindopdrachten, alleen fun of alleen de moeilijkheidgraad.
           <br />
           <br />
         </div>
         <div>
-          <h1>Gekozen student: </h1>
+          <h1>Gekozen student: {selectedStudent_name}</h1>
           <li>
             <button className="btn" onClick={this.filterFinal}>
               <i className="fa fa-filter"> finals only</i>

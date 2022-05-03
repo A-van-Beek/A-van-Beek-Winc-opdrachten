@@ -4,7 +4,7 @@ import store from "../../store";
 
 // deze heet bij Michiel: RatingsChart
 const Chart = ({ ratingsList }) => {
-  console.log("vanuit charts", store.getState().dataReducer);
+  // console.log("vanuit charts", store.getState().dataReducer);
 
   return (
     <>

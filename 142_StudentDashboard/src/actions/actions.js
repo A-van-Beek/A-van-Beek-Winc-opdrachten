@@ -18,3 +18,10 @@ export const addExercise = (description) => ({
     description: description,
   },
 });
+
+export const findStudentName = (student_id) => ({
+  type: actions.FIND_STUDENTNAME,
+  payload: {
+    student_id: student_id,
+  },
+});

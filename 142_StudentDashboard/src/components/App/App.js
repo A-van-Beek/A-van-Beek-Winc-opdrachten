@@ -11,8 +11,8 @@ import * as actions from "../../actions/actions";
 import "./App.css";
 
 //testing store + reducer + action add exercise
-store.dispatch(actions.addExercise());
-console.log("vanuit home", store.getState().dataReducer);
+// store.dispatch(actions.addExercise());
+// console.log("vanuit home", store.getState().dataReducer);
 
 function App() {
   const chartTitle = {

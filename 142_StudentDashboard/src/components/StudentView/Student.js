@@ -5,11 +5,11 @@ import store from "../../store";
 function Student(props) {
   return (
     <li>
-      <Link to="/studentOne">
-        <button
-          className="btn"
-          onClick={() => props.handleClick(props.student_id)}
-        >
+      <Link
+        to="/studentOne"
+        onClick={() => props.handleClick(props.student_id)}
+      >
+        <button className="btn">
           <i className="fa fa-line-chart"></i>
         </button>
         {props.first_name} {props.last_name} {"  "}

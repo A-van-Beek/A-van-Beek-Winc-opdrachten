@@ -25,9 +25,6 @@ class StudentView extends React.Component {
     });
     const studentInfo = dataStudent(student_id);
     store.dispatch(actions.setDataStudent(studentInfo));
-    // this.setState({ studentInfo });
-    // console.log(studentInfo);
-    // store.dispatch(actions.selectedStudent(student_id));
     unsubscribe();
   }
 

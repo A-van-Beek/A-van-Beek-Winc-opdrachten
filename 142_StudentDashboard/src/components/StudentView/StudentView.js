@@ -20,13 +20,17 @@ class StudentView extends React.Component {
 
   //mijn handeClick:
   filterStudent(student_id) {
-    // console.log("handleClick: ", student_id);
-    store.dispatch(actions.selectedStudent(student_id));
-    // console.log(
-    //   "store: ",
-    //   store.getState().studentReducer.selected_student.selected_student
-    // );
+    const unsubscribe = store.subscribe(() => {
+      console.log("Store changed ! ", store.getState());
+    });
+    const studentInfo = dataStudent(student_id);
+    store.dispatch(actions.setDataStudent(studentInfo));
+    // this.setState({ studentInfo });
+    // console.log(studentInfo);
+    // store.dispatch(actions.selectedStudent(student_id));
+    unsubscribe();
   }
+
   //eindopdracht = final assignment
   filterFinal() {
     let studentInfo = dataStudent(this.state.studentInfo[0].student_id);

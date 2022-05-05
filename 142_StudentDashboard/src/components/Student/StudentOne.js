@@ -11,16 +11,9 @@ class StudentOne extends React.Component {
   constructor() {
     super();
     this.state = [];
-    this.filterStudent = this.filterStudent.bind(this);
     this.filterFinal = this.filterFinal.bind(this);
     this.filterFun = this.filterFun.bind(this);
     this.filterDiff = this.filterDiff.bind(this);
-  }
-
-  filterStudent(student_id) {
-    const studentInfo = dataStudent(student_id);
-    this.setState({ studentInfo });
-    console.log(this.state);
   }
 
   //eindopdracht = final assignment
@@ -80,22 +73,10 @@ class StudentOne extends React.Component {
   }
 
   render() {
-    const selectedStudent_id =
-      store.getState().studentReducer.selected_student.selected_student;
+    const selectedStudent_name =
+      store.getState().studentReducer.studentInfo.studentInfo[0].student_name;
 
-    const selectedStudent_name = studentUniqueSort.filter(function (student) {
-      return student.student_id === selectedStudent_id;
-    })[0].student_name;
-
-    const studentInfo = this.state.studentInfo;
-    // const students = studentUniqueSort.map((student) => (
-    //   <Student
-    //     key={student.student_id}
-    //     first_name={student.student_name}
-    //     student_id={student.student_id}
-    //     handleClick={this.filterStudent}
-    //   />
-    // ));
+    const studentInfo = store.getState().studentReducer.studentInfo.studentInfo;
 
     return (
       <>
@@ -109,7 +90,7 @@ class StudentOne extends React.Component {
           <br />
         </div>
         <div>
-          <h1>Gekozen student: {selectedStudent_name}</h1>
+          <h1>Gekozen student: {selectedStudent_name} </h1>
           <li>
             <button className="btn" onClick={this.filterFinal}>
               <i className="fa fa-filter"> finals only</i>

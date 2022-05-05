@@ -25,3 +25,10 @@ export const findStudentName = (student_id) => ({
     student_id: student_id,
   },
 });
+
+export const setDataStudent = (studentInfo) => ({
+  type: actions.SET_DATA_STUDENT,
+  payload: {
+    studentInfo,
+  },
+});

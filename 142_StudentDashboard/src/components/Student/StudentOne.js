@@ -14,31 +14,34 @@ class StudentOne extends React.Component {
     this.filterFinal = this.filterFinal.bind(this);
     this.filterFun = this.filterFun.bind(this);
     this.filterDiff = this.filterDiff.bind(this);
+    // this.studentInfo = store.getState().studentReducer.studentInfo.studentInfo;
   }
 
   //eindopdracht = final assignment
   filterFinal() {
-    let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
-    const studentShortInfo = [];
-    studentInfo.forEach((element) => {
-      if (element.exercise.length > 6) {
-        const newExercise = {
-          student_id: element.student_id,
-          student_name: element.student_name,
-          exercise: getShortName(element.exercise),
-          fun_score: element.fun_score,
-          difficult_rate: element.difficult_rate,
-        };
-        studentShortInfo.push(newExercise);
-      }
-    });
-    studentInfo = studentShortInfo;
-    this.setState({ studentInfo });
+    // let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
+    // const studentShortInfo = [];
+    // studentInfo.forEach((element) => {
+    //   if (element.exercise.length > 6) {
+    //     const newExercise = {
+    //       student_id: element.student_id,
+    //       student_name: element.student_name,
+    //       exercise: getShortName(element.exercise),
+    //       fun_score: element.fun_score,
+    //       difficult_rate: element.difficult_rate,
+    //     };
+    //     studentShortInfo.push(newExercise);
+    //   }
+    // });
+    // studentInfo = studentShortInfo;
+    // this.setState({ studentInfo });
   }
 
   //fun only
   filterFun() {
-    let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
+    let studentInfo = store.getState().studentReducer.studentInfo.studentInfo;
+    // dataStudent(this.state.studentInfo[0].student_id);
+    console.log("studentInfo, voor filteren ", studentInfo);
     let studentFunInfo = [];
     studentInfo.forEach((element) => {
       const newExercise = {
@@ -52,24 +55,26 @@ class StudentOne extends React.Component {
     });
     studentInfo = studentFunInfo;
     this.setState({ studentInfo });
+    console.log("gefilterd ", this.state);
+    console.log("studentInfo, na filteren ", studentInfo);
   }
 
   //difficult only
   filterDiff() {
-    let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
-    let studentDiffInfo = [];
-    studentInfo.forEach((element) => {
-      const newExercise = {
-        student_id: element.student_id,
-        student_name: element.student_name,
-        exercise: getShortName(element.exercise),
-        fun_score: 0,
-        difficult_rate: element.difficult_rate,
-      };
-      studentDiffInfo.push(newExercise);
-    });
-    studentInfo = studentDiffInfo;
-    this.setState({ studentInfo });
+    // let studentInfo = dataStudent(this.state.studentInfo[0].student_id);
+    // let studentDiffInfo = [];
+    // studentInfo.forEach((element) => {
+    //   const newExercise = {
+    //     student_id: element.student_id,
+    //     student_name: element.student_name,
+    //     exercise: getShortName(element.exercise),
+    //     fun_score: 0,
+    //     difficult_rate: element.difficult_rate,
+    //   };
+    //   studentDiffInfo.push(newExercise);
+    // });
+    // studentInfo = studentDiffInfo;
+    // this.setState({ studentInfo });
   }
 
   render() {

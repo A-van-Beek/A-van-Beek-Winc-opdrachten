@@ -2,10 +2,10 @@ import React from "react";
 import "../StudentView/StudentView.css";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
-import Student from "../StudentView/Student";
 import Chart from "../Charts/Chart";
-import { studentUniqueSort, dataStudent, getShortName } from "../Functions";
+import { dataStudent, getShortName } from "../Functions";
 import store from "../../store";
+import { Link } from "react-router-dom";
 
 class StudentOne extends React.Component {
   constructor() {
@@ -112,6 +112,12 @@ class StudentOne extends React.Component {
 
           <Chart key="1" ratingsList={this.state.studentInfo} />
         </div>
+        <li>
+          <button className="btn">
+            {" "}
+            <Link to="/studentView">terug naar studenten overzicht</Link>
+          </button>
+        </li>
       </>
     );
   }

@@ -1,11 +1,7 @@
 import React from "react";
 import * as v from "victory";
-import store from "../../store";
 
-// deze heet bij Michiel: RatingsChart
 const Chart = ({ ratingsList }) => {
-  // console.log("vanuit charts", store.getState().dataReducer);
-
   return (
     <>
       <v.VictoryChart

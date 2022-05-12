@@ -1,18 +1,10 @@
 import React from "react";
-// import { Outlet, Link } from "react-router-dom";
-import store from "../../store";
 import Header from "../Header/Header";
-// import ChartExample from "../ChartExample/ChartExample";
 import Navbar from "../Navbar/Navbar";
 import MyGaugeChart from "../Charts/MyGaugeChart";
 import { averageDifficult, averageFun } from "../Functions";
-import * as actions from "../../actions/actions";
 
 import "./App.css";
-
-//testing store + reducer + action add exercise
-// store.dispatch(actions.addExercise());
-// console.log("vanuit home", store.getState().dataReducer);
 
 function App() {
   const chartTitle = {

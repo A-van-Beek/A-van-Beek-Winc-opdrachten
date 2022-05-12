@@ -6,7 +6,6 @@ function Student(props) {
   return (
     <li>
       <Link
-        // to="/studentOne"
         to={`/studentOne/${props.first_name}`}
         onClick={() => props.handleClick(props.student_id)}
       >

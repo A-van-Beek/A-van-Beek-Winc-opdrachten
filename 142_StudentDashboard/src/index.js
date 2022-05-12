@@ -14,7 +14,7 @@ render(
       <Route path="/" element={<App />} />
       <Route path="ChartView" element={<ChartView />} />
       <Route path="StudentView" element={<StudentView />} />
-      <Route path="StudentOne" element={<StudentOne />} />
+      <Route path="StudentOne/:id" element={<StudentOne />} />
       <Route
         path="*"
         element={
